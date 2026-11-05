@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.idea/
+.vscode/
+
+# база создаётся автоматически при первом запуске
+data/app.db
+data/app.db-wal
+data/app.db-shm
+
+# сборка .exe
+build/
+dist/
+*.spec

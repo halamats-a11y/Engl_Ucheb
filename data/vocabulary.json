@@ -1,0 +1,8378 @@
+[
+  {
+    "english": "aberration",
+    "russian": "отклонение"
+  },
+  {
+    "english": "abyss",
+    "russian": "бездна"
+  },
+  {
+    "english": "accolade",
+    "russian": "награда"
+  },
+  {
+    "english": "acrimony",
+    "russian": "язвительность"
+  },
+  {
+    "english": "adulation",
+    "russian": "обожание"
+  },
+  {
+    "english": "adversity",
+    "russian": "невзгоды"
+  },
+  {
+    "english": "aegis",
+    "russian": "эгида"
+  },
+  {
+    "english": "aesthetic",
+    "russian": "эстетика"
+  },
+  {
+    "english": "affinity",
+    "russian": "родство"
+  },
+  {
+    "english": "alacrity",
+    "russian": "готовность"
+  },
+  {
+    "english": "alchemy",
+    "russian": "алхимия"
+  },
+  {
+    "english": "allegory",
+    "russian": "аллегория"
+  },
+  {
+    "english": "allure",
+    "russian": "привлекательность"
+  },
+  {
+    "english": "altruism",
+    "russian": "альтруизм"
+  },
+  {
+    "english": "amalgam",
+    "russian": "смесь"
+  },
+  {
+    "english": "ambience",
+    "russian": "атмосфера"
+  },
+  {
+    "english": "ambivalence",
+    "russian": "двойственность"
+  },
+  {
+    "english": "amelioration",
+    "russian": "улучшение"
+  },
+  {
+    "english": "anachronism",
+    "russian": "анахронизм"
+  },
+  {
+    "english": "analogy",
+    "russian": "аналогия"
+  },
+  {
+    "english": "anathema",
+    "russian": "анафема"
+  },
+  {
+    "english": "anecdote",
+    "russian": "анекдот"
+  },
+  {
+    "english": "animosity",
+    "russian": "враждебность"
+  },
+  {
+    "english": "annals",
+    "russian": "летописи"
+  },
+  {
+    "english": "anomalous",
+    "russian": "аномальный"
+  },
+  {
+    "english": "antagonism",
+    "russian": "антагонизм"
+  },
+  {
+    "english": "antithesis",
+    "russian": "антитеза"
+  },
+  {
+    "english": "apathy",
+    "russian": "апатия"
+  },
+  {
+    "english": "apocalypse",
+    "russian": "апокалипсис"
+  },
+  {
+    "english": "apocryphal",
+    "russian": "апокрифический"
+  },
+  {
+    "english": "apogee",
+    "russian": "апогей"
+  },
+  {
+    "english": "appeasement",
+    "russian": "умиротворение"
+  },
+  {
+    "english": "apprehension",
+    "russian": "опасение"
+  },
+  {
+    "english": "approbation",
+    "russian": "одобрение"
+  },
+  {
+    "english": "aptitude",
+    "russian": "способность"
+  },
+  {
+    "english": "arable",
+    "russian": "пахотный"
+  },
+  {
+    "english": "arbiter",
+    "russian": "арбитр"
+  },
+  {
+    "english": "arbitrary",
+    "russian": "произвольный"
+  },
+  {
+    "english": "arboretum",
+    "russian": "дендрарий"
+  },
+  {
+    "english": "arcane",
+    "russian": "тайный"
+  },
+  {
+    "english": "archaeology",
+    "russian": "археология"
+  },
+  {
+    "english": "archaic",
+    "russian": "архаичный"
+  },
+  {
+    "english": "archetype",
+    "russian": "архетип"
+  },
+  {
+    "english": "arduous",
+    "russian": "трудный"
+  },
+  {
+    "english": "aroma",
+    "russian": "аромат"
+  },
+  {
+    "english": "arrogance",
+    "russian": "высокомерие"
+  },
+  {
+    "english": "artefact",
+    "russian": "артефакт"
+  },
+  {
+    "english": "ascendancy",
+    "russian": "господство"
+  },
+  {
+    "english": "ascertain",
+    "russian": "установить"
+  },
+  {
+    "english": "ascetic",
+    "russian": "аскет"
+  },
+  {
+    "english": "ascribe",
+    "russian": "приписывать"
+  },
+  {
+    "english": "aseptic",
+    "russian": "асептический"
+  },
+  {
+    "english": "asperity",
+    "russian": "суровость"
+  },
+  {
+    "english": "aspersion",
+    "russian": "клевета"
+  },
+  {
+    "english": "assiduous",
+    "russian": "усердный"
+  },
+  {
+    "english": "assuage",
+    "russian": "утолить"
+  },
+  {
+    "english": "asterisk",
+    "russian": "звездочка"
+  },
+  {
+    "english": "astringent",
+    "russian": "вяжущий"
+  },
+  {
+    "english": "asylum",
+    "russian": "убежище"
+  },
+  {
+    "english": "asymmetry",
+    "russian": "асимметрия"
+  },
+  {
+    "english": "atavism",
+    "russian": "атавизм"
+  },
+  {
+    "english": "atheism",
+    "russian": "атеизм"
+  },
+  {
+    "english": "atrophy",
+    "russian": "атрофия"
+  },
+  {
+    "english": "attrition",
+    "russian": "трение"
+  },
+  {
+    "english": "atypical",
+    "russian": "атипичный"
+  },
+  {
+    "english": "audacious",
+    "russian": "дерзкий"
+  },
+  {
+    "english": "audible",
+    "russian": "слышимый"
+  },
+  {
+    "english": "audit",
+    "russian": "аудит"
+  },
+  {
+    "english": "augment",
+    "russian": "увеличить"
+  },
+  {
+    "english": "augury",
+    "russian": "предзнаменование"
+  },
+  {
+    "english": "aureole",
+    "russian": "ореол"
+  },
+  {
+    "english": "auspices",
+    "russian": "покровительство"
+  },
+  {
+    "english": "auspicious",
+    "russian": "благоприятный"
+  },
+  {
+    "english": "austere",
+    "russian": "суровый"
+  },
+  {
+    "english": "autarchy",
+    "russian": "автаркия"
+  },
+  {
+    "english": "authentic",
+    "russian": "подлинный"
+  },
+  {
+    "english": "authoritarian",
+    "russian": "авторитарный"
+  },
+  {
+    "english": "autocracy",
+    "russian": "автократия"
+  },
+  {
+    "english": "automatic",
+    "russian": "автоматический"
+  },
+  {
+    "english": "autonomous",
+    "russian": "автономный"
+  },
+  {
+    "english": "autopsy",
+    "russian": "вскрытие"
+  },
+  {
+    "english": "auxiliary",
+    "russian": "вспомогательный"
+  },
+  {
+    "english": "avalanche",
+    "russian": "лавина"
+  },
+  {
+    "english": "avarice",
+    "russian": "алчность"
+  },
+  {
+    "english": "avenge",
+    "russian": "мстить"
+  },
+  {
+    "english": "avenue",
+    "russian": "проспект"
+  },
+  {
+    "english": "aver",
+    "russian": "утверждать"
+  },
+  {
+    "english": "averse",
+    "russian": "испытывающий отвращение"
+  },
+  {
+    "english": "aversion",
+    "russian": "отвращение"
+  },
+  {
+    "english": "avert",
+    "russian": "предотвратить"
+  },
+  {
+    "english": "aviary",
+    "russian": "вольер"
+  },
+  {
+    "english": "avid",
+    "russian": "жадный"
+  },
+  {
+    "english": "avocation",
+    "russian": "хобби"
+  },
+  {
+    "english": "avoid",
+    "russian": "избегать"
+  },
+  {
+    "english": "avow",
+    "russian": "признавать"
+  },
+  {
+    "english": "await",
+    "russian": "ждать"
+  },
+  {
+    "english": "awaken",
+    "russian": "пробудить"
+  },
+  {
+    "english": "award",
+    "russian": "награда"
+  },
+  {
+    "english": "aware",
+    "russian": "осведомленный"
+  },
+  {
+    "english": "awe",
+    "russian": "благоговение"
+  },
+  {
+    "english": "awful",
+    "russian": "ужасный"
+  },
+  {
+    "english": "awkward",
+    "russian": "неловкий"
+  },
+  {
+    "english": "axiom",
+    "russian": "аксиома"
+  },
+  {
+    "english": "azure",
+    "russian": "лазурный"
+  },
+  {
+    "english": "babble",
+    "russian": "лепет"
+  },
+  {
+    "english": "bacchanal",
+    "russian": "вакханалия"
+  },
+  {
+    "english": "backlash",
+    "russian": "реакция"
+  },
+  {
+    "english": "baffle",
+    "russian": "озадачить"
+  },
+  {
+    "english": "bait",
+    "russian": "приманка"
+  },
+  {
+    "english": "balance",
+    "russian": "баланс"
+  },
+  {
+    "english": "bald",
+    "russian": "лысый"
+  },
+  {
+    "english": "balk",
+    "russian": "препятствовать"
+  },
+  {
+    "english": "ballad",
+    "russian": "баллада"
+  },
+  {
+    "english": "balm",
+    "russian": "бальзам"
+  },
+  {
+    "english": "banal",
+    "russian": "банальный"
+  },
+  {
+    "english": "bandwagon",
+    "russian": "фургон"
+  },
+  {
+    "english": "bane",
+    "russian": "бич"
+  },
+  {
+    "english": "banish",
+    "russian": "изгнать"
+  },
+  {
+    "english": "banter",
+    "russian": "шутливая беседа"
+  },
+  {
+    "english": "barbarian",
+    "russian": "варвар"
+  },
+  {
+    "english": "bard",
+    "russian": "бард"
+  },
+  {
+    "english": "bargain",
+    "russian": "сделка"
+  },
+  {
+    "english": "baroque",
+    "russian": "барокко"
+  },
+  {
+    "english": "barren",
+    "russian": "бесплодный"
+  },
+  {
+    "english": "barter",
+    "russian": "бартер"
+  },
+  {
+    "english": "baseline",
+    "russian": "базовая линия"
+  },
+  {
+    "english": "baseless",
+    "russian": "необоснованный"
+  },
+  {
+    "english": "bashful",
+    "russian": "застенчивый"
+  },
+  {
+    "english": "bask",
+    "russian": "греться"
+  },
+  {
+    "english": "bastion",
+    "russian": "бастион"
+  },
+  {
+    "english": "bawdy",
+    "russian": "непристойный"
+  },
+  {
+    "english": "beacon",
+    "russian": "маяк"
+  },
+  {
+    "english": "bead",
+    "russian": "бусина"
+  },
+  {
+    "english": "beak",
+    "russian": "клюв"
+  },
+  {
+    "english": "beam",
+    "russian": "луч"
+  },
+  {
+    "english": "bearing",
+    "russian": "поведение"
+  },
+  {
+    "english": "beast",
+    "russian": "зверь"
+  },
+  {
+    "english": "beckon",
+    "russian": "манить"
+  },
+  {
+    "english": "becoming",
+    "russian": "становление"
+  },
+  {
+    "english": "bedlam",
+    "russian": "сумасшедший дом"
+  },
+  {
+    "english": "befall",
+    "russian": "случиться"
+  },
+  {
+    "english": "befit",
+    "russian": "соответствовать"
+  },
+  {
+    "english": "befog",
+    "russian": "затуманить"
+  },
+  {
+    "english": "befriend",
+    "russian": "подружиться"
+  },
+  {
+    "english": "begrudge",
+    "russian": "завидовать"
+  },
+  {
+    "english": "beguile",
+    "russian": "очаровать"
+  },
+  {
+    "english": "behalf",
+    "russian": "интересы"
+  },
+  {
+    "english": "behave",
+    "russian": "вести себя"
+  },
+  {
+    "english": "behead",
+    "russian": "обезглавить"
+  },
+  {
+    "english": "behold",
+    "russian": "видеть"
+  },
+  {
+    "english": "belabour",
+    "russian": "отделывать"
+  },
+  {
+    "english": "belated",
+    "russian": "запоздалый"
+  },
+  {
+    "english": "beleaguer",
+    "russian": "осаждать"
+  },
+  {
+    "english": "belie",
+    "russian": "противоречить"
+  },
+  {
+    "english": "belittle",
+    "russian": "умалять"
+  },
+  {
+    "english": "bellicose",
+    "russian": "воинственный"
+  },
+  {
+    "english": "belligerent",
+    "russian": "воюющий"
+  },
+  {
+    "english": "bemoan",
+    "russian": "оплакивать"
+  },
+  {
+    "english": "bemused",
+    "russian": "озадаченный"
+  },
+  {
+    "english": "benchmark",
+    "russian": "ориентир"
+  },
+  {
+    "english": "benediction",
+    "russian": "благословение"
+  },
+  {
+    "english": "benefactor",
+    "russian": "благодетель"
+  },
+  {
+    "english": "beneficiary",
+    "russian": "бенефициар"
+  },
+  {
+    "english": "benevolent",
+    "russian": "доброжелательный"
+  },
+  {
+    "english": "benign",
+    "russian": "доброкачественный"
+  },
+  {
+    "english": "bequeath",
+    "russian": "завещать"
+  },
+  {
+    "english": "berate",
+    "russian": "бранить"
+  },
+  {
+    "english": "bereave",
+    "russian": "лишать"
+  },
+  {
+    "english": "berserk",
+    "russian": "берсерк"
+  },
+  {
+    "english": "beseech",
+    "russian": "умолять"
+  },
+  {
+    "english": "beset",
+    "russian": "осаждать"
+  },
+  {
+    "english": "besiege",
+    "russian": "осаждать"
+  },
+  {
+    "english": "besmirch",
+    "russian": "пятнать"
+  },
+  {
+    "english": "bestial",
+    "russian": "звериный"
+  },
+  {
+    "english": "bestow",
+    "russian": "даровать"
+  },
+  {
+    "english": "betray",
+    "russian": "предавать"
+  },
+  {
+    "english": "betroth",
+    "russian": "обручать"
+  },
+  {
+    "english": "bewail",
+    "russian": "оплакивать"
+  },
+  {
+    "english": "bewilder",
+    "russian": "сбивать с толку"
+  },
+  {
+    "english": "bias",
+    "russian": "предвзятость"
+  },
+  {
+    "english": "bicker",
+    "russian": "ссориться"
+  },
+  {
+    "english": "bicycle",
+    "russian": "велосипед"
+  },
+  {
+    "english": "bid",
+    "russian": "предложение"
+  },
+  {
+    "english": "biennial",
+    "russian": "двухгодичный"
+  },
+  {
+    "english": "bifurcate",
+    "russian": "раздваивать"
+  },
+  {
+    "english": "bigot",
+    "russian": "фанатик"
+  },
+  {
+    "english": "bile",
+    "russian": "желчь"
+  },
+  {
+    "english": "bilk",
+    "russian": "обманывать"
+  },
+  {
+    "english": "billow",
+    "russian": "волна"
+  },
+  {
+    "english": "binary",
+    "russian": "бинарный"
+  },
+  {
+    "english": "binge",
+    "russian": "запой"
+  },
+  {
+    "english": "binocular",
+    "russian": "бинокль"
+  },
+  {
+    "english": "biopsy",
+    "russian": "биопсия"
+  },
+  {
+    "english": "bizarre",
+    "russian": "странный"
+  },
+  {
+    "english": "blanch",
+    "russian": "бледнеть"
+  },
+  {
+    "english": "bland",
+    "russian": "мягкий"
+  },
+  {
+    "english": "blare",
+    "russian": "рев"
+  },
+  {
+    "english": "blasphemy",
+    "russian": "богохульство"
+  },
+  {
+    "english": "blatant",
+    "russian": "кричащий"
+  },
+  {
+    "english": "bleak",
+    "russian": "мрачный"
+  },
+  {
+    "english": "blemish",
+    "russian": "пятно"
+  },
+  {
+    "english": "blight",
+    "russian": "порча"
+  },
+  {
+    "english": "bliss",
+    "russian": "блаженство"
+  },
+  {
+    "english": "blister",
+    "russian": "волдырь"
+  },
+  {
+    "english": "blithe",
+    "russian": "беспечный"
+  },
+  {
+    "english": "blizzard",
+    "russian": "метель"
+  },
+  {
+    "english": "bloated",
+    "russian": "раздутый"
+  },
+  {
+    "english": "blunder",
+    "russian": "ошибка"
+  },
+  {
+    "english": "blunt",
+    "russian": "тупой"
+  },
+  {
+    "english": "blur",
+    "russian": "пятно"
+  },
+  {
+    "english": "blurt",
+    "russian": "ляпнуть"
+  },
+  {
+    "english": "bluster",
+    "russian": "бушевать"
+  },
+  {
+    "english": "bogus",
+    "russian": "фальшивый"
+  },
+  {
+    "english": "boisterous",
+    "russian": "шумный"
+  },
+  {
+    "english": "bolster",
+    "russian": "поддерживать"
+  },
+  {
+    "english": "bombastic",
+    "russian": "напыщенный"
+  },
+  {
+    "english": "bonhomie",
+    "russian": "добродушие"
+  },
+  {
+    "english": "bonus",
+    "russian": "бонус"
+  },
+  {
+    "english": "boon",
+    "russian": "благо"
+  },
+  {
+    "english": "boorish",
+    "russian": "грубый"
+  },
+  {
+    "english": "bootstrap",
+    "russian": "загрузчик"
+  },
+  {
+    "english": "bore",
+    "russian": "скучный"
+  },
+  {
+    "english": "botany",
+    "russian": "ботаника"
+  },
+  {
+    "english": "boulder",
+    "russian": "валун"
+  },
+  {
+    "english": "bounce",
+    "russian": "отскок"
+  },
+  {
+    "english": "bountiful",
+    "russian": "щедрый"
+  },
+  {
+    "english": "bourgeois",
+    "russian": "буржуазный"
+  },
+  {
+    "english": "bout",
+    "russian": "схватка"
+  },
+  {
+    "english": "bovine",
+    "russian": "бычий"
+  },
+  {
+    "english": "bowdlerize",
+    "russian": "вырезать"
+  },
+  {
+    "english": "boycott",
+    "russian": "бойкот"
+  },
+  {
+    "english": "brace",
+    "russian": "скоба"
+  },
+  {
+    "english": "brackish",
+    "russian": "солоноватый"
+  },
+  {
+    "english": "brag",
+    "russian": "хвастать"
+  },
+  {
+    "english": "braggart",
+    "russian": "хвастун"
+  },
+  {
+    "english": "braid",
+    "russian": "коса"
+  },
+  {
+    "english": "brainstorm",
+    "russian": "мозговой штурм"
+  },
+  {
+    "english": "brake",
+    "russian": "тормоз"
+  },
+  {
+    "english": "brash",
+    "russian": "дерзкий"
+  },
+  {
+    "english": "bravado",
+    "russian": "бравада"
+  },
+  {
+    "english": "brawl",
+    "russian": "драка"
+  },
+  {
+    "english": "brawn",
+    "russian": "мускулы"
+  },
+  {
+    "english": "brazen",
+    "russian": "наглый"
+  },
+  {
+    "english": "breach",
+    "russian": "нарушение"
+  },
+  {
+    "english": "breadth",
+    "russian": "ширина"
+  },
+  {
+    "english": "brevity",
+    "russian": "краткость"
+  },
+  {
+    "english": "brink",
+    "russian": "грань"
+  },
+  {
+    "english": "brisk",
+    "russian": "оживленный"
+  },
+  {
+    "english": "brittle",
+    "russian": "хрупкий"
+  },
+  {
+    "english": "broach",
+    "russian": "поднять"
+  },
+  {
+    "english": "brocade",
+    "russian": "парча"
+  },
+  {
+    "english": "brochure",
+    "russian": "брошюра"
+  },
+  {
+    "english": "brooch",
+    "russian": "брошь"
+  },
+  {
+    "english": "brook",
+    "russian": "ручей"
+  },
+  {
+    "english": "browbeat",
+    "russian": "запугивать"
+  },
+  {
+    "english": "browse",
+    "russian": "просматривать"
+  },
+  {
+    "english": "bruise",
+    "russian": "синяк"
+  },
+  {
+    "english": "brunt",
+    "russian": "основная тяжесть"
+  },
+  {
+    "english": "brusque",
+    "russian": "резкий"
+  },
+  {
+    "english": "brutal",
+    "russian": "жестокий"
+  },
+  {
+    "english": "bubble",
+    "russian": "пузырь"
+  },
+  {
+    "english": "bucolic",
+    "russian": "буколический"
+  },
+  {
+    "english": "budge",
+    "russian": "сдвинуть"
+  },
+  {
+    "english": "buff",
+    "russian": "поклонник"
+  },
+  {
+    "english": "buffalo",
+    "russian": "буйвол"
+  },
+  {
+    "english": "buffer",
+    "russian": "буфер"
+  },
+  {
+    "english": "buffet",
+    "russian": "шведский стол"
+  },
+  {
+    "english": "buffoon",
+    "russian": "шут"
+  },
+  {
+    "english": "buggy",
+    "russian": "багги"
+  },
+  {
+    "english": "bugle",
+    "russian": "горн"
+  },
+  {
+    "english": "bulb",
+    "russian": "луковица"
+  },
+  {
+    "english": "bulge",
+    "russian": "выпуклость"
+  },
+  {
+    "english": "bulk",
+    "russian": "масса"
+  },
+  {
+    "english": "bull",
+    "russian": "бык"
+  },
+  {
+    "english": "bulletin",
+    "russian": "бюллетень"
+  },
+  {
+    "english": "bullion",
+    "russian": "слиток"
+  },
+  {
+    "english": "bully",
+    "russian": "хулиган"
+  },
+  {
+    "english": "bulwark",
+    "russian": "оплот"
+  },
+  {
+    "english": "bumble",
+    "russian": "жужать"
+  },
+  {
+    "english": "bump",
+    "russian": "столкновение"
+  },
+  {
+    "english": "bunch",
+    "russian": "связка"
+  },
+  {
+    "english": "bundle",
+    "russian": "пакет"
+  },
+  {
+    "english": "bungalow",
+    "russian": "бунгало"
+  },
+  {
+    "english": "bungle",
+    "russian": "испортить"
+  },
+  {
+    "english": "bunk",
+    "russian": "чушь"
+  },
+  {
+    "english": "buoy",
+    "russian": "буй"
+  },
+  {
+    "english": "buoyant",
+    "russian": "жизнерадостный"
+  },
+  {
+    "english": "bureaucracy",
+    "russian": "бюрократия"
+  },
+  {
+    "english": "burgeon",
+    "russian": "расти"
+  },
+  {
+    "english": "burglar",
+    "russian": "вор"
+  },
+  {
+    "english": "burial",
+    "russian": "похороны"
+  },
+  {
+    "english": "burlesque",
+    "russian": "бурлеск"
+  },
+  {
+    "english": "burnish",
+    "russian": "полировать"
+  },
+  {
+    "english": "burrow",
+    "russian": "нора"
+  },
+  {
+    "english": "bust",
+    "russian": "бюст"
+  },
+  {
+    "english": "bustle",
+    "russian": "суета"
+  },
+  {
+    "english": "buttress",
+    "russian": "контрфорс"
+  },
+  {
+    "english": "buxom",
+    "russian": "пышный"
+  },
+  {
+    "english": "bygone",
+    "russian": "прошлый"
+  },
+  {
+    "english": "bypass",
+    "russian": "обход"
+  },
+  {
+    "english": "byproduct",
+    "russian": "побочный продукт"
+  },
+  {
+    "english": "bystander",
+    "russian": "наблюдатель"
+  },
+  {
+    "english": "cabal",
+    "russian": "кабал"
+  },
+  {
+    "english": "cache",
+    "russian": "тайник"
+  },
+  {
+    "english": "cacophony",
+    "russian": "какофония"
+  },
+  {
+    "english": "cadaver",
+    "russian": "труп"
+  },
+  {
+    "english": "cajole",
+    "russian": "уговаривать"
+  },
+  {
+    "english": "calamity",
+    "russian": "бедствие"
+  },
+  {
+    "english": "caliber",
+    "russian": "калибр"
+  },
+  {
+    "english": "callous",
+    "russian": "бессердечный"
+  },
+  {
+    "english": "callow",
+    "russian": "неопытный"
+  },
+  {
+    "english": "calumny",
+    "russian": "клевета"
+  },
+  {
+    "english": "camaraderie",
+    "russian": "товарищество"
+  },
+  {
+    "english": "cameo",
+    "russian": "камея"
+  },
+  {
+    "english": "camouflage",
+    "russian": "камуфляж"
+  },
+  {
+    "english": "candid",
+    "russian": "откровенный"
+  },
+  {
+    "english": "candor",
+    "russian": "искренность"
+  },
+  {
+    "english": "canine",
+    "russian": "собачий"
+  },
+  {
+    "english": "canny",
+    "russian": "хитрый"
+  },
+  {
+    "english": "canon",
+    "russian": "канон"
+  },
+  {
+    "english": "cant",
+    "russian": "жаргон"
+  },
+  {
+    "english": "cantankerous",
+    "russian": "сварливый"
+  },
+  {
+    "english": "canter",
+    "russian": "легкий галоп"
+  },
+  {
+    "english": "canto",
+    "russian": "песнь"
+  },
+  {
+    "english": "canvass",
+    "russian": "агитировать"
+  },
+  {
+    "english": "capacious",
+    "russian": "вместительный"
+  },
+  {
+    "english": "capacity",
+    "russian": "способность"
+  },
+  {
+    "english": "capillary",
+    "russian": "капилляр"
+  },
+  {
+    "english": "capitulate",
+    "russian": "капитулировать"
+  },
+  {
+    "english": "caprice",
+    "russian": "каприз"
+  },
+  {
+    "english": "capsize",
+    "russian": "опрокинуть"
+  },
+  {
+    "english": "captivate",
+    "russian": "пленить"
+  },
+  {
+    "english": "carapace",
+    "russian": "панцирь"
+  },
+  {
+    "english": "carcass",
+    "russian": "туша"
+  },
+  {
+    "english": "cardiac",
+    "russian": "сердечный"
+  },
+  {
+    "english": "careen",
+    "russian": "крениться"
+  },
+  {
+    "english": "career",
+    "russian": "карьера"
+  },
+  {
+    "english": "caress",
+    "russian": "ласка"
+  },
+  {
+    "english": "cargo",
+    "russian": "груз"
+  },
+  {
+    "english": "caricature",
+    "russian": "карикатура"
+  },
+  {
+    "english": "carnage",
+    "russian": "резня"
+  },
+  {
+    "english": "carnal",
+    "russian": "плотский"
+  },
+  {
+    "english": "carnival",
+    "russian": "карнавал"
+  },
+  {
+    "english": "carnivorous",
+    "russian": "плотоядный"
+  },
+  {
+    "english": "carouse",
+    "russian": "кутить"
+  },
+  {
+    "english": "carp",
+    "russian": "карп"
+  },
+  {
+    "english": "carpenter",
+    "russian": "плотник"
+  },
+  {
+    "english": "carpet",
+    "russian": "ковер"
+  },
+  {
+    "english": "carriage",
+    "russian": "экипаж"
+  },
+  {
+    "english": "carrion",
+    "russian": "падаль"
+  },
+  {
+    "english": "cartilage",
+    "russian": "хрящ"
+  },
+  {
+    "english": "cartography",
+    "russian": "картография"
+  },
+  {
+    "english": "cascade",
+    "russian": "каскад"
+  },
+  {
+    "english": "caste",
+    "russian": "каста"
+  },
+  {
+    "english": "castigate",
+    "russian": "наказывать"
+  },
+  {
+    "english": "castle",
+    "russian": "замок"
+  },
+  {
+    "english": "castrate",
+    "russian": "кастрировать"
+  },
+  {
+    "english": "casual",
+    "russian": "повседневный"
+  },
+  {
+    "english": "casualty",
+    "russian": "жертва"
+  },
+  {
+    "english": "cataclysm",
+    "russian": "катаклизм"
+  },
+  {
+    "english": "catalyst",
+    "russian": "катализатор"
+  },
+  {
+    "english": "catapult",
+    "russian": "катапульта"
+  },
+  {
+    "english": "cataract",
+    "russian": "катаракта"
+  },
+  {
+    "english": "catastrophe",
+    "russian": "катастрофа"
+  },
+  {
+    "english": "catechism",
+    "russian": "катехизис"
+  },
+  {
+    "english": "categorical",
+    "russian": "категорический"
+  },
+  {
+    "english": "cater",
+    "russian": "обслуживать"
+  },
+  {
+    "english": "caterpillar",
+    "russian": "гусеница"
+  },
+  {
+    "english": "cathedral",
+    "russian": "собор"
+  },
+  {
+    "english": "catholic",
+    "russian": "католический"
+  },
+  {
+    "english": "caucus",
+    "russian": "собрание"
+  },
+  {
+    "english": "cauldron",
+    "russian": "котел"
+  },
+  {
+    "english": "cauliflower",
+    "russian": "цветная капуста"
+  },
+  {
+    "english": "causal",
+    "russian": "причинный"
+  },
+  {
+    "english": "caustic",
+    "russian": "едкий"
+  },
+  {
+    "english": "cauterize",
+    "russian": "прижигать"
+  },
+  {
+    "english": "caution",
+    "russian": "осторожность"
+  },
+  {
+    "english": "cavalcade",
+    "russian": "кавалькада"
+  },
+  {
+    "english": "cavalier",
+    "russian": "кавалер"
+  },
+  {
+    "english": "cavalry",
+    "russian": "кавалерия"
+  },
+  {
+    "english": "cavern",
+    "russian": "пещера"
+  },
+  {
+    "english": "cavil",
+    "russian": "придираться"
+  },
+  {
+    "english": "cavity",
+    "russian": "полость"
+  },
+  {
+    "english": "cease",
+    "russian": "прекратить"
+  },
+  {
+    "english": "cedar",
+    "russian": "кедр"
+  },
+  {
+    "english": "cede",
+    "russian": "уступать"
+  },
+  {
+    "english": "celebrity",
+    "russian": "знаменитость"
+  },
+  {
+    "english": "celestial",
+    "russian": "небесный"
+  },
+  {
+    "english": "celibate",
+    "russian": "безбрачный"
+  },
+  {
+    "english": "censor",
+    "russian": "цензор"
+  },
+  {
+    "english": "censure",
+    "russian": "порицание"
+  },
+  {
+    "english": "census",
+    "russian": "перепись"
+  },
+  {
+    "english": "centenary",
+    "russian": "столетие"
+  },
+  {
+    "english": "centrifugal",
+    "russian": "центробежный"
+  },
+  {
+    "english": "centripetal",
+    "russian": "центростремительный"
+  },
+  {
+    "english": "centurion",
+    "russian": "центурион"
+  },
+  {
+    "english": "cerebral",
+    "russian": "мозговой"
+  },
+  {
+    "english": "ceremony",
+    "russian": "церемония"
+  },
+  {
+    "english": "certain",
+    "russian": "определенный"
+  },
+  {
+    "english": "certify",
+    "russian": "удостоверять"
+  },
+  {
+    "english": "cessation",
+    "russian": "прекращение"
+  },
+  {
+    "english": "cession",
+    "russian": "уступка"
+  },
+  {
+    "english": "chafe",
+    "russian": "тереть"
+  },
+  {
+    "english": "chaff",
+    "russian": "мякина"
+  },
+  {
+    "english": "chagrin",
+    "russian": "досада"
+  },
+  {
+    "english": "chalice",
+    "russian": "чаша"
+  },
+  {
+    "english": "champion",
+    "russian": "чемпион"
+  },
+  {
+    "english": "chaos",
+    "russian": "хаос"
+  },
+  {
+    "english": "chapel",
+    "russian": "часовня"
+  },
+  {
+    "english": "chaplain",
+    "russian": "капеллан"
+  },
+  {
+    "english": "char",
+    "russian": "обугливать"
+  },
+  {
+    "english": "character",
+    "russian": "характер"
+  },
+  {
+    "english": "charade",
+    "russian": "шарада"
+  },
+  {
+    "english": "charisma",
+    "russian": "харизма"
+  },
+  {
+    "english": "charity",
+    "russian": "благотворительность"
+  },
+  {
+    "english": "charlatan",
+    "russian": "шарлатан"
+  },
+  {
+    "english": "charm",
+    "russian": "шарм"
+  },
+  {
+    "english": "charter",
+    "russian": "устав"
+  },
+  {
+    "english": "chary",
+    "russian": "осторожный"
+  },
+  {
+    "english": "chasm",
+    "russian": "пропасть"
+  },
+  {
+    "english": "chassis",
+    "russian": "шасси"
+  },
+  {
+    "english": "chaste",
+    "russian": "целомудренный"
+  },
+  {
+    "english": "chastise",
+    "russian": "наказывать"
+  },
+  {
+    "english": "chateau",
+    "russian": "шато"
+  },
+  {
+    "english": "chattel",
+    "russian": "движимое имущество"
+  },
+  {
+    "english": "chatter",
+    "russian": "болтовня"
+  },
+  {
+    "english": "chauvinism",
+    "russian": "шовинизм"
+  },
+  {
+    "english": "chef",
+    "russian": "шеф-повар"
+  },
+  {
+    "english": "chemical",
+    "russian": "химический"
+  },
+  {
+    "english": "cherish",
+    "russian": "лелеять"
+  },
+  {
+    "english": "chest",
+    "russian": "грудь"
+  },
+  {
+    "english": "chevron",
+    "russian": "шеврон"
+  },
+  {
+    "english": "chicanery",
+    "russian": "крючкотворство"
+  },
+  {
+    "english": "chide",
+    "russian": "упрекать"
+  },
+  {
+    "english": "chief",
+    "russian": "главный"
+  },
+  {
+    "english": "childhood",
+    "russian": "детство"
+  },
+  {
+    "english": "chill",
+    "russian": "холод"
+  },
+  {
+    "english": "chime",
+    "russian": "звон"
+  },
+  {
+    "english": "chimney",
+    "russian": "дымоход"
+  },
+  {
+    "english": "chisel",
+    "russian": "долото"
+  },
+  {
+    "english": "chivalry",
+    "russian": "рыцарство"
+  },
+  {
+    "english": "choice",
+    "russian": "выбор"
+  },
+  {
+    "english": "choke",
+    "russian": "душить"
+  },
+  {
+    "english": "choleric",
+    "russian": "холерический"
+  },
+  {
+    "english": "cholesterol",
+    "russian": "холестерин"
+  },
+  {
+    "english": "chomp",
+    "russian": "чавкать"
+  },
+  {
+    "english": "choir",
+    "russian": "хор"
+  },
+  {
+    "english": "choler",
+    "russian": "гнев"
+  },
+  {
+    "english": "chore",
+    "russian": "рутина"
+  },
+  {
+    "english": "choreography",
+    "russian": "хореография"
+  },
+  {
+    "english": "chorus",
+    "russian": "хор"
+  },
+  {
+    "english": "christen",
+    "russian": "крестить"
+  },
+  {
+    "english": "chromatic",
+    "russian": "хроматический"
+  },
+  {
+    "english": "chronic",
+    "russian": "хронический"
+  },
+  {
+    "english": "chronicle",
+    "russian": "хроника"
+  },
+  {
+    "english": "chrysalis",
+    "russian": "куколка"
+  },
+  {
+    "english": "chuckle",
+    "russian": "хихикать"
+  },
+  {
+    "english": "chum",
+    "russian": "приятель"
+  },
+  {
+    "english": "chunk",
+    "russian": "кусок"
+  },
+  {
+    "english": "churl",
+    "russian": "грубиян"
+  },
+  {
+    "english": "churn",
+    "russian": "взбивать"
+  },
+  {
+    "english": "cider",
+    "russian": "сидр"
+  },
+  {
+    "english": "cigar",
+    "russian": "сигара"
+  },
+  {
+    "english": "cilia",
+    "russian": "реснички"
+  },
+  {
+    "english": "cinder",
+    "russian": "зола"
+  },
+  {
+    "english": "cinema",
+    "russian": "кино"
+  },
+  {
+    "english": "cipher",
+    "russian": "шифр"
+  },
+  {
+    "english": "circle",
+    "russian": "круг"
+  },
+  {
+    "english": "circuit",
+    "russian": "схема"
+  },
+  {
+    "english": "circular",
+    "russian": "круглый"
+  },
+  {
+    "english": "circulate",
+    "russian": "циркулировать"
+  },
+  {
+    "english": "circumcise",
+    "russian": "обрезать"
+  },
+  {
+    "english": "circumference",
+    "russian": "окружность"
+  },
+  {
+    "english": "circumflex",
+    "russian": "циркумфлекс"
+  },
+  {
+    "english": "circumlocution",
+    "russian": "многословие"
+  },
+  {
+    "english": "circumnavigate",
+    "russian": "обогнуть"
+  },
+  {
+    "english": "circumscribe",
+    "russian": "ограничивать"
+  },
+  {
+    "english": "circumspect",
+    "russian": "осмотрительный"
+  },
+  {
+    "english": "circumstance",
+    "russian": "обстоятельство"
+  },
+  {
+    "english": "circumvent",
+    "russian": "обходить"
+  },
+  {
+    "english": "cistern",
+    "russian": "цистерна"
+  },
+  {
+    "english": "citadel",
+    "russian": "цитадель"
+  },
+  {
+    "english": "citation",
+    "russian": "цитата"
+  },
+  {
+    "english": "citizen",
+    "russian": "гражданин"
+  },
+  {
+    "english": "civic",
+    "russian": "гражданский"
+  },
+  {
+    "english": "civil",
+    "russian": "гражданский"
+  },
+  {
+    "english": "clad",
+    "russian": "одетый"
+  },
+  {
+    "english": "claim",
+    "russian": "утверждение"
+  },
+  {
+    "english": "clam",
+    "russian": "моллюск"
+  },
+  {
+    "english": "clamber",
+    "russian": "карабкаться"
+  },
+  {
+    "english": "clamor",
+    "russian": "шум"
+  },
+  {
+    "english": "clamp",
+    "russian": "зажим"
+  },
+  {
+    "english": "clan",
+    "russian": "клан"
+  },
+  {
+    "english": "clandestine",
+    "russian": "тайный"
+  },
+  {
+    "english": "clang",
+    "russian": "лязг"
+  },
+  {
+    "english": "clap",
+    "russian": "хлопать"
+  },
+  {
+    "english": "clarify",
+    "russian": "уточнять"
+  },
+  {
+    "english": "clarinet",
+    "russian": "кларнет"
+  },
+  {
+    "english": "clarity",
+    "russian": "ясность"
+  },
+  {
+    "english": "clash",
+    "russian": "столкновение"
+  },
+  {
+    "english": "clasp",
+    "russian": "застежка"
+  },
+  {
+    "english": "classic",
+    "russian": "классический"
+  },
+  {
+    "english": "classify",
+    "russian": "классифицировать"
+  },
+  {
+    "english": "clause",
+    "russian": "пункт"
+  },
+  {
+    "english": "claustrophobia",
+    "russian": "клаустрофобия"
+  },
+  {
+    "english": "clavicle",
+    "russian": "ключица"
+  },
+  {
+    "english": "claw",
+    "russian": "коготь"
+  },
+  {
+    "english": "clay",
+    "russian": "глина"
+  },
+  {
+    "english": "cleanse",
+    "russian": "очищать"
+  },
+  {
+    "english": "cleavage",
+    "russian": "расщепление"
+  },
+  {
+    "english": "cleave",
+    "russian": "расщеплять"
+  },
+  {
+    "english": "cleft",
+    "russian": "расщелина"
+  },
+  {
+    "english": "clemency",
+    "russian": "милосердие"
+  },
+  {
+    "english": "clench",
+    "russian": "сжимать"
+  },
+  {
+    "english": "clergy",
+    "russian": "духовенство"
+  },
+  {
+    "english": "cleric",
+    "russian": "священник"
+  },
+  {
+    "english": "cliche",
+    "russian": "клише"
+  },
+  {
+    "english": "client",
+    "russian": "клиент"
+  },
+  {
+    "english": "cliff",
+    "russian": "скала"
+  },
+  {
+    "english": "climate",
+    "russian": "климат"
+  },
+  {
+    "english": "climax",
+    "russian": "кульминация"
+  },
+  {
+    "english": "climb",
+    "russian": "подъем"
+  },
+  {
+    "english": "clinch",
+    "russian": "закреплять"
+  },
+  {
+    "english": "cling",
+    "russian": "цепляться"
+  },
+  {
+    "english": "clinic",
+    "russian": "клиника"
+  },
+  {
+    "english": "clink",
+    "russian": "звон"
+  },
+  {
+    "english": "clip",
+    "russian": "зажим"
+  },
+  {
+    "english": "clique",
+    "russian": "клика"
+  },
+  {
+    "english": "cloak",
+    "russian": "плащ"
+  },
+  {
+    "english": "cloche",
+    "russian": "клош"
+  },
+  {
+    "english": "clock",
+    "russian": "часы"
+  },
+  {
+    "english": "clod",
+    "russian": "ком"
+  },
+  {
+    "english": "clog",
+    "russian": "засорять"
+  },
+  {
+    "english": "cloister",
+    "russian": "монастырь"
+  },
+  {
+    "english": "clone",
+    "russian": "клон"
+  },
+  {
+    "english": "close",
+    "russian": "близкий"
+  },
+  {
+    "english": "closet",
+    "russian": "шкаф"
+  },
+  {
+    "english": "closure",
+    "russian": "закрытие"
+  },
+  {
+    "english": "clot",
+    "russian": "сгусток"
+  },
+  {
+    "english": "cloth",
+    "russian": "ткань"
+  },
+  {
+    "english": "clothe",
+    "russian": "одевать"
+  },
+  {
+    "english": "cloud",
+    "russian": "облако"
+  },
+  {
+    "english": "clout",
+    "russian": "влияние"
+  },
+  {
+    "english": "clover",
+    "russian": "клевер"
+  },
+  {
+    "english": "clown",
+    "russian": "клоун"
+  },
+  {
+    "english": "cloy",
+    "russian": "приедаться"
+  },
+  {
+    "english": "club",
+    "russian": "клуб"
+  },
+  {
+    "english": "clue",
+    "russian": "подсказка"
+  },
+  {
+    "english": "clump",
+    "russian": "группа"
+  },
+  {
+    "english": "clumsy",
+    "russian": "неуклюжий"
+  },
+  {
+    "english": "cluster",
+    "russian": "кластер"
+  },
+  {
+    "english": "clutch",
+    "russian": "сцепление"
+  },
+  {
+    "english": "clutter",
+    "russian": "беспорядок"
+  },
+  {
+    "english": "coach",
+    "russian": "тренер"
+  },
+  {
+    "english": "coalition",
+    "russian": "коалиция"
+  },
+  {
+    "english": "coarse",
+    "russian": "грубый"
+  },
+  {
+    "english": "coast",
+    "russian": "побережье"
+  },
+  {
+    "english": "coax",
+    "russian": "уговаривать"
+  },
+  {
+    "english": "cobble",
+    "russian": "булыжник"
+  },
+  {
+    "english": "cobra",
+    "russian": "кобра"
+  },
+  {
+    "english": "cobweb",
+    "russian": "паутина"
+  },
+  {
+    "english": "cocaine",
+    "russian": "кокаин"
+  },
+  {
+    "english": "cock",
+    "russian": "петух"
+  },
+  {
+    "english": "cockpit",
+    "russian": "кабина"
+  },
+  {
+    "english": "cockroach",
+    "russian": "таракан"
+  },
+  {
+    "english": "cocoa",
+    "russian": "какао"
+  },
+  {
+    "english": "cocoon",
+    "russian": "кокон"
+  },
+  {
+    "english": "code",
+    "russian": "код"
+  },
+  {
+    "english": "codify",
+    "russian": "кодифицировать"
+  },
+  {
+    "english": "coerce",
+    "russian": "принуждать"
+  },
+  {
+    "english": "coeval",
+    "russian": "современный"
+  },
+  {
+    "english": "coexist",
+    "russian": "сосуществовать"
+  },
+  {
+    "english": "coffer",
+    "russian": "сундук"
+  },
+  {
+    "english": "cog",
+    "russian": "зубец"
+  },
+  {
+    "english": "cogent",
+    "russian": "убедительный"
+  },
+  {
+    "english": "cogitate",
+    "russian": "размышлять"
+  },
+  {
+    "english": "cognac",
+    "russian": "коньяк"
+  },
+  {
+    "english": "cognate",
+    "russian": "родственный"
+  },
+  {
+    "english": "cognition",
+    "russian": "познание"
+  },
+  {
+    "english": "cognizance",
+    "russian": "осведомленность"
+  },
+  {
+    "english": "cohere",
+    "russian": "сцепляться"
+  },
+  {
+    "english": "coherent",
+    "russian": "связный"
+  },
+  {
+    "english": "cohesion",
+    "russian": "сплоченность"
+  },
+  {
+    "english": "cohort",
+    "russian": "когорта"
+  },
+  {
+    "english": "coil",
+    "russian": "катушка"
+  },
+  {
+    "english": "coin",
+    "russian": "монета"
+  },
+  {
+    "english": "coincide",
+    "russian": "совпадать"
+  },
+  {
+    "english": "colander",
+    "russian": "дуршлаг"
+  },
+  {
+    "english": "cold",
+    "russian": "холод"
+  },
+  {
+    "english": "collaborate",
+    "russian": "сотрудничать"
+  },
+  {
+    "english": "collage",
+    "russian": "коллаж"
+  },
+  {
+    "english": "collapse",
+    "russian": "крах"
+  },
+  {
+    "english": "collar",
+    "russian": "воротник"
+  },
+  {
+    "english": "collate",
+    "russian": "сопоставлять"
+  },
+  {
+    "english": "collateral",
+    "russian": "обеспечение"
+  },
+  {
+    "english": "colleague",
+    "russian": "коллега"
+  },
+  {
+    "english": "collect",
+    "russian": "собирать"
+  },
+  {
+    "english": "college",
+    "russian": "колледж"
+  },
+  {
+    "english": "collide",
+    "russian": "сталкиваться"
+  },
+  {
+    "english": "collie",
+    "russian": "колли"
+  },
+  {
+    "english": "colliery",
+    "russian": "угольная шахта"
+  },
+  {
+    "english": "collision",
+    "russian": "столкновение"
+  },
+  {
+    "english": "colloquial",
+    "russian": "разговорный"
+  },
+  {
+    "english": "collude",
+    "russian": "сговариваться"
+  },
+  {
+    "english": "colon",
+    "russian": "двоеточие"
+  },
+  {
+    "english": "colonel",
+    "russian": "полковник"
+  },
+  {
+    "english": "colonial",
+    "russian": "колониальный"
+  },
+  {
+    "english": "colony",
+    "russian": "колония"
+  },
+  {
+    "english": "colossal",
+    "russian": "колоссальный"
+  },
+  {
+    "english": "colour",
+    "russian": "цвет"
+  },
+  {
+    "english": "column",
+    "russian": "колонка"
+  },
+  {
+    "english": "coma",
+    "russian": "кома"
+  },
+  {
+    "english": "comb",
+    "russian": "расческа"
+  },
+  {
+    "english": "combat",
+    "russian": "бой"
+  },
+  {
+    "english": "combine",
+    "russian": "объединять"
+  },
+  {
+    "english": "combustible",
+    "russian": "горючий"
+  },
+  {
+    "english": "comeback",
+    "russian": "возвращение"
+  },
+  {
+    "english": "comedy",
+    "russian": "комедия"
+  },
+  {
+    "english": "comet",
+    "russian": "комета"
+  },
+  {
+    "english": "comfort",
+    "russian": "комфорт"
+  },
+  {
+    "english": "comic",
+    "russian": "комический"
+  },
+  {
+    "english": "comma",
+    "russian": "запятая"
+  },
+  {
+    "english": "command",
+    "russian": "команда"
+  },
+  {
+    "english": "commemorate",
+    "russian": "увековечить"
+  },
+  {
+    "english": "commence",
+    "russian": "начинать"
+  },
+  {
+    "english": "commend",
+    "russian": "хвалить"
+  },
+  {
+    "english": "comment",
+    "russian": "комментарий"
+  },
+  {
+    "english": "commerce",
+    "russian": "коммерция"
+  },
+  {
+    "english": "commiserate",
+    "russian": "сочувствовать"
+  },
+  {
+    "english": "commission",
+    "russian": "комиссия"
+  },
+  {
+    "english": "commit",
+    "russian": "совершать"
+  },
+  {
+    "english": "commodity",
+    "russian": "товар"
+  },
+  {
+    "english": "commodore",
+    "russian": "коммодор"
+  },
+  {
+    "english": "common",
+    "russian": "общий"
+  },
+  {
+    "english": "commotion",
+    "russian": "суматоха"
+  },
+  {
+    "english": "commune",
+    "russian": "община"
+  },
+  {
+    "english": "communicate",
+    "russian": "общаться"
+  },
+  {
+    "english": "communion",
+    "russian": "причастие"
+  },
+  {
+    "english": "communism",
+    "russian": "коммунизм"
+  },
+  {
+    "english": "community",
+    "russian": "сообщество"
+  },
+  {
+    "english": "commute",
+    "russian": "ездить"
+  },
+  {
+    "english": "compact",
+    "russian": "компактный"
+  },
+  {
+    "english": "companion",
+    "russian": "компаньон"
+  },
+  {
+    "english": "company",
+    "russian": "компания"
+  },
+  {
+    "english": "compare",
+    "russian": "сравнивать"
+  },
+  {
+    "english": "compartment",
+    "russian": "отсек"
+  },
+  {
+    "english": "compass",
+    "russian": "компас"
+  },
+  {
+    "english": "compassion",
+    "russian": "сострадание"
+  },
+  {
+    "english": "compatible",
+    "russian": "совместимый"
+  },
+  {
+    "english": "compel",
+    "russian": "заставлять"
+  },
+  {
+    "english": "compensate",
+    "russian": "компенсировать"
+  },
+  {
+    "english": "compete",
+    "russian": "соревноваться"
+  },
+  {
+    "english": "compile",
+    "russian": "компилировать"
+  },
+  {
+    "english": "complacent",
+    "russian": "самодовольный"
+  },
+  {
+    "english": "complain",
+    "russian": "жаловаться"
+  },
+  {
+    "english": "complete",
+    "russian": "полный"
+  },
+  {
+    "english": "complex",
+    "russian": "сложный"
+  },
+  {
+    "english": "complicate",
+    "russian": "усложнять"
+  },
+  {
+    "english": "complicity",
+    "russian": "соучастие"
+  },
+  {
+    "english": "compliment",
+    "russian": "комплимент"
+  },
+  {
+    "english": "comply",
+    "russian": "соблюдать"
+  },
+  {
+    "english": "component",
+    "russian": "компонент"
+  },
+  {
+    "english": "compose",
+    "russian": "составлять"
+  },
+  {
+    "english": "composite",
+    "russian": "композитный"
+  },
+  {
+    "english": "composition",
+    "russian": "композиция"
+  },
+  {
+    "english": "compost",
+    "russian": "компост"
+  },
+  {
+    "english": "composure",
+    "russian": "самообладание"
+  },
+  {
+    "english": "compound",
+    "russian": "соединение"
+  },
+  {
+    "english": "comprehend",
+    "russian": "понимать"
+  },
+  {
+    "english": "compress",
+    "russian": "сжимать"
+  },
+  {
+    "english": "comprise",
+    "russian": "включать"
+  },
+  {
+    "english": "compromise",
+    "russian": "компромисс"
+  },
+  {
+    "english": "compulsion",
+    "russian": "принуждение"
+  },
+  {
+    "english": "compunction",
+    "russian": "угрызения совести"
+  },
+  {
+    "english": "compute",
+    "russian": "вычислять"
+  },
+  {
+    "english": "comrade",
+    "russian": "товарищ"
+  },
+  {
+    "english": "con",
+    "russian": "против"
+  },
+  {
+    "english": "concave",
+    "russian": "вогнутый"
+  },
+  {
+    "english": "conceal",
+    "russian": "скрывать"
+  },
+  {
+    "english": "concede",
+    "russian": "уступать"
+  },
+  {
+    "english": "conceit",
+    "russian": "самомнение"
+  },
+  {
+    "english": "conceive",
+    "russian": "зачать"
+  },
+  {
+    "english": "concentrate",
+    "russian": "концентрировать"
+  },
+  {
+    "english": "concept",
+    "russian": "концепция"
+  },
+  {
+    "english": "concern",
+    "russian": "беспокойство"
+  },
+  {
+    "english": "concert",
+    "russian": "концерт"
+  },
+  {
+    "english": "concession",
+    "russian": "уступка"
+  },
+  {
+    "english": "conch",
+    "russian": "раковина"
+  },
+  {
+    "english": "conciliate",
+    "russian": "примирять"
+  },
+  {
+    "english": "concise",
+    "russian": "краткий"
+  },
+  {
+    "english": "conclave",
+    "russian": "конклав"
+  },
+  {
+    "english": "conclude",
+    "russian": "заключать"
+  },
+  {
+    "english": "concoct",
+    "russian": "состряпать"
+  },
+  {
+    "english": "concomitant",
+    "russian": "сопутствующий"
+  },
+  {
+    "english": "concord",
+    "russian": "согласие"
+  },
+  {
+    "english": "concourse",
+    "russian": "вестибюль"
+  },
+  {
+    "english": "concrete",
+    "russian": "бетон"
+  },
+  {
+    "english": "concur",
+    "russian": "соглашаться"
+  },
+  {
+    "english": "concussion",
+    "russian": "сотрясение"
+  },
+  {
+    "english": "condemn",
+    "russian": "осуждать"
+  },
+  {
+    "english": "condense",
+    "russian": "сгущать"
+  },
+  {
+    "english": "condescend",
+    "russian": "снисходить"
+  },
+  {
+    "english": "condiment",
+    "russian": "приправа"
+  },
+  {
+    "english": "condition",
+    "russian": "условие"
+  },
+  {
+    "english": "condole",
+    "russian": "соболезновать"
+  },
+  {
+    "english": "condone",
+    "russian": "прощать"
+  },
+  {
+    "english": "conduce",
+    "russian": "способствовать"
+  },
+  {
+    "english": "conduct",
+    "russian": "проводить"
+  },
+  {
+    "english": "conduit",
+    "russian": "канал"
+  },
+  {
+    "english": "cone",
+    "russian": "конус"
+  },
+  {
+    "english": "confederacy",
+    "russian": "конфедерация"
+  },
+  {
+    "english": "confer",
+    "russian": "совещаться"
+  },
+  {
+    "english": "confess",
+    "russian": "исповедоваться"
+  },
+  {
+    "english": "confide",
+    "russian": "доверять"
+  },
+  {
+    "english": "confidence",
+    "russian": "уверенность"
+  },
+  {
+    "english": "configuration",
+    "russian": "конфигурация"
+  },
+  {
+    "english": "confine",
+    "russian": "ограничивать"
+  },
+  {
+    "english": "confirm",
+    "russian": "подтверждать"
+  },
+  {
+    "english": "confiscate",
+    "russian": "конфисковать"
+  },
+  {
+    "english": "conflagration",
+    "russian": "пожар"
+  },
+  {
+    "english": "conflict",
+    "russian": "конфликт"
+  },
+  {
+    "english": "confluence",
+    "russian": "слияние"
+  },
+  {
+    "english": "conform",
+    "russian": "соответствовать"
+  },
+  {
+    "english": "confound",
+    "russian": "смущать"
+  },
+  {
+    "english": "confront",
+    "russian": "противостоять"
+  },
+  {
+    "english": "confuse",
+    "russian": "путать"
+  },
+  {
+    "english": "confute",
+    "russian": "опровергать"
+  },
+  {
+    "english": "congeal",
+    "russian": "застывать"
+  },
+  {
+    "english": "congenial",
+    "russian": "благоприятный"
+  },
+  {
+    "english": "congenital",
+    "russian": "врожденный"
+  },
+  {
+    "english": "congest",
+    "russian": "перегружать"
+  },
+  {
+    "english": "conglomerate",
+    "russian": "конгломерат"
+  },
+  {
+    "english": "congratulate",
+    "russian": "поздравлять"
+  },
+  {
+    "english": "congregate",
+    "russian": "собираться"
+  },
+  {
+    "english": "congress",
+    "russian": "конгресс"
+  },
+  {
+    "english": "conical",
+    "russian": "конический"
+  },
+  {
+    "english": "conifer",
+    "russian": "хвойное"
+  },
+  {
+    "english": "conjecture",
+    "russian": "предположение"
+  },
+  {
+    "english": "conjoin",
+    "russian": "соединять"
+  },
+  {
+    "english": "conjugal",
+    "russian": "супружеский"
+  },
+  {
+    "english": "conjugate",
+    "russian": "спрягать"
+  },
+  {
+    "english": "conjunction",
+    "russian": "союз"
+  },
+  {
+    "english": "conjure",
+    "russian": "колдовать"
+  },
+  {
+    "english": "conk",
+    "russian": "нос"
+  },
+  {
+    "english": "connect",
+    "russian": "подключать"
+  },
+  {
+    "english": "connive",
+    "russian": "потворствовать"
+  },
+  {
+    "english": "connoisseur",
+    "russian": "знаток"
+  },
+  {
+    "english": "connote",
+    "russian": "означать"
+  },
+  {
+    "english": "conquer",
+    "russian": "завоевывать"
+  },
+  {
+    "english": "consanguineous",
+    "russian": "кровный"
+  },
+  {
+    "english": "conscience",
+    "russian": "совесть"
+  },
+  {
+    "english": "conscious",
+    "russian": "сознательный"
+  },
+  {
+    "english": "conscript",
+    "russian": "призывник"
+  },
+  {
+    "english": "consecrate",
+    "russian": "освящать"
+  },
+  {
+    "english": "consecutive",
+    "russian": "последовательный"
+  },
+  {
+    "english": "consensus",
+    "russian": "консенсус"
+  },
+  {
+    "english": "consent",
+    "russian": "согласие"
+  },
+  {
+    "english": "consequence",
+    "russian": "последствие"
+  },
+  {
+    "english": "conservative",
+    "russian": "консервативный"
+  },
+  {
+    "english": "conserve",
+    "russian": "сохранять"
+  },
+  {
+    "english": "consider",
+    "russian": "рассматривать"
+  },
+  {
+    "english": "consign",
+    "russian": "отправлять"
+  },
+  {
+    "english": "consist",
+    "russian": "состоять"
+  },
+  {
+    "english": "console",
+    "russian": "утешать"
+  },
+  {
+    "english": "consolidate",
+    "russian": "консолидировать"
+  },
+  {
+    "english": "consonant",
+    "russian": "согласный"
+  },
+  {
+    "english": "consort",
+    "russian": "супруг"
+  },
+  {
+    "english": "conspicuous",
+    "russian": "заметный"
+  },
+  {
+    "english": "conspire",
+    "russian": "заговаривать"
+  },
+  {
+    "english": "constable",
+    "russian": "констебль"
+  },
+  {
+    "english": "constant",
+    "russian": "постоянный"
+  },
+  {
+    "english": "constellation",
+    "russian": "созвездие"
+  },
+  {
+    "english": "consternation",
+    "russian": "испуг"
+  },
+  {
+    "english": "constipation",
+    "russian": "запор"
+  },
+  {
+    "english": "constituency",
+    "russian": "избирательный округ"
+  },
+  {
+    "english": "constitute",
+    "russian": "составлять"
+  },
+  {
+    "english": "constrain",
+    "russian": "ограничивать"
+  },
+  {
+    "english": "constrict",
+    "russian": "сужать"
+  },
+  {
+    "english": "construct",
+    "russian": "строить"
+  },
+  {
+    "english": "construe",
+    "russian": "истолковывать"
+  },
+  {
+    "english": "consul",
+    "russian": "консул"
+  },
+  {
+    "english": "consult",
+    "russian": "консультировать"
+  },
+  {
+    "english": "consume",
+    "russian": "потреблять"
+  },
+  {
+    "english": "consummate",
+    "russian": "совершенный"
+  },
+  {
+    "english": "contagion",
+    "russian": "заражение"
+  },
+  {
+    "english": "contain",
+    "russian": "содержать"
+  },
+  {
+    "english": "contaminate",
+    "russian": "загрязнять"
+  },
+  {
+    "english": "contemplate",
+    "russian": "созерцать"
+  },
+  {
+    "english": "contemporary",
+    "russian": "современный"
+  },
+  {
+    "english": "contempt",
+    "russian": "презрение"
+  },
+  {
+    "english": "contend",
+    "russian": "бороться"
+  },
+  {
+    "english": "content",
+    "russian": "содержание"
+  },
+  {
+    "english": "contention",
+    "russian": "спор"
+  },
+  {
+    "english": "contest",
+    "russian": "конкурс"
+  },
+  {
+    "english": "context",
+    "russian": "контекст"
+  },
+  {
+    "english": "contiguous",
+    "russian": "смежный"
+  },
+  {
+    "english": "continent",
+    "russian": "континент"
+  },
+  {
+    "english": "contingent",
+    "russian": "зависящий"
+  },
+  {
+    "english": "continue",
+    "russian": "продолжать"
+  },
+  {
+    "english": "contort",
+    "russian": "искривлять"
+  },
+  {
+    "english": "contour",
+    "russian": "контур"
+  },
+  {
+    "english": "contraband",
+    "russian": "контрабанда"
+  },
+  {
+    "english": "contract",
+    "russian": "контракт"
+  },
+  {
+    "english": "contradict",
+    "russian": "противоречить"
+  },
+  {
+    "english": "contralto",
+    "russian": "контральто"
+  },
+  {
+    "english": "contrary",
+    "russian": "противоположный"
+  },
+  {
+    "english": "contrast",
+    "russian": "контраст"
+  },
+  {
+    "english": "contravene",
+    "russian": "нарушать"
+  },
+  {
+    "english": "contribute",
+    "russian": "вносить вклад"
+  },
+  {
+    "english": "contrite",
+    "russian": "кающийся"
+  },
+  {
+    "english": "contrive",
+    "russian": "изобретать"
+  },
+  {
+    "english": "control",
+    "russian": "контроль"
+  },
+  {
+    "english": "controversy",
+    "russian": "противоречие"
+  },
+  {
+    "english": "controvert",
+    "russian": "оспаривать"
+  },
+  {
+    "english": "contusion",
+    "russian": "ушиб"
+  },
+  {
+    "english": "conundrum",
+    "russian": "загадка"
+  },
+  {
+    "english": "convalesce",
+    "russian": "выздоравливать"
+  },
+  {
+    "english": "convene",
+    "russian": "созывать"
+  },
+  {
+    "english": "convenient",
+    "russian": "удобный"
+  },
+  {
+    "english": "convent",
+    "russian": "монастырь"
+  },
+  {
+    "english": "convention",
+    "russian": "соглашение"
+  },
+  {
+    "english": "converge",
+    "russian": "сходиться"
+  },
+  {
+    "english": "conversant",
+    "russian": "сведущий"
+  },
+  {
+    "english": "converse",
+    "russian": "общаться"
+  },
+  {
+    "english": "convert",
+    "russian": "преобразовывать"
+  },
+  {
+    "english": "convex",
+    "russian": "выпуклый"
+  },
+  {
+    "english": "convey",
+    "russian": "передавать"
+  },
+  {
+    "english": "convict",
+    "russian": "осужденный"
+  },
+  {
+    "english": "convince",
+    "russian": "убеждать"
+  },
+  {
+    "english": "convivial",
+    "russian": "дружеский"
+  },
+  {
+    "english": "convoke",
+    "russian": "созывать"
+  },
+  {
+    "english": "convoy",
+    "russian": "конвой"
+  },
+  {
+    "english": "convulse",
+    "russian": "сотрясать"
+  },
+  {
+    "english": "coo",
+    "russian": "ворковать"
+  },
+  {
+    "english": "cook",
+    "russian": "готовить"
+  },
+  {
+    "english": "cool",
+    "russian": "прохладный"
+  },
+  {
+    "english": "coop",
+    "russian": "клетка"
+  },
+  {
+    "english": "cooperate",
+    "russian": "сотрудничать"
+  },
+  {
+    "english": "coordinate",
+    "russian": "координировать"
+  },
+  {
+    "english": "copious",
+    "russian": "обильный"
+  },
+  {
+    "english": "copper",
+    "russian": "медь"
+  },
+  {
+    "english": "copse",
+    "russian": "роща"
+  },
+  {
+    "english": "copy",
+    "russian": "копия"
+  },
+  {
+    "english": "copyright",
+    "russian": "авторское право"
+  },
+  {
+    "english": "coquette",
+    "russian": "кокетка"
+  },
+  {
+    "english": "coral",
+    "russian": "коралл"
+  },
+  {
+    "english": "cord",
+    "russian": "шнур"
+  },
+  {
+    "english": "cordial",
+    "russian": "сердечный"
+  },
+  {
+    "english": "core",
+    "russian": "ядро"
+  },
+  {
+    "english": "cork",
+    "russian": "пробка"
+  },
+  {
+    "english": "corn",
+    "russian": "кукуруза"
+  },
+  {
+    "english": "cornea",
+    "russian": "роговица"
+  },
+  {
+    "english": "corner",
+    "russian": "угол"
+  },
+  {
+    "english": "cornet",
+    "russian": "корнет"
+  },
+  {
+    "english": "cornice",
+    "russian": "карниз"
+  },
+  {
+    "english": "cornucopia",
+    "russian": "рог изобилия"
+  },
+  {
+    "english": "corollary",
+    "russian": "следствие"
+  },
+  {
+    "english": "corona",
+    "russian": "корона"
+  },
+  {
+    "english": "coronary",
+    "russian": "коронарный"
+  },
+  {
+    "english": "coronation",
+    "russian": "коронация"
+  },
+  {
+    "english": "coroner",
+    "russian": "коронер"
+  },
+  {
+    "english": "corporal",
+    "russian": "телесный"
+  },
+  {
+    "english": "corporate",
+    "russian": "корпоративный"
+  },
+  {
+    "english": "corpse",
+    "russian": "труп"
+  },
+  {
+    "english": "corpulent",
+    "russian": "тучный"
+  },
+  {
+    "english": "corpus",
+    "russian": "корпус"
+  },
+  {
+    "english": "corral",
+    "russian": "загон"
+  },
+  {
+    "english": "correct",
+    "russian": "правильный"
+  },
+  {
+    "english": "correlate",
+    "russian": "соотносить"
+  },
+  {
+    "english": "correspond",
+    "russian": "соответствовать"
+  },
+  {
+    "english": "corridor",
+    "russian": "коридор"
+  },
+  {
+    "english": "corroborate",
+    "russian": "подтверждать"
+  },
+  {
+    "english": "corrode",
+    "russian": "разъедать"
+  },
+  {
+    "english": "corrugated",
+    "russian": "гофрированный"
+  },
+  {
+    "english": "corrupt",
+    "russian": "коррумпированный"
+  },
+  {
+    "english": "corset",
+    "russian": "корсет"
+  },
+  {
+    "english": "cortege",
+    "russian": "кортеж"
+  },
+  {
+    "english": "cortex",
+    "russian": "кора"
+  },
+  {
+    "english": "cosmetic",
+    "russian": "косметика"
+  },
+  {
+    "english": "cosmic",
+    "russian": "космический"
+  },
+  {
+    "english": "cosmopolitan",
+    "russian": "космополитичный"
+  },
+  {
+    "english": "cosmos",
+    "russian": "космос"
+  },
+  {
+    "english": "costume",
+    "russian": "костюм"
+  },
+  {
+    "english": "cosy",
+    "russian": "уютный"
+  },
+  {
+    "english": "coteric",
+    "russian": "компания"
+  },
+  {
+    "english": "cotton",
+    "russian": "хлопок"
+  },
+  {
+    "english": "couch",
+    "russian": "кушетка"
+  },
+  {
+    "english": "cough",
+    "russian": "кашель"
+  },
+  {
+    "english": "council",
+    "russian": "совет"
+  },
+  {
+    "english": "counsel",
+    "russian": "совет"
+  },
+  {
+    "english": "count",
+    "russian": "считать"
+  },
+  {
+    "english": "counter",
+    "russian": "прилавок"
+  },
+  {
+    "english": "counteract",
+    "russian": "противодействовать"
+  },
+  {
+    "english": "counterfeit",
+    "russian": "подделка"
+  },
+  {
+    "english": "counterpart",
+    "russian": "коллега"
+  },
+  {
+    "english": "countless",
+    "russian": "бесчисленный"
+  },
+  {
+    "english": "country",
+    "russian": "страна"
+  },
+  {
+    "english": "county",
+    "russian": "графство"
+  },
+  {
+    "english": "coup",
+    "russian": "переворот"
+  },
+  {
+    "english": "couple",
+    "russian": "пара"
+  },
+  {
+    "english": "coupon",
+    "russian": "купон"
+  },
+  {
+    "english": "courage",
+    "russian": "мужество"
+  },
+  {
+    "english": "courier",
+    "russian": "курьер"
+  },
+  {
+    "english": "course",
+    "russian": "курс"
+  },
+  {
+    "english": "court",
+    "russian": "суд"
+  },
+  {
+    "english": "courteous",
+    "russian": "вежливый"
+  },
+  {
+    "english": "courtesy",
+    "russian": "вежливость"
+  },
+  {
+    "english": "courtier",
+    "russian": "придворный"
+  },
+  {
+    "english": "courtyard",
+    "russian": "внутренний двор"
+  },
+  {
+    "english": "cousin",
+    "russian": "двоюродный брат"
+  },
+  {
+    "english": "cove",
+    "russian": "бухта"
+  },
+  {
+    "english": "covenant",
+    "russian": "договор"
+  },
+  {
+    "english": "cover",
+    "russian": "покрывать"
+  },
+  {
+    "english": "covert",
+    "russian": "тайный"
+  },
+  {
+    "english": "covet",
+    "russian": "жаждать"
+  },
+  {
+    "english": "coward",
+    "russian": "трус"
+  },
+  {
+    "english": "cower",
+    "russian": "съеживаться"
+  },
+  {
+    "english": "coy",
+    "russian": "застенчивый"
+  },
+  {
+    "english": "cozy",
+    "russian": "уютный"
+  },
+  {
+    "english": "crab",
+    "russian": "краб"
+  },
+  {
+    "english": "crack",
+    "russian": "трещина"
+  },
+  {
+    "english": "cradle",
+    "russian": "колыбель"
+  },
+  {
+    "english": "craft",
+    "russian": "ремесло"
+  },
+  {
+    "english": "crag",
+    "russian": "скала"
+  },
+  {
+    "english": "cram",
+    "russian": "втискивать"
+  },
+  {
+    "english": "cramp",
+    "russian": "судорога"
+  },
+  {
+    "english": "crane",
+    "russian": "журавль"
+  },
+  {
+    "english": "crank",
+    "russian": "чудак"
+  },
+  {
+    "english": "cranny",
+    "russian": "щель"
+  },
+  {
+    "english": "crash",
+    "russian": "авария"
+  },
+  {
+    "english": "crate",
+    "russian": "ящик"
+  },
+  {
+    "english": "crater",
+    "russian": "кратер"
+  },
+  {
+    "english": "crave",
+    "russian": "жаждать"
+  },
+  {
+    "english": "craven",
+    "russian": "трусливый"
+  },
+  {
+    "english": "crawl",
+    "russian": "ползать"
+  },
+  {
+    "english": "crayon",
+    "russian": "мелок"
+  },
+  {
+    "english": "craze",
+    "russian": "увлечение"
+  },
+  {
+    "english": "creak",
+    "russian": "скрип"
+  },
+  {
+    "english": "cream",
+    "russian": "крем"
+  },
+  {
+    "english": "crease",
+    "russian": "складка"
+  },
+  {
+    "english": "create",
+    "russian": "создавать"
+  },
+  {
+    "english": "creature",
+    "russian": "существо"
+  },
+  {
+    "english": "credence",
+    "russian": "доверие"
+  },
+  {
+    "english": "credentials",
+    "russian": "полномочия"
+  },
+  {
+    "english": "credible",
+    "russian": "заслуживающий доверия"
+  },
+  {
+    "english": "credit",
+    "russian": "кредит"
+  },
+  {
+    "english": "creditor",
+    "russian": "кредитор"
+  },
+  {
+    "english": "credo",
+    "russian": "кредо"
+  },
+  {
+    "english": "credulous",
+    "russian": "доверчивый"
+  },
+  {
+    "english": "creed",
+    "russian": "вероучение"
+  },
+  {
+    "english": "creek",
+    "russian": "ручей"
+  },
+  {
+    "english": "creep",
+    "russian": "ползать"
+  },
+  {
+    "english": "cremate",
+    "russian": "кремировать"
+  },
+  {
+    "english": "creole",
+    "russian": "креольский"
+  },
+  {
+    "english": "creosote",
+    "russian": "креозот"
+  },
+  {
+    "english": "crepe",
+    "russian": "креп"
+  },
+  {
+    "english": "crescendo",
+    "russian": "крещендо"
+  },
+  {
+    "english": "crescent",
+    "russian": "полумесяц"
+  },
+  {
+    "english": "crest",
+    "russian": "гребень"
+  },
+  {
+    "english": "crevice",
+    "russian": "расщелина"
+  },
+  {
+    "english": "crew",
+    "russian": "экипаж"
+  },
+  {
+    "english": "crib",
+    "russian": "кроватка"
+  },
+  {
+    "english": "cricket",
+    "russian": "крикет"
+  },
+  {
+    "english": "crime",
+    "russian": "преступление"
+  },
+  {
+    "english": "criminal",
+    "russian": "преступник"
+  },
+  {
+    "english": "crimson",
+    "russian": "малиновый"
+  },
+  {
+    "english": "cringe",
+    "russian": "съеживаться"
+  },
+  {
+    "english": "crinkle",
+    "russian": "морщина"
+  },
+  {
+    "english": "cripple",
+    "russian": "калека"
+  },
+  {
+    "english": "crisis",
+    "russian": "кризис"
+  },
+  {
+    "english": "crisp",
+    "russian": "хрустящий"
+  },
+  {
+    "english": "criterion",
+    "russian": "критерий"
+  },
+  {
+    "english": "critic",
+    "russian": "критик"
+  },
+  {
+    "english": "croak",
+    "russian": "квакать"
+  },
+  {
+    "english": "crochet",
+    "russian": "вязание крючком"
+  },
+  {
+    "english": "crockery",
+    "russian": "посуда"
+  },
+  {
+    "english": "crocodile",
+    "russian": "крокодил"
+  },
+  {
+    "english": "crocus",
+    "russian": "крокус"
+  },
+  {
+    "english": "crone",
+    "russian": "старуха"
+  },
+  {
+    "english": "crony",
+    "russian": "дружок"
+  },
+  {
+    "english": "crook",
+    "russian": "крюк"
+  },
+  {
+    "english": "croon",
+    "russian": "напевать"
+  },
+  {
+    "english": "crop",
+    "russian": "урожай"
+  },
+  {
+    "english": "cross",
+    "russian": "крест"
+  },
+  {
+    "english": "crouch",
+    "russian": "приседать"
+  },
+  {
+    "english": "crow",
+    "russian": "ворона"
+  },
+  {
+    "english": "crowd",
+    "russian": "толпа"
+  },
+  {
+    "english": "crown",
+    "russian": "корона"
+  },
+  {
+    "english": "crucial",
+    "russian": "решающий"
+  },
+  {
+    "english": "crucible",
+    "russian": "тигель"
+  },
+  {
+    "english": "crucify",
+    "russian": "распинать"
+  },
+  {
+    "english": "crude",
+    "russian": "сырой"
+  },
+  {
+    "english": "cruel",
+    "russian": "жестокий"
+  },
+  {
+    "english": "cruise",
+    "russian": "круиз"
+  },
+  {
+    "english": "crumb",
+    "russian": "крошка"
+  },
+  {
+    "english": "crumble",
+    "russian": "крошиться"
+  },
+  {
+    "english": "crumple",
+    "russian": "мять"
+  },
+  {
+    "english": "crunch",
+    "russian": "хруст"
+  },
+  {
+    "english": "crusade",
+    "russian": "крестовый поход"
+  },
+  {
+    "english": "crush",
+    "russian": "давить"
+  },
+  {
+    "english": "crust",
+    "russian": "корка"
+  },
+  {
+    "english": "crutch",
+    "russian": "костыль"
+  },
+  {
+    "english": "crux",
+    "russian": "суть"
+  },
+  {
+    "english": "cry",
+    "russian": "крик"
+  },
+  {
+    "english": "crypt",
+    "russian": "крипта"
+  },
+  {
+    "english": "cryptic",
+    "russian": "загадочный"
+  },
+  {
+    "english": "crystal",
+    "russian": "кристалл"
+  },
+  {
+    "english": "cub",
+    "russian": "детеныш"
+  },
+  {
+    "english": "cube",
+    "russian": "куб"
+  },
+  {
+    "english": "cubicle",
+    "russian": "кабинка"
+  },
+  {
+    "english": "cuckoo",
+    "russian": "кукушка"
+  },
+  {
+    "english": "cucumber",
+    "russian": "огурец"
+  },
+  {
+    "english": "cuddle",
+    "russian": "обнимать"
+  },
+  {
+    "english": "cudgel",
+    "russian": "дубина"
+  },
+  {
+    "english": "cue",
+    "russian": "сигнал"
+  },
+  {
+    "english": "cuff",
+    "russian": "манжета"
+  },
+  {
+    "english": "cuisine",
+    "russian": "кухня"
+  },
+  {
+    "english": "culinary",
+    "russian": "кулинарный"
+  },
+  {
+    "english": "cull",
+    "russian": "отбирать"
+  },
+  {
+    "english": "culminate",
+    "russian": "достигать кульминации"
+  },
+  {
+    "english": "culpable",
+    "russian": "виновный"
+  },
+  {
+    "english": "culprit",
+    "russian": "виновник"
+  },
+  {
+    "english": "cult",
+    "russian": "культ"
+  },
+  {
+    "english": "cultivate",
+    "russian": "культивировать"
+  },
+  {
+    "english": "culture",
+    "russian": "культура"
+  },
+  {
+    "english": "culvert",
+    "russian": "водопропускная труба"
+  },
+  {
+    "english": "cumbersome",
+    "russian": "громоздкий"
+  },
+  {
+    "english": "cumulative",
+    "russian": "совокупный"
+  },
+  {
+    "english": "cunning",
+    "russian": "хитрый"
+  },
+  {
+    "english": "cupboard",
+    "russian": "шкаф"
+  },
+  {
+    "english": "cupidity",
+    "russian": "алчность"
+  },
+  {
+    "english": "cur",
+    "russian": "дворняга"
+  },
+  {
+    "english": "curate",
+    "russian": "курировать"
+  },
+  {
+    "english": "curative",
+    "russian": "целебный"
+  },
+  {
+    "english": "curator",
+    "russian": "куратор"
+  },
+  {
+    "english": "curb",
+    "russian": "обуздывать"
+  },
+  {
+    "english": "curdle",
+    "russian": "свертываться"
+  },
+  {
+    "english": "cure",
+    "russian": "лекарство"
+  },
+  {
+    "english": "curfew",
+    "russian": "комендантский час"
+  },
+  {
+    "english": "curio",
+    "russian": "редкость"
+  },
+  {
+    "english": "curious",
+    "russian": "любопытный"
+  },
+  {
+    "english": "curl",
+    "russian": "завиток"
+  },
+  {
+    "english": "curmudgeon",
+    "russian": "ворчун"
+  },
+  {
+    "english": "current",
+    "russian": "текущий"
+  },
+  {
+    "english": "curriculum",
+    "russian": "учебный план"
+  },
+  {
+    "english": "curry",
+    "russian": "карри"
+  },
+  {
+    "english": "curse",
+    "russian": "проклятие"
+  },
+  {
+    "english": "cursory",
+    "russian": "поверхностный"
+  },
+  {
+    "english": "curt",
+    "russian": "краткий"
+  },
+  {
+    "english": "curtail",
+    "russian": "сокращать"
+  },
+  {
+    "english": "curtain",
+    "russian": "занавес"
+  },
+  {
+    "english": "curtsey",
+    "russian": "реверанс"
+  },
+  {
+    "english": "curve",
+    "russian": "кривая"
+  },
+  {
+    "english": "cushion",
+    "russian": "подушка"
+  },
+  {
+    "english": "cusp",
+    "russian": "острие"
+  },
+  {
+    "english": "custard",
+    "russian": "заварной крем"
+  },
+  {
+    "english": "custody",
+    "russian": "опека"
+  },
+  {
+    "english": "custom",
+    "russian": "обычай"
+  },
+  {
+    "english": "customer",
+    "russian": "покупатель"
+  },
+  {
+    "english": "cuticle",
+    "russian": "кутикула"
+  },
+  {
+    "english": "cutlass",
+    "russian": "кортик"
+  },
+  {
+    "english": "cutlery",
+    "russian": "столовые приборы"
+  },
+  {
+    "english": "cuttlefish",
+    "russian": "каракатица"
+  },
+  {
+    "english": "cyanide",
+    "russian": "цианид"
+  },
+  {
+    "english": "cycle",
+    "russian": "цикл"
+  },
+  {
+    "english": "cyclone",
+    "russian": "циклон"
+  },
+  {
+    "english": "cygnet",
+    "russian": "молодой лебедь"
+  },
+  {
+    "english": "cylinder",
+    "russian": "цилиндр"
+  },
+  {
+    "english": "cymbal",
+    "russian": "тарелка"
+  },
+  {
+    "english": "cynic",
+    "russian": "циник"
+  },
+  {
+    "english": "cypher",
+    "russian": "шифр"
+  },
+  {
+    "english": "cyst",
+    "russian": "киста"
+  },
+  {
+    "english": "czar",
+    "russian": "царь"
+  },
+  {
+    "english": "dab",
+    "russian": "касаться"
+  },
+  {
+    "english": "dabble",
+    "russian": "баловаться"
+  },
+  {
+    "english": "dactyl",
+    "russian": "дактиль"
+  },
+  {
+    "english": "daddy",
+    "russian": "папочка"
+  },
+  {
+    "english": "daffodil",
+    "russian": "нарцисс"
+  },
+  {
+    "english": "dagger",
+    "russian": "кинжал"
+  },
+  {
+    "english": "daily",
+    "russian": "ежедневный"
+  },
+  {
+    "english": "dainty",
+    "russian": "изящный"
+  },
+  {
+    "english": "dairy",
+    "russian": "молочный"
+  },
+  {
+    "english": "dais",
+    "russian": "помост"
+  },
+  {
+    "english": "daisy",
+    "russian": "маргаритка"
+  },
+  {
+    "english": "dale",
+    "russian": "долина"
+  },
+  {
+    "english": "dally",
+    "russian": "забавляться"
+  },
+  {
+    "english": "dam",
+    "russian": "дамба"
+  },
+  {
+    "english": "damage",
+    "russian": "ущерб"
+  },
+  {
+    "english": "damask",
+    "russian": "дамаск"
+  },
+  {
+    "english": "dame",
+    "russian": "дама"
+  },
+  {
+    "english": "damn",
+    "russian": "черт"
+  },
+  {
+    "english": "damp",
+    "russian": "сырой"
+  },
+  {
+    "english": "damsel",
+    "russian": "девица"
+  },
+  {
+    "english": "dance",
+    "russian": "танец"
+  },
+  {
+    "english": "dandelion",
+    "russian": "одуванчик"
+  },
+  {
+    "english": "dandruff",
+    "russian": "перхоть"
+  },
+  {
+    "english": "dandy",
+    "russian": "денди"
+  },
+  {
+    "english": "danger",
+    "russian": "опасность"
+  },
+  {
+    "english": "dangle",
+    "russian": "висеть"
+  },
+  {
+    "english": "dank",
+    "russian": "промозглый"
+  },
+  {
+    "english": "dapper",
+    "russian": "щегольской"
+  },
+  {
+    "english": "dapple",
+    "russian": "пятно"
+  },
+  {
+    "english": "dare",
+    "russian": "сметь"
+  },
+  {
+    "english": "dark",
+    "russian": "темный"
+  },
+  {
+    "english": "darling",
+    "russian": "дорогой"
+  },
+  {
+    "english": "darn",
+    "russian": "штопать"
+  },
+  {
+    "english": "dart",
+    "russian": "дротик"
+  },
+  {
+    "english": "dash",
+    "russian": "тире"
+  },
+  {
+    "english": "data",
+    "russian": "данные"
+  },
+  {
+    "english": "date",
+    "russian": "дата"
+  },
+  {
+    "english": "daub",
+    "russian": "мазня"
+  },
+  {
+    "english": "daughter",
+    "russian": "дочь"
+  },
+  {
+    "english": "daunt",
+    "russian": "пугать"
+  },
+  {
+    "english": "dawdle",
+    "russian": "мешкать"
+  },
+  {
+    "english": "dawn",
+    "russian": "рассвет"
+  },
+  {
+    "english": "day",
+    "russian": "день"
+  },
+  {
+    "english": "daze",
+    "russian": "оцепенение"
+  },
+  {
+    "english": "dazzle",
+    "russian": "ослеплять"
+  },
+  {
+    "english": "deacon",
+    "russian": "дьякон"
+  },
+  {
+    "english": "dead",
+    "russian": "мертвый"
+  },
+  {
+    "english": "deaf",
+    "russian": "глухой"
+  },
+  {
+    "english": "deal",
+    "russian": "сделка"
+  },
+  {
+    "english": "dean",
+    "russian": "декан"
+  },
+  {
+    "english": "dear",
+    "russian": "дорогой"
+  },
+  {
+    "english": "dearth",
+    "russian": "нехватка"
+  },
+  {
+    "english": "death",
+    "russian": "смерть"
+  },
+  {
+    "english": "debark",
+    "russian": "высаживаться"
+  },
+  {
+    "english": "debase",
+    "russian": "снижать"
+  },
+  {
+    "english": "debate",
+    "russian": "дебаты"
+  },
+  {
+    "english": "debauch",
+    "russian": "развращать"
+  },
+  {
+    "english": "debenture",
+    "russian": "облигация"
+  },
+  {
+    "english": "debilitate",
+    "russian": "ослаблять"
+  },
+  {
+    "english": "debit",
+    "russian": "дебет"
+  },
+  {
+    "english": "debris",
+    "russian": "обломки"
+  },
+  {
+    "english": "debt",
+    "russian": "долг"
+  },
+  {
+    "english": "debug",
+    "russian": "отлаживать"
+  },
+  {
+    "english": "debunk",
+    "russian": "разоблачать"
+  },
+  {
+    "english": "debut",
+    "russian": "дебют"
+  },
+  {
+    "english": "decade",
+    "russian": "десятилетие"
+  },
+  {
+    "english": "decadence",
+    "russian": "декаданс"
+  },
+  {
+    "english": "decant",
+    "russian": "декантировать"
+  },
+  {
+    "english": "decapitate",
+    "russian": "обезглавливать"
+  },
+  {
+    "english": "decay",
+    "russian": "распад"
+  },
+  {
+    "english": "decease",
+    "russian": "кончина"
+  },
+  {
+    "english": "deceive",
+    "russian": "обманывать"
+  },
+  {
+    "english": "decelerate",
+    "russian": "замедлять"
+  },
+  {
+    "english": "decent",
+    "russian": "приличный"
+  },
+  {
+    "english": "deception",
+    "russian": "обман"
+  },
+  {
+    "english": "decibel",
+    "russian": "децибел"
+  },
+  {
+    "english": "decide",
+    "russian": "решать"
+  },
+  {
+    "english": "decimal",
+    "russian": "десятичный"
+  },
+  {
+    "english": "decimate",
+    "russian": "истреблять"
+  },
+  {
+    "english": "decipher",
+    "russian": "расшифровывать"
+  },
+  {
+    "english": "decision",
+    "russian": "решение"
+  },
+  {
+    "english": "decisive",
+    "russian": "решительный"
+  },
+  {
+    "english": "deck",
+    "russian": "палуба"
+  },
+  {
+    "english": "declaim",
+    "russian": "декламировать"
+  },
+  {
+    "english": "declare",
+    "russian": "объявлять"
+  },
+  {
+    "english": "decline",
+    "russian": "снижение"
+  },
+  {
+    "english": "decode",
+    "russian": "декодировать"
+  },
+  {
+    "english": "decompose",
+    "russian": "разлагаться"
+  },
+  {
+    "english": "decor",
+    "russian": "декор"
+  },
+  {
+    "english": "decorate",
+    "russian": "украшать"
+  },
+  {
+    "english": "decorum",
+    "russian": "приличие"
+  },
+  {
+    "english": "decoy",
+    "russian": "приманка"
+  },
+  {
+    "english": "decrease",
+    "russian": "уменьшение"
+  },
+  {
+    "english": "decree",
+    "russian": "указ"
+  },
+  {
+    "english": "decrepit",
+    "russian": "ветхий"
+  },
+  {
+    "english": "decry",
+    "russian": "осуждать"
+  },
+  {
+    "english": "dedicate",
+    "russian": "посвящать"
+  },
+  {
+    "english": "deduce",
+    "russian": "выводить"
+  },
+  {
+    "english": "deduct",
+    "russian": "вычитать"
+  },
+  {
+    "english": "deed",
+    "russian": "деяние"
+  },
+  {
+    "english": "deem",
+    "russian": "считать"
+  },
+  {
+    "english": "deep",
+    "russian": "глубокий"
+  },
+  {
+    "english": "deer",
+    "russian": "олень"
+  },
+  {
+    "english": "deface",
+    "russian": "уродовать"
+  },
+  {
+    "english": "defame",
+    "russian": "порочить"
+  },
+  {
+    "english": "default",
+    "russian": "умолчание"
+  },
+  {
+    "english": "defeat",
+    "russian": "поражение"
+  },
+  {
+    "english": "defect",
+    "russian": "дефект"
+  },
+  {
+    "english": "defend",
+    "russian": "защищать"
+  },
+  {
+    "english": "defer",
+    "russian": "откладывать"
+  },
+  {
+    "english": "defiant",
+    "russian": "вызывающий"
+  },
+  {
+    "english": "deficient",
+    "russian": "недостаточный"
+  },
+  {
+    "english": "deficit",
+    "russian": "дефицит"
+  },
+  {
+    "english": "define",
+    "russian": "определять"
+  },
+  {
+    "english": "definite",
+    "russian": "определенный"
+  },
+  {
+    "english": "deflect",
+    "russian": "отклонять"
+  },
+  {
+    "english": "deforest",
+    "russian": "вырубать лес"
+  },
+  {
+    "english": "deform",
+    "russian": "деформировать"
+  },
+  {
+    "english": "defraud",
+    "russian": "обманывать"
+  },
+  {
+    "english": "defray",
+    "russian": "оплачивать"
+  },
+  {
+    "english": "deft",
+    "russian": "ловкий"
+  },
+  {
+    "english": "defunct",
+    "russian": "недействующий"
+  },
+  {
+    "english": "defy",
+    "russian": "бросать вызов"
+  },
+  {
+    "english": "degenerate",
+    "russian": "вырождаться"
+  },
+  {
+    "english": "degrade",
+    "russian": "разжаловать"
+  },
+  {
+    "english": "degree",
+    "russian": "степень"
+  },
+  {
+    "english": "dehydrate",
+    "russian": "обезвоживать"
+  },
+  {
+    "english": "deify",
+    "russian": "обожествлять"
+  },
+  {
+    "english": "deign",
+    "russian": "снисходить"
+  },
+  {
+    "english": "deity",
+    "russian": "божество"
+  },
+  {
+    "english": "deject",
+    "russian": "удручать"
+  },
+  {
+    "english": "delay",
+    "russian": "задержка"
+  },
+  {
+    "english": "delegate",
+    "russian": "делегат"
+  },
+  {
+    "english": "delete",
+    "russian": "удалять"
+  },
+  {
+    "english": "deleterious",
+    "russian": "вредный"
+  },
+  {
+    "english": "deliberate",
+    "russian": "обдуманный"
+  },
+  {
+    "english": "delicate",
+    "russian": "деликатный"
+  },
+  {
+    "english": "delicious",
+    "russian": "восхитительный"
+  },
+  {
+    "english": "delight",
+    "russian": "восторг"
+  },
+  {
+    "english": "delineate",
+    "russian": "очерчивать"
+  },
+  {
+    "english": "delinquent",
+    "russian": "правонарушитель"
+  },
+  {
+    "english": "delirious",
+    "russian": "бредовый"
+  },
+  {
+    "english": "deliver",
+    "russian": "доставлять"
+  },
+  {
+    "english": "delta",
+    "russian": "дельта"
+  },
+  {
+    "english": "delude",
+    "russian": "обманывать"
+  },
+  {
+    "english": "deluge",
+    "russian": "потоп"
+  },
+  {
+    "english": "delusion",
+    "russian": "заблуждение"
+  },
+  {
+    "english": "delve",
+    "russian": "углубляться"
+  },
+  {
+    "english": "demagogue",
+    "russian": "демагог"
+  },
+  {
+    "english": "demand",
+    "russian": "требование"
+  },
+  {
+    "english": "demean",
+    "russian": "унижать"
+  },
+  {
+    "english": "demeanor",
+    "russian": "поведение"
+  },
+  {
+    "english": "demented",
+    "russian": "безумный"
+  },
+  {
+    "english": "demise",
+    "russian": "кончина"
+  },
+  {
+    "english": "democracy",
+    "russian": "демократия"
+  },
+  {
+    "english": "demolish",
+    "russian": "разрушать"
+  },
+  {
+    "english": "demon",
+    "russian": "демон"
+  },
+  {
+    "english": "demonic",
+    "russian": "демонический"
+  },
+  {
+    "english": "demonstrate",
+    "russian": "демонстрировать"
+  },
+  {
+    "english": "demoralize",
+    "russian": "деморализовать"
+  },
+  {
+    "english": "demote",
+    "russian": "понижать"
+  },
+  {
+    "english": "demur",
+    "russian": "возражать"
+  },
+  {
+    "english": "demure",
+    "russian": "скромный"
+  },
+  {
+    "english": "den",
+    "russian": "логово"
+  },
+  {
+    "english": "denial",
+    "russian": "отрицание"
+  },
+  {
+    "english": "denigrate",
+    "russian": "чернить"
+  },
+  {
+    "english": "denizen",
+    "russian": "обитатель"
+  },
+  {
+    "english": "denominate",
+    "russian": "называть"
+  },
+  {
+    "english": "denote",
+    "russian": "обозначать"
+  },
+  {
+    "english": "denouement",
+    "russian": "развязка"
+  },
+  {
+    "english": "denounce",
+    "russian": "осуждать"
+  },
+  {
+    "english": "dense",
+    "russian": "густой"
+  },
+  {
+    "english": "dent",
+    "russian": "вмятина"
+  },
+  {
+    "english": "denture",
+    "russian": "зубной протез"
+  },
+  {
+    "english": "denude",
+    "russian": "оголять"
+  },
+  {
+    "english": "deny",
+    "russian": "отрицать"
+  },
+  {
+    "english": "depart",
+    "russian": "отправляться"
+  },
+  {
+    "english": "depend",
+    "russian": "зависеть"
+  },
+  {
+    "english": "depict",
+    "russian": "изображать"
+  },
+  {
+    "english": "deplete",
+    "russian": "истощать"
+  },
+  {
+    "english": "deplore",
+    "russian": "сожалеть"
+  },
+  {
+    "english": "deploy",
+    "russian": "развертывать"
+  },
+  {
+    "english": "depose",
+    "russian": "свергать"
+  },
+  {
+    "english": "deposit",
+    "russian": "депозит"
+  },
+  {
+    "english": "depot",
+    "russian": "депо"
+  },
+  {
+    "english": "deprave",
+    "russian": "развращать"
+  },
+  {
+    "english": "deprecate",
+    "russian": "осуждать"
+  },
+  {
+    "english": "depreciate",
+    "russian": "обесценивать"
+  },
+  {
+    "english": "depress",
+    "russian": "угнетать"
+  },
+  {
+    "english": "deprive",
+    "russian": "лишать"
+  },
+  {
+    "english": "depth",
+    "russian": "глубина"
+  },
+  {
+    "english": "deputation",
+    "russian": "делегация"
+  },
+  {
+    "english": "deputy",
+    "russian": "заместитель"
+  },
+  {
+    "english": "derange",
+    "russian": "расстраивать"
+  },
+  {
+    "english": "derelict",
+    "russian": "заброшенный"
+  },
+  {
+    "english": "deride",
+    "russian": "высмеивать"
+  },
+  {
+    "english": "derive",
+    "russian": "получать"
+  },
+  {
+    "english": "derogate",
+    "russian": "умалять"
+  },
+  {
+    "english": "descend",
+    "russian": "спускаться"
+  },
+  {
+    "english": "describe",
+    "russian": "описывать"
+  },
+  {
+    "english": "desecrate",
+    "russian": "осквернять"
+  },
+  {
+    "english": "desert",
+    "russian": "пустыня"
+  },
+  {
+    "english": "deserve",
+    "russian": "заслуживать"
+  },
+  {
+    "english": "design",
+    "russian": "дизайн"
+  },
+  {
+    "english": "desire",
+    "russian": "желание"
+  },
+  {
+    "english": "desist",
+    "russian": "прекращать"
+  },
+  {
+    "english": "desk",
+    "russian": "письменный стол"
+  },
+  {
+    "english": "desolate",
+    "russian": "пустынный"
+  },
+  {
+    "english": "despair",
+    "russian": "отчаяние"
+  },
+  {
+    "english": "despatch",
+    "russian": "отправлять"
+  },
+  {
+    "english": "desperate",
+    "russian": "отчаянный"
+  },
+  {
+    "english": "despise",
+    "russian": "презирать"
+  },
+  {
+    "english": "despite",
+    "russian": "несмотря на"
+  },
+  {
+    "english": "despoil",
+    "russian": "грабить"
+  },
+  {
+    "english": "despond",
+    "russian": "унывать"
+  },
+  {
+    "english": "despot",
+    "russian": "деспот"
+  },
+  {
+    "english": "dessert",
+    "russian": "десерт"
+  },
+  {
+    "english": "destination",
+    "russian": "назначение"
+  },
+  {
+    "english": "destiny",
+    "russian": "судьба"
+  },
+  {
+    "english": "destitute",
+    "russian": "нищий"
+  },
+  {
+    "english": "destroy",
+    "russian": "уничтожать"
+  },
+  {
+    "english": "destruct",
+    "russian": "разрушать"
+  },
+  {
+    "english": "detach",
+    "russian": "отделять"
+  },
+  {
+    "english": "detail",
+    "russian": "деталь"
+  },
+  {
+    "english": "detain",
+    "russian": "задерживать"
+  },
+  {
+    "english": "detect",
+    "russian": "обнаруживать"
+  },
+  {
+    "english": "deter",
+    "russian": "удерживать"
+  },
+  {
+    "english": "detergent",
+    "russian": "моющее средство"
+  },
+  {
+    "english": "deteriorate",
+    "russian": "ухудшаться"
+  },
+  {
+    "english": "determine",
+    "russian": "определять"
+  },
+  {
+    "english": "detest",
+    "russian": "ненавидеть"
+  },
+  {
+    "english": "dethrone",
+    "russian": "свергать"
+  },
+  {
+    "english": "detonate",
+    "russian": "взрывать"
+  },
+  {
+    "english": "detour",
+    "russian": "объезд"
+  },
+  {
+    "english": "detract",
+    "russian": "уменьшать"
+  },
+  {
+    "english": "detriment",
+    "russian": "вред"
+  },
+  {
+    "english": "deuce",
+    "russian": "двойка"
+  },
+  {
+    "english": "devastate",
+    "russian": "опустошать"
+  },
+  {
+    "english": "develop",
+    "russian": "развивать"
+  },
+  {
+    "english": "deviate",
+    "russian": "отклоняться"
+  },
+  {
+    "english": "device",
+    "russian": "устройство"
+  },
+  {
+    "english": "devil",
+    "russian": "дьявол"
+  },
+  {
+    "english": "devious",
+    "russian": "извилистый"
+  },
+  {
+    "english": "devise",
+    "russian": "разрабатывать"
+  },
+  {
+    "english": "devoid",
+    "russian": "лишенный"
+  },
+  {
+    "english": "devote",
+    "russian": "посвящать"
+  },
+  {
+    "english": "devour",
+    "russian": "пожирать"
+  },
+  {
+    "english": "devout",
+    "russian": "набожный"
+  },
+  {
+    "english": "dew",
+    "russian": "роса"
+  },
+  {
+    "english": "dexterity",
+    "russian": "ловкость"
+  },
+  {
+    "english": "diabetes",
+    "russian": "диабет"
+  },
+  {
+    "english": "diabolic",
+    "russian": "дьявольский"
+  },
+  {
+    "english": "diagnose",
+    "russian": "диагностировать"
+  },
+  {
+    "english": "diagonal",
+    "russian": "диагональ"
+  },
+  {
+    "english": "diagram",
+    "russian": "диаграмма"
+  },
+  {
+    "english": "dial",
+    "russian": "циферблат"
+  },
+  {
+    "english": "dialect",
+    "russian": "диалект"
+  },
+  {
+    "english": "diameter",
+    "russian": "диаметр"
+  },
+  {
+    "english": "diamond",
+    "russian": "алмаз"
+  },
+  {
+    "english": "diaper",
+    "russian": "подгузник"
+  },
+  {
+    "english": "diaphragm",
+    "russian": "диафрагма"
+  },
+  {
+    "english": "diarrhea",
+    "russian": "диарея"
+  },
+  {
+    "english": "diary",
+    "russian": "дневник"
+  },
+  {
+    "english": "diatribe",
+    "russian": "диатриба"
+  },
+  {
+    "english": "dice",
+    "russian": "игральные кости"
+  },
+  {
+    "english": "dictate",
+    "russian": "диктовать"
+  },
+  {
+    "english": "diction",
+    "russian": "дикция"
+  },
+  {
+    "english": "dictionary",
+    "russian": "словарь"
+  },
+  {
+    "english": "die",
+    "russian": "умирать"
+  },
+  {
+    "english": "diet",
+    "russian": "диета"
+  },
+  {
+    "english": "differ",
+    "russian": "отличаться"
+  },
+  {
+    "english": "difficult",
+    "russian": "трудный"
+  },
+  {
+    "english": "diffident",
+    "russian": "неуверенный"
+  },
+  {
+    "english": "diffuse",
+    "russian": "рассеивать"
+  },
+  {
+    "english": "digest",
+    "russian": "переваривать"
+  },
+  {
+    "english": "digit",
+    "russian": "цифра"
+  },
+  {
+    "english": "dignity",
+    "russian": "достоинство"
+  },
+  {
+    "english": "digress",
+    "russian": "отклоняться"
+  },
+  {
+    "english": "dilapidated",
+    "russian": "обветшалый"
+  },
+  {
+    "english": "dilate",
+    "russian": "расширять"
+  },
+  {
+    "english": "dilemma",
+    "russian": "дилемма"
+  },
+  {
+    "english": "diligent",
+    "russian": "прилежный"
+  },
+  {
+    "english": "dilute",
+    "russian": "разбавлять"
+  },
+  {
+    "english": "dim",
+    "russian": "тусклый"
+  },
+  {
+    "english": "dimension",
+    "russian": "измерение"
+  },
+  {
+    "english": "diminish",
+    "russian": "уменьшать"
+  },
+  {
+    "english": "diminutive",
+    "russian": "уменьшительный"
+  },
+  {
+    "english": "dimple",
+    "russian": "ямка"
+  },
+  {
+    "english": "din",
+    "russian": "шум"
+  },
+  {
+    "english": "dinghy",
+    "russian": "шлюпка"
+  },
+  {
+    "english": "dingy",
+    "russian": "закопченный"
+  },
+  {
+    "english": "dinner",
+    "russian": "обед"
+  },
+  {
+    "english": "dinosaur",
+    "russian": "динозавр"
+  },
+  {
+    "english": "diocese",
+    "russian": "епархия"
+  },
+  {
+    "english": "dioxide",
+    "russian": "диоксид"
+  },
+  {
+    "english": "dip",
+    "russian": "окунать"
+  },
+  {
+    "english": "diploma",
+    "russian": "диплом"
+  },
+  {
+    "english": "diplomacy",
+    "russian": "дипломатия"
+  },
+  {
+    "english": "dire",
+    "russian": "ужасный"
+  },
+  {
+    "english": "direct",
+    "russian": "прямой"
+  },
+  {
+    "english": "dirge",
+    "russian": "похоронный марш"
+  },
+  {
+    "english": "dirk",
+    "russian": "кортик"
+  },
+  {
+    "english": "dirt",
+    "russian": "грязь"
+  },
+  {
+    "english": "disability",
+    "russian": "инвалидность"
+  },
+  {
+    "english": "disable",
+    "russian": "отключать"
+  },
+  {
+    "english": "disabuse",
+    "russian": "выводить из заблуждения"
+  },
+  {
+    "english": "disadvantage",
+    "russian": "недостаток"
+  },
+  {
+    "english": "disaffected",
+    "russian": "недовольный"
+  },
+  {
+    "english": "disagree",
+    "russian": "не соглашаться"
+  },
+  {
+    "english": "disallow",
+    "russian": "не разрешать"
+  },
+  {
+    "english": "disappear",
+    "russian": "исчезать"
+  },
+  {
+    "english": "disappoint",
+    "russian": "разочаровывать"
+  },
+  {
+    "english": "disapprove",
+    "russian": "не одобрять"
+  },
+  {
+    "english": "disarm",
+    "russian": "разоружать"
+  },
+  {
+    "english": "disarray",
+    "russian": "беспорядок"
+  },
+  {
+    "english": "disaster",
+    "russian": "бедствие"
+  },
+  {
+    "english": "disavow",
+    "russian": "отрекаться"
+  },
+  {
+    "english": "disband",
+    "russian": "распускать"
+  },
+  {
+    "english": "disbelieve",
+    "russian": "не верить"
+  },
+  {
+    "english": "disburse",
+    "russian": "платить"
+  },
+  {
+    "english": "discard",
+    "russian": "отбрасывать"
+  },
+  {
+    "english": "discern",
+    "russian": "различать"
+  },
+  {
+    "english": "discharge",
+    "russian": "разряд"
+  },
+  {
+    "english": "disciple",
+    "russian": "ученик"
+  },
+  {
+    "english": "discipline",
+    "russian": "дисциплина"
+  },
+  {
+    "english": "disclaim",
+    "russian": "отрицать"
+  },
+  {
+    "english": "disclose",
+    "russian": "раскрывать"
+  },
+  {
+    "english": "disco",
+    "russian": "диско"
+  },
+  {
+    "english": "discolour",
+    "russian": "обесцвечивать"
+  },
+  {
+    "english": "discomfit",
+    "russian": "смущать"
+  },
+  {
+    "english": "discomfort",
+    "russian": "дискомфорт"
+  },
+  {
+    "english": "discompose",
+    "russian": "беспокоить"
+  },
+  {
+    "english": "disconcert",
+    "russian": "смущать"
+  },
+  {
+    "english": "disconnect",
+    "russian": "отключать"
+  },
+  {
+    "english": "disconsolate",
+    "russian": "безутешный"
+  },
+  {
+    "english": "discontent",
+    "russian": "недовольство"
+  },
+  {
+    "english": "discontinue",
+    "russian": "прекращать"
+  },
+  {
+    "english": "discord",
+    "russian": "разногласие"
+  },
+  {
+    "english": "discount",
+    "russian": "скидка"
+  },
+  {
+    "english": "discourage",
+    "russian": "обескураживать"
+  },
+  {
+    "english": "discourse",
+    "russian": "рассуждение"
+  },
+  {
+    "english": "discourteous",
+    "russian": "невежливый"
+  },
+  {
+    "english": "discover",
+    "russian": "обнаруживать"
+  },
+  {
+    "english": "discredit",
+    "russian": "дискредитировать"
+  },
+  {
+    "english": "discreet",
+    "russian": "осмотрительный"
+  },
+  {
+    "english": "discrepancy",
+    "russian": "несоответствие"
+  },
+  {
+    "english": "discrete",
+    "russian": "отдельный"
+  },
+  {
+    "english": "discretion",
+    "russian": "осмотрительность"
+  },
+  {
+    "english": "discriminate",
+    "russian": "различать"
+  },
+  {
+    "english": "discursive",
+    "russian": "бессвязный"
+  },
+  {
+    "english": "discuss",
+    "russian": "обсуждать"
+  },
+  {
+    "english": "disdain",
+    "russian": "пренебрежение"
+  },
+  {
+    "english": "disease",
+    "russian": "болезнь"
+  },
+  {
+    "english": "disembark",
+    "russian": "высаживаться"
+  },
+  {
+    "english": "disenchant",
+    "russian": "разочаровывать"
+  },
+  {
+    "english": "disengage",
+    "russian": "отключать"
+  },
+  {
+    "english": "disentangle",
+    "russian": "распутывать"
+  },
+  {
+    "english": "disfigure",
+    "russian": "уродовать"
+  },
+  {
+    "english": "disgorge",
+    "russian": "извергать"
+  },
+  {
+    "english": "disgrace",
+    "russian": "позор"
+  },
+  {
+    "english": "disguise",
+    "russian": "маскировка"
+  },
+  {
+    "english": "disgust",
+    "russian": "отвращение"
+  },
+  {
+    "english": "dish",
+    "russian": "блюдо"
+  },
+  {
+    "english": "dishearten",
+    "russian": "обескураживать"
+  },
+  {
+    "english": "dishevelled",
+    "russian": "растрепанный"
+  },
+  {
+    "english": "dishonest",
+    "russian": "нечестный"
+  },
+  {
+    "english": "dishonour",
+    "russian": "бесчестье"
+  },
+  {
+    "english": "disillusion",
+    "russian": "разочарование"
+  },
+  {
+    "english": "disincline",
+    "russian": "не склонять"
+  },
+  {
+    "english": "disinfect",
+    "russian": "дезинфицировать"
+  },
+  {
+    "english": "disingenuous",
+    "russian": "неискренний"
+  },
+  {
+    "english": "disinherit",
+    "russian": "лишать наследства"
+  },
+  {
+    "english": "disintegrate",
+    "russian": "распадаться"
+  },
+  {
+    "english": "disinter",
+    "russian": "эксгумировать"
+  },
+  {
+    "english": "disinterest",
+    "russian": "незаинтересованность"
+  },
+  {
+    "english": "disjointed",
+    "russian": "несвязный"
+  },
+  {
+    "english": "disk",
+    "russian": "диск"
+  },
+  {
+    "english": "dislike",
+    "russian": "неприязнь"
+  },
+  {
+    "english": "dislocate",
+    "russian": "вывихнуть"
+  },
+  {
+    "english": "dislodge",
+    "russian": "вытеснять"
+  },
+  {
+    "english": "disloyal",
+    "russian": "неверный"
+  },
+  {
+    "english": "dismal",
+    "russian": "мрачный"
+  },
+  {
+    "english": "dismantle",
+    "russian": "демонтировать"
+  },
+  {
+    "english": "dismay",
+    "russian": "испуг"
+  },
+  {
+    "english": "dismember",
+    "russian": "расчленять"
+  },
+  {
+    "english": "dismiss",
+    "russian": "увольнять"
+  },
+  {
+    "english": "dismount",
+    "russian": "спешиваться"
+  },
+  {
+    "english": "disobey",
+    "russian": "не подчиняться"
+  },
+  {
+    "english": "disorder",
+    "russian": "беспорядок"
+  },
+  {
+    "english": "disorganize",
+    "russian": "дезорганизовывать"
+  },
+  {
+    "english": "disown",
+    "russian": "отрекаться"
+  },
+  {
+    "english": "disparage",
+    "russian": "пренебрегать"
+  },
+  {
+    "english": "disparate",
+    "russian": "несоизмеримый"
+  },
+  {
+    "english": "disparity",
+    "russian": "неравенство"
+  },
+  {
+    "english": "dispassionate",
+    "russian": "бесстрастный"
+  },
+  {
+    "english": "dispatch",
+    "russian": "отправка"
+  },
+  {
+    "english": "dispel",
+    "russian": "рассеивать"
+  },
+  {
+    "english": "dispense",
+    "russian": "распределять"
+  },
+  {
+    "english": "disperse",
+    "russian": "рассеивать"
+  },
+  {
+    "english": "dispirit",
+    "russian": "удручать"
+  },
+  {
+    "english": "displace",
+    "russian": "перемещать"
+  },
+  {
+    "english": "display",
+    "russian": "дисплей"
+  },
+  {
+    "english": "displease",
+    "russian": "не нравиться"
+  },
+  {
+    "english": "disport",
+    "russian": "развлекаться"
+  },
+  {
+    "english": "dispose",
+    "russian": "располагать"
+  },
+  {
+    "english": "disprove",
+    "russian": "опровергать"
+  },
+  {
+    "english": "dispute",
+    "russian": "спор"
+  },
+  {
+    "english": "disqualify",
+    "russian": "дисквалифицировать"
+  },
+  {
+    "english": "disquiet",
+    "russian": "беспокойство"
+  },
+  {
+    "english": "disregard",
+    "russian": "игнорировать"
+  },
+  {
+    "english": "disrepair",
+    "russian": "неисправность"
+  },
+  {
+    "english": "disrepute",
+    "russian": "дурная слава"
+  },
+  {
+    "english": "disrespect",
+    "russian": "неуважение"
+  },
+  {
+    "english": "disrobe",
+    "russian": "раздеваться"
+  },
+  {
+    "english": "disrupt",
+    "russian": "нарушать"
+  },
+  {
+    "english": "dissatisfy",
+    "russian": "не удовлетворять"
+  },
+  {
+    "english": "dissect",
+    "russian": "рассекать"
+  },
+  {
+    "english": "dissemble",
+    "russian": "скрывать"
+  },
+  {
+    "english": "disseminate",
+    "russian": "распространять"
+  },
+  {
+    "english": "dissension",
+    "russian": "раздор"
+  },
+  {
+    "english": "dissent",
+    "russian": "несогласие"
+  },
+  {
+    "english": "dissertation",
+    "russian": "диссертация"
+  },
+  {
+    "english": "disservice",
+    "russian": "медвежья услуга"
+  },
+  {
+    "english": "dissident",
+    "russian": "диссидент"
+  },
+  {
+    "english": "dissimilar",
+    "russian": "несходный"
+  },
+  {
+    "english": "dissimulate",
+    "russian": "притворяться"
+  },
+  {
+    "english": "dissipate",
+    "russian": "рассеивать"
+  },
+  {
+    "english": "dissociate",
+    "russian": "отделять"
+  },
+  {
+    "english": "dissolute",
+    "russian": "распутный"
+  },
+  {
+    "english": "dissolve",
+    "russian": "растворять"
+  },
+  {
+    "english": "dissonance",
+    "russian": "диссонанс"
+  },
+  {
+    "english": "dissuade",
+    "russian": "отговаривать"
+  },
+  {
+    "english": "distaff",
+    "russian": "женский"
+  },
+  {
+    "english": "distance",
+    "russian": "расстояние"
+  },
+  {
+    "english": "distant",
+    "russian": "далекий"
+  },
+  {
+    "english": "distaste",
+    "russian": "отвращение"
+  },
+  {
+    "english": "distemper",
+    "russian": "чума"
+  },
+  {
+    "english": "distend",
+    "russian": "расширять"
+  },
+  {
+    "english": "distil",
+    "russian": "перегонять"
+  },
+  {
+    "english": "distinct",
+    "russian": "отчетливый"
+  },
+  {
+    "english": "distinguish",
+    "russian": "различать"
+  },
+  {
+    "english": "distort",
+    "russian": "искажать"
+  },
+  {
+    "english": "distract",
+    "russian": "отвлекать"
+  },
+  {
+    "english": "distraught",
+    "russian": "обезумевший"
+  },
+  {
+    "english": "distress",
+    "russian": "бедствие"
+  },
+  {
+    "english": "distribute",
+    "russian": "распределять"
+  },
+  {
+    "english": "district",
+    "russian": "район"
+  },
+  {
+    "english": "distrust",
+    "russian": "недоверие"
+  },
+  {
+    "english": "disturb",
+    "russian": "беспокоить"
+  },
+  {
+    "english": "disuse",
+    "russian": "неиспользование"
+  },
+  {
+    "english": "ditch",
+    "russian": "канава"
+  },
+  {
+    "english": "ditto",
+    "russian": "то же самое"
+  },
+  {
+    "english": "ditty",
+    "russian": "песенка"
+  },
+  {
+    "english": "diurnal",
+    "russian": "дневной"
+  },
+  {
+    "english": "divan",
+    "russian": "диван"
+  },
+  {
+    "english": "dive",
+    "russian": "нырять"
+  },
+  {
+    "english": "diverge",
+    "russian": "расходиться"
+  },
+  {
+    "english": "diverse",
+    "russian": "разнообразный"
+  },
+  {
+    "english": "divert",
+    "russian": "отвлекать"
+  },
+  {
+    "english": "divest",
+    "russian": "снимать"
+  },
+  {
+    "english": "divide",
+    "russian": "делить"
+  },
+  {
+    "english": "divine",
+    "russian": "божественный"
+  },
+  {
+    "english": "division",
+    "russian": "разделение"
+  },
+  {
+    "english": "divorce",
+    "russian": "развод"
+  },
+  {
+    "english": "divulge",
+    "russian": "разглашать"
+  },
+  {
+    "english": "dizzy",
+    "russian": "головокружительный"
+  },
+  {
+    "english": "docile",
+    "russian": "послушный"
+  },
+  {
+    "english": "dock",
+    "russian": "док"
+  },
+  {
+    "english": "docket",
+    "russian": "список"
+  },
+  {
+    "english": "doctor",
+    "russian": "врач"
+  },
+  {
+    "english": "doctrine",
+    "russian": "доктрина"
+  },
+  {
+    "english": "document",
+    "russian": "документ"
+  },
+  {
+    "english": "dodder",
+    "russian": "трястись"
+  },
+  {
+    "english": "dodge",
+    "russian": "уклоняться"
+  },
+  {
+    "english": "doe",
+    "russian": "лань"
+  },
+  {
+    "english": "doff",
+    "russian": "снимать"
+  },
+  {
+    "english": "dog",
+    "russian": "собака"
+  },
+  {
+    "english": "dogged",
+    "russian": "упорный"
+  },
+  {
+    "english": "dogma",
+    "russian": "догма"
+  },
+  {
+    "english": "doldrums",
+    "russian": "штиль"
+  },
+  {
+    "english": "dole",
+    "russian": "пособие"
+  },
+  {
+    "english": "doll",
+    "russian": "кукла"
+  },
+  {
+    "english": "dollar",
+    "russian": "доллар"
+  },
+  {
+    "english": "dolly",
+    "russian": "тележка"
+  },
+  {
+    "english": "dolor",
+    "russian": "скорбь"
+  },
+  {
+    "english": "dolphin",
+    "russian": "дельфин"
+  },
+  {
+    "english": "dolt",
+    "russian": "болван"
+  },
+  {
+    "english": "domain",
+    "russian": "домен"
+  },
+  {
+    "english": "dome",
+    "russian": "купол"
+  },
+  {
+    "english": "domestic",
+    "russian": "домашний"
+  },
+  {
+    "english": "domicile",
+    "russian": "жилище"
+  },
+  {
+    "english": "dominant",
+    "russian": "доминирующий"
+  },
+  {
+    "english": "dominate",
+    "russian": "доминировать"
+  },
+  {
+    "english": "domineer",
+    "russian": "властвовать"
+  },
+  {
+    "english": "dominion",
+    "russian": "владение"
+  },
+  {
+    "english": "domino",
+    "russian": "домино"
+  },
+  {
+    "english": "donate",
+    "russian": "жертвовать"
+  },
+  {
+    "english": "done",
+    "russian": "сделано"
+  },
+  {
+    "english": "donkey",
+    "russian": "осел"
+  },
+  {
+    "english": "donor",
+    "russian": "донор"
+  },
+  {
+    "english": "doodle",
+    "russian": "каракули"
+  },
+  {
+    "english": "doom",
+    "russian": "рок"
+  },
+  {
+    "english": "door",
+    "russian": "дверь"
+  },
+  {
+    "english": "dope",
+    "russian": "дурь"
+  },
+  {
+    "english": "dormant",
+    "russian": "спящий"
+  },
+  {
+    "english": "dormitory",
+    "russian": "общежитие"
+  },
+  {
+    "english": "dorsal",
+    "russian": "спинной"
+  },
+  {
+    "english": "dose",
+    "russian": "доза"
+  },
+  {
+    "english": "dossier",
+    "russian": "досье"
+  },
+  {
+    "english": "dot",
+    "russian": "точка"
+  },
+  {
+    "english": "dote",
+    "russian": "обожать"
+  },
+  {
+    "english": "double",
+    "russian": "двойной"
+  },
+  {
+    "english": "doubt",
+    "russian": "сомнение"
+  },
+  {
+    "english": "dough",
+    "russian": "тесто"
+  },
+  {
+    "english": "dour",
+    "russian": "суровый"
+  },
+  {
+    "english": "douse",
+    "russian": "окунать"
+  },
+  {
+    "english": "dove",
+    "russian": "голубь"
+  },
+  {
+    "english": "dowdy",
+    "russian": "безвкусный"
+  },
+  {
+    "english": "down",
+    "russian": "вниз"
+  },
+  {
+    "english": "downy",
+    "russian": "пушистый"
+  },
+  {
+    "english": "dowry",
+    "russian": "приданое"
+  },
+  {
+    "english": "doze",
+    "russian": "дремать"
+  },
+  {
+    "english": "dozen",
+    "russian": "дюжина"
+  },
+  {
+    "english": "drab",
+    "russian": "скучный"
+  },
+  {
+    "english": "draft",
+    "russian": "черновик"
+  },
+  {
+    "english": "drag",
+    "russian": "тянуть"
+  },
+  {
+    "english": "dragon",
+    "russian": "дракон"
+  },
+  {
+    "english": "dragoon",
+    "russian": "драгун"
+  },
+  {
+    "english": "drain",
+    "russian": "слив"
+  },
+  {
+    "english": "drake",
+    "russian": "селезень"
+  },
+  {
+    "english": "drama",
+    "russian": "драма"
+  },
+  {
+    "english": "drank",
+    "russian": "пил"
+  },
+  {
+    "english": "drape",
+    "russian": "драпировать"
+  },
+  {
+    "english": "drastic",
+    "russian": "решительный"
+  },
+  {
+    "english": "draw",
+    "russian": "рисовать"
+  },
+  {
+    "english": "drawback",
+    "russian": "недостаток"
+  },
+  {
+    "english": "drawer",
+    "russian": "ящик"
+  },
+  {
+    "english": "drawl",
+    "russian": "тянуть слова"
+  },
+  {
+    "english": "dread",
+    "russian": "страх"
+  },
+  {
+    "english": "dream",
+    "russian": "мечта"
+  },
+  {
+    "english": "dreary",
+    "russian": "унылый"
+  },
+  {
+    "english": "dredge",
+    "russian": "драга"
+  },
+  {
+    "english": "dregs",
+    "russian": "осадок"
+  },
+  {
+    "english": "drench",
+    "russian": "промочить"
+  },
+  {
+    "english": "dress",
+    "russian": "платье"
+  },
+  {
+    "english": "dresser",
+    "russian": "комод"
+  },
+  {
+    "english": "dribble",
+    "russian": "капать"
+  },
+  {
+    "english": "dried",
+    "russian": "сушеный"
+  },
+  {
+    "english": "drift",
+    "russian": "дрейф"
+  },
+  {
+    "english": "drill",
+    "russian": "сверло"
+  },
+  {
+    "english": "drink",
+    "russian": "пить"
+  },
+  {
+    "english": "drip",
+    "russian": "капать"
+  },
+  {
+    "english": "drive",
+    "russian": "водить"
+  },
+  {
+    "english": "drivel",
+    "russian": "нести чушь"
+  },
+  {
+    "english": "drizzle",
+    "russian": "моросить"
+  },
+  {
+    "english": "droll",
+    "russian": "забавный"
+  },
+  {
+    "english": "drone",
+    "russian": "дрон"
+  },
+  {
+    "english": "drool",
+    "russian": "пускать слюни"
+  },
+  {
+    "english": "droop",
+    "russian": "поникать"
+  },
+  {
+    "english": "drop",
+    "russian": "капля"
+  },
+  {
+    "english": "dross",
+    "russian": "отходы"
+  },
+  {
+    "english": "drought",
+    "russian": "засуха"
+  },
+  {
+    "english": "drove",
+    "russian": "гнал"
+  },
+  {
+    "english": "drown",
+    "russian": "тонуть"
+  },
+  {
+    "english": "drowse",
+    "russian": "дремать"
+  },
+  {
+    "english": "drudge",
+    "russian": "работать как лошадь"
+  },
+  {
+    "english": "drug",
+    "russian": "лекарство"
+  },
+  {
+    "english": "drum",
+    "russian": "барабан"
+  },
+  {
+    "english": "drunk",
+    "russian": "пьяный"
+  },
+  {
+    "english": "dry",
+    "russian": "сухой"
+  },
+  {
+    "english": "dual",
+    "russian": "двойной"
+  },
+  {
+    "english": "dub",
+    "russian": "дублировать"
+  },
+  {
+    "english": "dubious",
+    "russian": "сомнительный"
+  },
+  {
+    "english": "duck",
+    "russian": "утка"
+  },
+  {
+    "english": "duct",
+    "russian": "канал"
+  },
+  {
+    "english": "dud",
+    "russian": "неудача"
+  },
+  {
+    "english": "due",
+    "russian": "должный"
+  },
+  {
+    "english": "duel",
+    "russian": "дуэль"
+  },
+  {
+    "english": "duet",
+    "russian": "дуэт"
+  },
+  {
+    "english": "duff",
+    "russian": "пудинг"
+  },
+  {
+    "english": "duke",
+    "russian": "герцог"
+  },
+  {
+    "english": "dull",
+    "russian": "скучный"
+  },
+  {
+    "english": "duly",
+    "russian": "должным образом"
+  },
+  {
+    "english": "dumb",
+    "russian": "немой"
+  },
+  {
+    "english": "dummy",
+    "russian": "манекен"
+  },
+  {
+    "english": "dump",
+    "russian": "свалка"
+  },
+  {
+    "english": "dun",
+    "russian": "требовать"
+  },
+  {
+    "english": "dunce",
+    "russian": "тупица"
+  },
+  {
+    "english": "dune",
+    "russian": "дюна"
+  },
+  {
+    "english": "dung",
+    "russian": "навоз"
+  },
+  {
+    "english": "dungeon",
+    "russian": "темница"
+  },
+  {
+    "english": "dupe",
+    "russian": "простак"
+  },
+  {
+    "english": "duplex",
+    "russian": "дуплекс"
+  },
+  {
+    "english": "duplicate",
+    "russian": "дубликат"
+  },
+  {
+    "english": "duplicity",
+    "russian": "двуличие"
+  },
+  {
+    "english": "durable",
+    "russian": "прочный"
+  },
+  {
+    "english": "duration",
+    "russian": "продолжительность"
+  },
+  {
+    "english": "duress",
+    "russian": "принуждение"
+  },
+  {
+    "english": "during",
+    "russian": "в течение"
+  },
+  {
+    "english": "dusk",
+    "russian": "сумерки"
+  },
+  {
+    "english": "dust",
+    "russian": "пыль"
+  },
+  {
+    "english": "duty",
+    "russian": "обязанность"
+  },
+  {
+    "english": "dwarf",
+    "russian": "карлик"
+  },
+  {
+    "english": "dwell",
+    "russian": "обитать"
+  },
+  {
+    "english": "dwindle",
+    "russian": "сокращаться"
+  },
+  {
+    "english": "dye",
+    "russian": "краситель"
+  },
+  {
+    "english": "dynamic",
+    "russian": "динамический"
+  },
+  {
+    "english": "dynamite",
+    "russian": "динамит"
+  },
+  {
+    "english": "dynamo",
+    "russian": "динамо"
+  },
+  {
+    "english": "dynasty",
+    "russian": "династия"
+  },
+  {
+    "english": "dysentery",
+    "russian": "дизентерия"
+  },
+  {
+    "english": "dysfunction",
+    "russian": "дисфункция"
+  },
+  {
+    "english": "dyslexia",
+    "russian": "дислексия"
+  },
+  {
+    "english": "dyspepsia",
+    "russian": "диспепсия"
+  },
+  {
+    "english": "each",
+    "russian": "каждый"
+  },
+  {
+    "english": "eager",
+    "russian": "нетерпеливый"
+  },
+  {
+    "english": "eagle",
+    "russian": "орел"
+  },
+  {
+    "english": "ear",
+    "russian": "ухо"
+  },
+  {
+    "english": "earl",
+    "russian": "граф"
+  },
+  {
+    "english": "early",
+    "russian": "рано"
+  },
+  {
+    "english": "earn",
+    "russian": "зарабатывать"
+  },
+  {
+    "english": "earnest",
+    "russian": "серьезный"
+  },
+  {
+    "english": "earth",
+    "russian": "земля"
+  },
+  {
+    "english": "ease",
+    "russian": "легкость"
+  },
+  {
+    "english": "east",
+    "russian": "восток"
+  },
+  {
+    "english": "easy",
+    "russian": "легкий"
+  },
+  {
+    "english": "eat",
+    "russian": "есть"
+  },
+  {
+    "english": "eaves",
+    "russian": "карниз"
+  },
+  {
+    "english": "ebb",
+    "russian": "отлив"
+  },
+  {
+    "english": "ebony",
+    "russian": "черное дерево"
+  },
+  {
+    "english": "eccentric",
+    "russian": "эксцентричный"
+  },
+  {
+    "english": "echo",
+    "russian": "эхо"
+  },
+  {
+    "english": "eclipse",
+    "russian": "затмение"
+  },
+  {
+    "english": "ecology",
+    "russian": "экология"
+  },
+  {
+    "english": "economy",
+    "russian": "экономика"
+  },
+  {
+    "english": "ecstasy",
+    "russian": "экстаз"
+  },
+  {
+    "english": "eddy",
+    "russian": "водоворот"
+  },
+  {
+    "english": "edge",
+    "russian": "край"
+  },
+  {
+    "english": "edible",
+    "russian": "съедобный"
+  },
+  {
+    "english": "edict",
+    "russian": "указ"
+  },
+  {
+    "english": "edifice",
+    "russian": "здание"
+  },
+  {
+    "english": "edit",
+    "russian": "редактировать"
+  },
+  {
+    "english": "educate",
+    "russian": "обучать"
+  },
+  {
+    "english": "eerie",
+    "russian": "жуткий"
+  },
+  {
+    "english": "effect",
+    "russian": "эффект"
+  },
+  {
+    "english": "effeminate",
+    "russian": "женственный"
+  },
+  {
+    "english": "effervescent",
+    "russian": "игристой"
+  },
+  {
+    "english": "efficacious",
+    "russian": "эффективный"
+  },
+  {
+    "english": "efficient",
+    "russian": "эффективный"
+  },
+  {
+    "english": "effigy",
+    "russian": "изображение"
+  },
+  {
+    "english": "effort",
+    "russian": "усилие"
+  },
+  {
+    "english": "effrontery",
+    "russian": "наглость"
+  },
+  {
+    "english": "effulgent",
+    "russian": "лучезарный"
+  },
+  {
+    "english": "effusion",
+    "russian": "излияние"
+  },
+  {
+    "english": "egg",
+    "russian": "яйцо"
+  },
+  {
+    "english": "egotism",
+    "russian": "эготизм"
+  },
+  {
+    "english": "egregious",
+    "russian": "вопиющий"
+  },
+  {
+    "english": "eight",
+    "russian": "восемь"
+  },
+  {
+    "english": "either",
+    "russian": "либо"
+  },
+  {
+    "english": "ejaculate",
+    "russian": "восклицать"
+  },
+  {
+    "english": "eject",
+    "russian": "выбрасывать"
+  },
+  {
+    "english": "eke",
+    "russian": "добавлять"
+  },
+  {
+    "english": "elaborate",
+    "russian": "разработанный"
+  },
+  {
+    "english": "elapse",
+    "russian": "проходить"
+  },
+  {
+    "english": "elastic",
+    "russian": "эластичный"
+  },
+  {
+    "english": "elate",
+    "russian": "воодушевлять"
+  },
+  {
+    "english": "elbow",
+    "russian": "локоть"
+  },
+  {
+    "english": "elder",
+    "russian": "старший"
+  },
+  {
+    "english": "elect",
+    "russian": "выбирать"
+  },
+  {
+    "english": "elegant",
+    "russian": "элегантный"
+  },
+  {
+    "english": "element",
+    "russian": "элемент"
+  },
+  {
+    "english": "elephant",
+    "russian": "слон"
+  },
+  {
+    "english": "elevate",
+    "russian": "поднимать"
+  },
+  {
+    "english": "eleven",
+    "russian": "одиннадцать"
+  },
+  {
+    "english": "elf",
+    "russian": "эльф"
+  },
+  {
+    "english": "elicit",
+    "russian": "выявлять"
+  },
+  {
+    "english": "eligible",
+    "russian": "имеющий право"
+  },
+  {
+    "english": "eliminate",
+    "russian": "устранять"
+  },
+  {
+    "english": "elite",
+    "russian": "элита"
+  },
+  {
+    "english": "elk",
+    "russian": "лось"
+  },
+  {
+    "english": "elm",
+    "russian": "вяз"
+  },
+  {
+    "english": "elope",
+    "russian": "сбегать"
+  },
+  {
+    "english": "eloquent",
+    "russian": "красноречивый"
+  },
+  {
+    "english": "else",
+    "russian": "еще"
+  },
+  {
+    "english": "elucidate",
+    "russian": "разъяснять"
+  },
+  {
+    "english": "elude",
+    "russian": "ускользать"
+  },
+  {
+    "english": "elusive",
+    "russian": "неуловимый"
+  },
+  {
+    "english": "emaciated",
+    "russian": "истощенный"
+  },
+  {
+    "english": "emanate",
+    "russian": "исходить"
+  },
+  {
+    "english": "emancipate",
+    "russian": "освобождать"
+  },
+  {
+    "english": "embalm",
+    "russian": "бальзамировать"
+  },
+  {
+    "english": "embankment",
+    "russian": "набережная"
+  },
+  {
+    "english": "embargo",
+    "russian": "эмбарго"
+  },
+  {
+    "english": "embark",
+    "russian": "садиться на корабль"
+  },
+  {
+    "english": "embarrass",
+    "russian": "смущать"
+  },
+  {
+    "english": "embassy",
+    "russian": "посольство"
+  },
+  {
+    "english": "embed",
+    "russian": "встраивать"
+  },
+  {
+    "english": "embellish",
+    "russian": "украшать"
+  },
+  {
+    "english": "embers",
+    "russian": "угли"
+  },
+  {
+    "english": "embezzle",
+    "russian": "растрачивать"
+  },
+  {
+    "english": "serendipity",
+    "russian": "интуитивная прозорливость"
+  },
+  {
+    "english": "ephemeral",
+    "russian": "эфемерный"
+  },
+  {
+    "english": "quintessential",
+    "russian": "истинный"
+  },
+  {
+    "english": "mellifluous",
+    "russian": "мелодичный"
+  },
+  {
+    "english": "ineffable",
+    "russian": "невыразимый"
+  },
+  {
+    "english": "ubiquitous",
+    "russian": "вездесущий"
+  },
+  {
+    "english": "ambiguous",
+    "russian": "неоднозначный"
+  },
+  {
+    "english": "resilience",
+    "russian": "жизнестойкость"
+  },
+  {
+    "english": "vulnerability",
+    "russian": "уязвимость"
+  },
+  {
+    "english": "authenticity",
+    "russian": "аутентичность"
+  },
+  {
+    "english": "empathy",
+    "russian": "эмпатия"
+  },
+  {
+    "english": "apathy",
+    "russian": "апатия"
+  },
+  {
+    "english": "nostalgia",
+    "russian": "ностальгия"
+  },
+  {
+    "english": "melancholy",
+    "russian": "меланхолия"
+  },
+  {
+    "english": "euphoria",
+    "russian": "эйфория"
+  },
+  {
+    "english": "catharsis",
+    "russian": "катарсис"
+  },
+  {
+    "english": "epiphany",
+    "russian": "озарение"
+  },
+  {
+    "english": "paradigm",
+    "russian": "парадигма"
+  },
+  {
+    "english": "synthesis",
+    "russian": "синтез"
+  },
+  {
+    "english": "dichotomy",
+    "russian": "дихотомия"
+  },
+  {
+    "english": "anomaly",
+    "russian": "аномалия"
+  },
+  {
+    "english": "conundrum",
+    "russian": "головоломка"
+  },
+  {
+    "english": "quandary",
+    "russian": "затруднение"
+  },
+  {
+    "english": "dilemma",
+    "russian": "дилемма"
+  },
+  {
+    "english": "paradox",
+    "russian": "парадокс"
+  },
+  {
+    "english": "juxtaposition",
+    "russian": "сопоставление"
+  },
+  {
+    "english": "amalgamation",
+    "russian": "объединение"
+  },
+  {
+    "english": "proliferation",
+    "russian": "распространение"
+  },
+  {
+    "english": "mitigation",
+    "russian": "смягчение"
+  },
+  {
+    "english": "alleviation",
+    "russian": "облегчение"
+  },
+  {
+    "english": "obfuscation",
+    "russian": "запутывание"
+  },
+  {
+    "english": "redundancy",
+    "russian": "избыточность"
+  },
+  {
+    "english": "tangential",
+    "russian": "не относящийся к делу"
+  },
+  {
+    "english": "circumstantial",
+    "russian": "косвенный"
+  },
+  {
+    "english": "anecdotal",
+    "russian": "основанный на слухах"
+  },
+  {
+    "english": "empirical",
+    "russian": "эмпирический"
+  },
+  {
+    "english": "theoretical",
+    "russian": "теоретический"
+  },
+  {
+    "english": "hypothetical",
+    "russian": "гипотетический"
+  },
+  {
+    "english": "pragmatic",
+    "russian": "прагматичный"
+  },
+  {
+    "english": "utilitarian",
+    "russian": "утилитарный"
+  },
+  {
+    "english": "hedonistic",
+    "russian": "гедонистический"
+  },
+  {
+    "english": "stoic",
+    "russian": "стоический"
+  },
+  {
+    "english": "epicurean",
+    "russian": "эпикурейский"
+  },
+  {
+    "english": "ascetic",
+    "russian": "аскетичный"
+  },
+  {
+    "english": "spontaneous",
+    "russian": "спонтанный"
+  },
+  {
+    "english": "impulsive",
+    "russian": "импульсивный"
+  },
+  {
+    "english": "meticulous",
+    "russian": "дотошный"
+  },
+  {
+    "english": "fastidious",
+    "russian": "придирчивый"
+  },
+  {
+    "english": "gregarious",
+    "russian": "общительный"
+  },
+  {
+    "english": "introverted",
+    "russian": "интровертный"
+  },
+  {
+    "english": "extroverted",
+    "russian": "экстравертный"
+  },
+  {
+    "english": "ambivert",
+    "russian": "амбиверт"
+  },
+  {
+    "english": "loquacious",
+    "russian": "разговорчивый"
+  },
+  {
+    "english": "taciturn",
+    "russian": "молчаливый"
+  },
+  {
+    "english": "pensive",
+    "russian": "задумчивый"
+  },
+  {
+    "english": "contemplative",
+    "russian": "созерцательный"
+  },
+  {
+    "english": "meditative",
+    "russian": "медитативный"
+  },
+  {
+    "english": "transcendent",
+    "russian": "трансцендентный"
+  },
+  {
+    "english": "immanent",
+    "russian": "имманентный"
+  },
+  {
+    "english": "inherent",
+    "russian": "неотъемлемый"
+  },
+  {
+    "english": "intrinsic",
+    "russian": "внутренний"
+  },
+  {
+    "english": "extrinsic",
+    "russian": "внешний"
+  },
+  {
+    "english": "profound",
+    "russian": "глубокий"
+  },
+  {
+    "english": "superficial",
+    "russian": "поверхностный"
+  },
+  {
+    "english": "arbitrary",
+    "russian": "произвольный"
+  },
+  {
+    "english": "capricious",
+    "russian": "капризный"
+  },
+  {
+    "english": "whimsical",
+    "russian": "причудливый"
+  },
+  {
+    "english": "serene",
+    "russian": "безмятежный"
+  },
+  {
+    "english": "tranquil",
+    "russian": "спокойный"
+  },
+  {
+    "english": "chaotic",
+    "russian": "хаотичный"
+  },
+  {
+    "english": "turbulent",
+    "russian": "бурный"
+  },
+  {
+    "english": "voracious",
+    "russian": "жадный"
+  },
+  {
+    "english": "tenacious",
+    "russian": "цепкий"
+  },
+  {
+    "english": "pertinent",
+    "russian": "уместный"
+  },
+  {
+    "english": "relevant",
+    "russian": "актуальный"
+  },
+  {
+    "english": "obsolete",
+    "russian": "устаревший"
+  },
+  {
+    "english": "archaic",
+    "russian": "архаичный"
+  },
+  {
+    "english": "antiquated",
+    "russian": "древний"
+  },
+  {
+    "english": "contemporary",
+    "russian": "современный"
+  },
+  {
+    "english": "simultaneous",
+    "russian": "одновременный"
+  },
+  {
+    "english": "sporadic",
+    "russian": "спорадический"
+  },
+  {
+    "english": "incessant",
+    "russian": "беспрерывный"
+  },
+  {
+    "english": "perpetual",
+    "russian": "вечный"
+  },
+  {
+    "english": "ephemeral",
+    "russian": "недолговечный"
+  },
+  {
+    "english": "transient",
+    "russian": "преходящий"
+  },
+  {
+    "english": "fleeting",
+    "russian": "мимолетный"
+  },
+  {
+    "english": "eternal",
+    "russian": "вечный"
+  },
+  {
+    "english": "infinite",
+    "russian": "бесконечный"
+  },
+  {
+    "english": "finite",
+    "russian": "конечный"
+  },
+  {
+    "english": "myriad",
+    "russian": "бесчисленный"
+  },
+  {
+    "english": "plethora",
+    "russian": "изобилие"
+  },
+  {
+    "english": "myriad",
+    "russian": "множество"
+  },
+  {
+    "english": "surfeit",
+    "russian": "излишек"
+  },
+  {
+    "english": "deficit",
+    "russian": "дефицит"
+  },
+  {
+    "english": "epitome",
+    "russian": "воплощение"
+  },
+  {
+    "english": "quintessence",
+    "russian": "квинтэссенция"
+  },
+  {
+    "english": "embodiment",
+    "russian": "олицетворение"
+  },
+  {
+    "english": "personification",
+    "russian": "персонификация"
+  },
+  {
+    "english": "zenith",
+    "russian": "зенит"
+  },
+  {
+    "english": "nadir",
+    "russian": "надир"
+  },
+  {
+    "english": "apex",
+    "russian": "вершина"
+  },
+  {
+    "english": "pinnacle",
+    "russian": "высшая точка"
+  },
+  {
+    "english": "acme",
+    "russian": "расцвет"
+  },
+  {
+    "english": "epicenter",
+    "russian": "эпицентр"
+  },
+  {
+    "english": "milieu",
+    "russian": "среда"
+  },
+  {
+    "english": "ambiance",
+    "russian": "атмосфера"
+  },
+  {
+    "english": "zeitgeist",
+    "russian": "дух времени"
+  },
+  {
+    "english": "self-identity",
+    "russian": "самоидентичность"
+  },
+  {
+    "english": "personal identity",
+    "russian": "личностная идентичность"
+  },
+  {
+    "english": "social identity",
+    "russian": "социальная идентичность"
+  },
+  {
+    "english": "self-categorization",
+    "russian": "самокатегоризация"
+  },
+  {
+    "english": "self-schema",
+    "russian": "Я-схема"
+  },
+  {
+    "english": "possible selves",
+    "russian": "возможные Я"
+  },
+  {
+    "english": "ideal self",
+    "russian": "идеальное Я"
+  },
+  {
+    "english": "actual self",
+    "russian": "реальное Я"
+  },
+  {
+    "english": "ought self",
+    "russian": "должное Я"
+  },
+  {
+    "english": "self-discrepancy",
+    "russian": "самонесоответствие"
+  },
+  {
+    "english": "self-verification",
+    "russian": "самоверификация"
+  },
+  {
+    "english": "self-enhancement",
+    "russian": "самовозвеличивание"
+  },
+  {
+    "english": "self-consistency",
+    "russian": "самосогласованность"
+  },
+  {
+    "english": "self-presentation",
+    "russian": "самопрезентация"
+  },
+  {
+    "english": "self-disclosure",
+    "russian": "самораскрытие"
+  },
+  {
+    "english": "self-handicapping",
+    "russian": "самопрепятствование"
+  },
+  {
+    "english": "self-serving bias",
+    "russian": "самослужащее искажение"
+  },
+  {
+    "english": "self-fulfilling prophecy",
+    "russian": "самоисполняющееся пророчество"
+  },
+  {
+    "english": "introspective method",
+    "russian": "интроспективный метод"
+  },
+  {
+    "english": "systematic introspection",
+    "russian": "систематическая интроспекция"
+  },
+  {
+    "english": "analytic introspection",
+    "russian": "аналитическая интроспекция"
+  },
+  {
+    "english": "experimental introspection",
+    "russian": "экспериментальная интроспекция"
+  },
+  {
+    "english": "phenomenological method",
+    "russian": "феноменологический метод"
+  },
+  {
+    "english": "eidetic reduction",
+    "russian": "эйдетическая редукция"
+  },
+  {
+    "english": "transcendental reduction",
+    "russian": "трансцендентальная редукция"
+  },
+  {
+    "english": "bracketing",
+    "russian": "эпохе (заключение в скобки)"
+  },
+  {
+    "english": "lifeworld",
+    "russian": "жизненный мир"
+  },
+  {
+    "english": "intentionality",
+    "russian": "интенциональность"
+  },
+  {
+    "english": "self-reflection",
+    "russian": "саморефлексия"
+  },
+  {
+    "english": "consciousness",
+    "russian": "сознание"
+  },
+  {
+    "english": "subconsciousness",
+    "russian": "подсознание"
+  },
+  {
+    "english": "self-perception",
+    "russian": "самовосприятие"
+  },
+  {
+    "english": "self-concept",
+    "russian": "Я-концепция"
+  },
+  {
+    "english": "self-esteem",
+    "russian": "самооценка"
+  },
+  {
+    "english": "self-knowledge",
+    "russian": "самопознание"
+  },
+  {
+    "english": "self-understanding",
+    "russian": "самопонимание"
+  },
+  {
+    "english": "self-examination",
+    "russian": "самоисследование"
+  },
+  {
+    "english": "self-observation",
+    "russian": "самонаблюдение"
+  },
+  {
+    "english": "self-analysis",
+    "russian": "самоанализ"
+  },
+  {
+    "english": "rumination",
+    "russian": "руминация"
+  },
+  {
+    "english": "mindfulness",
+    "russian": "осознанность"
+  },
+  {
+    "english": "insight",
+    "russian": "инсайт"
+  },
+  {
+    "english": "awareness",
+    "russian": "осознание"
+  },
+  {
+    "english": "self-monitoring",
+    "russian": "самоконтроль"
+  },
+  {
+    "english": "self-regulation",
+    "russian": "саморегуляция"
+  },
+  {
+    "english": "self-consciousness",
+    "russian": "стеснительность / самосознание (в философии)"
+  },
+  {
+    "english": "self-efficacy",
+    "russian": "самоэффективность"
+  },
+  {
+    "english": "introspection illusion",
+    "russian": "иллюзия интроспекции"
+  },
+  {
+    "english": "self-report",
+    "russian": "самоотчет"
+  },
+  {
+    "english": "autobiographical memory",
+    "russian": "автобиографическая память"
+  },
+  {
+    "english": "self-narrative",
+    "russian": "самонарратив"
+  },
+  {
+    "english": "identity",
+    "russian": "идентичность"
+  },
+  {
+    "english": "ego",
+    "russian": "эго"
+  },
+  {
+    "english": "superego",
+    "russian": "суперэго"
+  },
+  {
+    "english": "id",
+    "russian": "ид (Оно)"
+  },
+  {
+    "english": "self-actualization",
+    "russian": "самоактуализация"
+  },
+  {
+    "english": "self-transcendence",
+    "russian": "самотрансценденция"
+  },
+  {
+    "english": "inner speech",
+    "russian": "внутренняя речь"
+  },
+  {
+    "english": "self-talk",
+    "russian": "внутренний диалог"
+  },
+  {
+    "english": "self-distancing",
+    "russian": "самодистанцирование"
+  },
+  {
+    "english": "decentering",
+    "russian": "децентрация"
+  },
+  {
+    "english": "perspective-taking",
+    "russian": "принятие перспективы"
+  },
+  {
+    "english": "theory of mind",
+    "russian": "теория сознания"
+  },
+  {
+    "english": "empathy",
+    "russian": "эмпатия"
+  },
+  {
+    "english": "sympathy",
+    "russian": "симпатия"
+  },
+  {
+    "english": "compassion",
+    "russian": "сострадание"
+  },
+  {
+    "english": "self-compassion",
+    "russian": "самосострадание"
+  },
+  {
+    "english": "self-acceptance",
+    "russian": "самопринятие"
+  },
+  {
+    "english": "self-worth",
+    "russian": "самоценность"
+  },
+  {
+    "english": "self-love",
+    "russian": "самолюбие"
+  },
+  {
+    "english": "narcissism",
+    "russian": "нарциссизм"
+  },
+  {
+    "english": "egocentrism",
+    "russian": "эгоцентризм"
+  },
+  {
+    "english": "introspectionist",
+    "russian": "интроспекционист"
+  },
+  {
+    "english": "phenomenological",
+    "russian": "феноменологический"
+  },
+  {
+    "english": "executive functions",
+    "russian": "исполнительные функции"
+  },
+  {
+    "english": "cognitive bias",
+    "russian": "когнитивное искажение"
+  },
+  {
+    "english": "introspective access",
+    "russian": "интроспективный доступ"
+  },
+  {
+    "english": "first-person perspective",
+    "russian": "перволичная перспектива"
+  },
+  {
+    "english": "qualia",
+    "russian": "квалиа"
+  },
+  {
+    "english": "oblivion",
+    "russian": "забвение"
+  },
+  {
+    "english": "solitude",
+    "russian": "одиночество"
+  },
+  {
+    "english": "isolation",
+    "russian": "изоляция"
+  },
+  {
+    "english": "seclusion",
+    "russian": "уединение"
+  },
+  {
+    "english": "reverie",
+    "russian": "грезы"
+  },
+  {
+    "english": "daydream",
+    "russian": "мечта"
+  },
+  {
+    "english": "hallucination",
+    "russian": "галлюцинация"
+  },
+  {
+    "english": "illusion",
+    "russian": "иллюзия"
+  },
+  {
+    "english": "delusion",
+    "russian": "заблуждение"
+  },
+  {
+    "english": "mirage",
+    "russian": "мираж"
+  },
+  {
+    "english": "chimera",
+    "russian": "химера"
+  },
+  {
+    "english": "enigma",
+    "russian": "загадка"
+  },
+  {
+    "english": "mystery",
+    "russian": "тайна"
+  },
+  {
+    "english": "riddle",
+    "russian": "загадка"
+  },
+  {
+    "english": "puzzle",
+    "russian": "головоломка"
+  },
+  {
+    "english": "labyrinth",
+    "russian": "лабиринт"
+  },
+  {
+    "english": "maze",
+    "russian": "путаница"
+  },
+  {
+    "english": "chaos",
+    "russian": "хаос"
+  },
+  {
+    "english": "disarray",
+    "russian": "беспорядок"
+  },
+  {
+    "english": "turmoil",
+    "russian": "суматоха"
+  },
+  {
+    "english": "upheaval",
+    "russian": "переворот"
+  },
+  {
+    "english": "cataclysm",
+    "russian": "катаклизм"
+  },
+  {
+    "english": "calamity",
+    "russian": "бедствие"
+  },
+  {
+    "english": "catastrophe",
+    "russian": "катастрофа"
+  },
+  {
+    "english": "disaster",
+    "russian": "несчастье"
+  },
+  {
+    "english": "fiasco",
+    "russian": "фиаско"
+  },
+  {
+    "english": "debacle",
+    "russian": "разгром"
+  },
+  {
+    "english": "bonanza",
+    "russian": "золотая жила"
+  },
+  {
+    "english": "windfall",
+    "russian": "неожиданная удача"
+  },
+  {
+    "english": "jackpot",
+    "russian": "джекпот"
+  },
+  {
+    "english": "serendipity",
+    "russian": "счастливая случайность"
+  },
+  {
+    "english": "fortitude",
+    "russian": "стойкость"
+  },
+  {
+    "english": "perseverance",
+    "russian": "настойчивость"
+  },
+  {
+    "english": "tenacity",
+    "russian": "упорство"
+  },
+  {
+    "english": "determination",
+    "russian": "решимость"
+  },
+  {
+    "english": "resolve",
+    "russian": "твердость"
+  },
+  {
+    "english": "conviction",
+    "russian": "убежденность"
+  },
+  {
+    "english": "dogma",
+    "russian": "догма"
+  },
+  {
+    "english": "doctrine",
+    "russian": "доктрина"
+  },
+  {
+    "english": "ideology",
+    "russian": "идеология"
+  },
+  {
+    "english": "philosophy",
+    "russian": "философия"
+  },
+  {
+    "english": "worldview",
+    "russian": "мировоззрение"
+  },
+  {
+    "english": "perspective",
+    "russian": "перспектива"
+  },
+  {
+    "english": "standpoint",
+    "russian": "точка зрения"
+  },
+  {
+    "english": "viewpoint",
+    "russian": "позиция"
+  },
+  {
+    "english": "outlook",
+    "russian": "взгляд"
+  },
+  {
+    "english": "mindset",
+    "russian": "образ мышления"
+  },
+  {
+    "english": "mentality",
+    "russian": "менталитет"
+  },
+  {
+    "english": "psyche",
+    "russian": "психика"
+  },
+  {
+    "english": "soul",
+    "russian": "душа"
+  },
+  {
+    "english": "spirit",
+    "russian": "дух"
+  },
+  {
+    "english": "essence",
+    "russian": "сущность"
+  },
+  {
+    "english": "core",
+    "russian": "ядро"
+  },
+  {
+    "english": "nucleus",
+    "russian": "центр"
+  },
+  {
+    "english": "heart",
+    "russian": "сердце"
+  },
+  {
+    "english": "crux",
+    "russian": "суть"
+  },
+  {
+    "english": "gist",
+    "russian": "суть"
+  },
+  {
+    "english": "kernel",
+    "russian": "зерно"
+  },
+  {
+    "english": "marrow",
+    "russian": "костный мозг"
+  },
+  {
+    "english": "pith",
+    "russian": "сердцевина"
+  },
+  {
+    "english": "quintessence",
+    "russian": "квинтэссенция"
+  },
+  {
+    "english": "archetype",
+    "russian": "архетип"
+  },
+  {
+    "english": "prototype",
+    "russian": "прототип"
+  },
+  {
+    "english": "stereotype",
+    "russian": "стереотип"
+  },
+  {
+    "english": "cliche",
+    "russian": "клише"
+  },
+  {
+    "english": "banality",
+    "russian": "банальность"
+  },
+  {
+    "english": "triviality",
+    "russian": "тривиальность"
+  },
+  {
+    "english": "profundity",
+    "russian": "глубина"
+  },
+  {
+    "english": "subtlety",
+    "russian": "тонкость"
+  },
+  {
+    "english": "nuance",
+    "russian": "нюанс"
+  },
+  {
+    "english": "shade",
+    "russian": "оттенок"
+  },
+  {
+    "english": "hue",
+    "russian": "цвет"
+  },
+  {
+    "english": "tinge",
+    "russian": "оттенок"
+  },
+  {
+    "english": "tint",
+    "russian": "отлив"
+  },
+  {
+    "english": "palette",
+    "russian": "палитра"
+  },
+  {
+    "english": "spectrum",
+    "russian": "спектр"
+  },
+  {
+    "english": "continuum",
+    "russian": "континуум"
+  },
+  {
+    "english": "gradient",
+    "russian": "градиент"
+  },
+  {
+    "english": "transition",
+    "russian": "переход"
+  },
+  {
+    "english": "metamorphosis",
+    "russian": "метаморфоза"
+  },
+  {
+    "english": "transformation",
+    "russian": "трансформация"
+  },
+  {
+    "english": "transmutation",
+    "russian": "превращение"
+  },
+  {
+    "english": "transfiguration",
+    "russian": "преображение"
+  },
+  {
+    "english": "evolution",
+    "russian": "эволюция"
+  },
+  {
+    "english": "revolution",
+    "russian": "революция"
+  },
+  {
+    "english": "devolution",
+    "russian": "деградация"
+  },
+  {
+    "english": "involution",
+    "russian": "инволюция"
+  },
+  {
+    "english": "progression",
+    "russian": "прогрессия"
+  },
+  {
+    "english": "regression",
+    "russian": "регрессия"
+  },
+  {
+    "english": "digression",
+    "russian": "отступление"
+  },
+  {
+    "english": "tangent",
+    "russian": "отклонение"
+  },
+  {
+    "english": "aside",
+    "russian": "отступление"
+  },
+  {
+    "english": "parenthesis",
+    "russian": "скобки"
+  },
+  {
+    "english": "interlude",
+    "russian": "интерлюдия"
+  },
+  {
+    "english": "intermission",
+    "russian": "перерыв"
+  },
+  {
+    "english": "hiatus",
+    "russian": "перерыв"
+  },
+  {
+    "english": "lull",
+    "russian": "затишье"
+  },
+  {
+    "english": "respite",
+    "russian": "передышка"
+  },
+  {
+    "english": "repose",
+    "russian": "отдых"
+  },
+  {
+    "english": "leisure",
+    "russian": "досуг"
+  },
+  {
+    "english": "idleness",
+    "russian": "безделье"
+  },
+  {
+    "english": "sloth",
+    "russian": "лень"
+  },
+  {
+    "english": "procrastination",
+    "russian": "прокрастинация"
+  },
+  {
+    "english": "diligence",
+    "russian": "усердие"
+  },
+  {
+    "english": "assiduity",
+    "russian": "прилежание"
+  },
+  {
+    "english": "industry",
+    "russian": "трудолюбие"
+  },
+  {
+    "english": "labor",
+    "russian": "труд"
+  },
+  {
+    "english": "toil",
+    "russian": "тяжелый труд"
+  },
+  {
+    "english": "grind",
+    "russian": "монотонная работа"
+  },
+  {
+    "english": "hustle",
+    "russian": "суета"
+  },
+  {
+    "english": "endeavor",
+    "russian": "попытка"
+  },
+  {
+    "english": "undertaking",
+    "russian": "предприятие"
+  },
+  {
+    "english": "venture",
+    "russian": "рискованное предприятие"
+  },
+  {
+    "english": "enterprise",
+    "russian": "предприятие"
+  },
+  {
+    "english": "initiative",
+    "russian": "инициатива"
+  },
+  {
+    "english": "drive",
+    "russian": "драйв"
+  },
+  {
+    "english": "motivation",
+    "russian": "мотивация"
+  },
+  {
+    "english": "inspiration",
+    "russian": "вдохновение"
+  },
+  {
+    "english": "aspiration",
+    "russian": "стремление"
+  },
+  {
+    "english": "ambition",
+    "russian": "амбиция"
+  },
+  {
+    "english": "zeal",
+    "russian": "рвение"
+  },
+  {
+    "english": "fervor",
+    "russian": "пыл"
+  },
+  {
+    "english": "ardor",
+    "russian": "жар"
+  },
+  {
+    "english": "enthusiasm",
+    "russian": "энтузиазм"
+  },
+  {
+    "english": "passion",
+    "russian": "страсть"
+  },
+  {
+    "english": "obsession",
+    "russian": "одержимость"
+  },
+  {
+    "english": "fixation",
+    "russian": "фиксация"
+  },
+  {
+    "english": "infatuation",
+    "russian": "увлечение"
+  },
+  {
+    "english": "craving",
+    "russian": "сильное желание"
+  },
+  {
+    "english": "yearning",
+    "russian": "тоска"
+  },
+  {
+    "english": "longing",
+    "russian": "томление"
+  },
+  {
+    "english": "homesickness",
+    "russian": "тоска по дому"
+  },
+  {
+    "english": "wanderlust",
+    "russian": "страсть к путешествиям"
+  },
+  {
+    "english": "curiosity",
+    "russian": "любопытство"
+  },
+  {
+    "english": "inquisitiveness",
+    "russian": "пытливость"
+  }
+]
