@@ -4,10 +4,9 @@ from datetime import date
 
 from PyQt5.QtCore import QCoreApplication
 
-from db.connection import connect, init_db, transaction
-from db.repository import ProgressRepository, UserRepository, WordRepository
-from services.progress_service import ProgressService
-from services.vocabulary_service import VocabularyService
+from database import (ProgressRepository, UserRepository, WordRepository, connect, init_db,
+                      transaction)
+from services import ProgressService, VocabularyService
 
 app = QCoreApplication.instance() or QCoreApplication([])
 

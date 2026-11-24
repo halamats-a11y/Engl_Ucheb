@@ -1,10 +1,10 @@
 """
-app_controller.py — запуск приложения: база, вход, главное окно.
+app.py — запуск приложения: база, вход, главное окно.
 
 Контроллер собирает приложение из слоёв:
-    db/        — подключение и репозитории (SQL)
-    services/  — бизнес-логика (словарь, прогресс)
-    views/     — окна PyQt5
+    database.py — подключение и репозитории (SQL)
+    services.py — бизнес-логика (словарь, прогресс)
+    windows/    — окна PyQt5
 Показывает окно входа или сразу главное окно (если пользователь уже входил).
 """
 import sys
@@ -12,14 +12,12 @@ import sys
 from PyQt5.QtGui import QColor, QIcon, QPalette
 from PyQt5.QtWidgets import QApplication
 
-from db.connection import connect, init_db
-from db.repository import (ProgressRepository, SessionRepository,
-                           UserRepository, WordRepository)
-from services.progress_service import ProgressService
-from services.vocabulary_service import VocabularyService
-from utils.paths import icon_path
-from views.login_window import LoginWindow
-from views.main_window import LanguageLearningApp
+from database import (ProgressRepository, SessionRepository, UserRepository, WordRepository,
+                      connect, init_db)
+from services import ProgressService, VocabularyService
+from utils import icon_path
+from windows.login_window import LoginWindow
+from windows.main_window import LanguageLearningApp
 
 
 class AppController:

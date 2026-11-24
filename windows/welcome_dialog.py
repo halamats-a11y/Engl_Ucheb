@@ -19,10 +19,9 @@ from PyQt5.QtWidgets import (QDialog, QVBoxLayout, QHBoxLayout, QLabel,
                              QPushButton, QFrame, QProgressBar)
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QFont
-from utils.styles import (HINT_TEXT_STYLE, TEXT_DARK_STYLE, TRANSPARENT_STYLE,
-                          WELCOME_CONGRATS_STYLE, WELCOME_DIALOG_STYLE, WELCOME_GOAL_PCT_STYLE,
-                          WELCOME_GOAL_TEXT_STYLE, WELCOME_GOAL_TITLE_STYLE, WELCOME_OK_BTN_STYLE,
-                          WELCOME_STREAK_NUM_STYLE)
+from styles import (HINT_TEXT_STYLE, TEXT_DARK_STYLE, TRANSPARENT_STYLE, WELCOME_CONGRATS_STYLE,
+                    WELCOME_DIALOG_STYLE, WELCOME_GOAL_PCT_STYLE, WELCOME_GOAL_TEXT_STYLE,
+                    WELCOME_GOAL_TITLE_STYLE, WELCOME_OK_BTN_STYLE, WELCOME_STREAK_NUM_STYLE)
 
 
 class WelcomeDialog(QDialog):

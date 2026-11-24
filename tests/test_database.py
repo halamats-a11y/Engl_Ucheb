@@ -1,9 +1,8 @@
 import tempfile
 import unittest
 
-from db.connection import connect, init_db
-from db.repository import (ProgressRepository, SessionRepository, UserExistsError,
-                           UserRepository, WordRepository)
+from database import (ProgressRepository, SessionRepository, UserExistsError, UserRepository,
+                      WordRepository, connect, init_db)
 
 
 class DatabaseTests(unittest.TestCase):

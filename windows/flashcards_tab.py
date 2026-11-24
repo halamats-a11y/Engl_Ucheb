@@ -7,10 +7,10 @@ from PyQt5.QtWidgets import (QWidget, QVBoxLayout, QHBoxLayout, QLabel,
                              QPushButton, QFrame, QMessageBox)
 from PyQt5.QtCore import Qt, QTimer, pyqtSignal
 from PyQt5.QtGui import QFont
-from utils.styles import (BTN_SECONDARY_STYLE, BTN_START_STYLE, BTN_STOP_STYLE, BTN_SUCCESS_STYLE,
-                          CARDS_BIG_WORD_STYLE, CARDS_DONE_FRAME_STYLE, CARDS_TIMER_BTN_STYLE,
-                          CARDS_TIME_STYLE, CARD_FRAME_STYLE, CARD_TRANSLATION_FLAT_STYLE,
-                          COUNTER_STYLE, GRADIENT_FRAME_STYLE, LIGHT_MSG_STYLE, PAGE_TITLE_STYLE)
+from styles import (BTN_SECONDARY_STYLE, BTN_START_STYLE, BTN_STOP_STYLE, BTN_SUCCESS_STYLE,
+                    CARDS_BIG_WORD_STYLE, CARDS_DONE_FRAME_STYLE, CARDS_TIMER_BTN_STYLE,
+                    CARDS_TIME_STYLE, CARD_FRAME_STYLE, CARD_TRANSLATION_FLAT_STYLE, COUNTER_STYLE,
+                    GRADIENT_FRAME_STYLE, LIGHT_MSG_STYLE, PAGE_TITLE_STYLE)
 
 
 class FlashcardsTab(QWidget):

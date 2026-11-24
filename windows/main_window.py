@@ -7,7 +7,7 @@ main_window.py — главное окно приложения после вх�
     боковая навигация, шапка с именем пользователя и кнопка «Выйти».
 
 Как вписывается в приложение (слои):
-    окна (views/)  →  сервисы (services/)  →  репозитории (db/)  →  база SQLite
+    окна (windows/)  →  сервисы (services.py)  →  репозитории (database.py)  →  база SQLite
     1. Пользователь входит через login_window.py.
     2. AppController создаёт сервисы и это окно.
     3. Вкладки ничего не записывают сами: они отправляют сигналы (pyqtSignal),
@@ -18,24 +18,24 @@ main_window.py — главное окно приложения после вх�
     • QMainWindow — стандартное «главное» окно PyQt5 с заголовком и кнопками свернуть/закрыть.
     • QStackedWidget — «стопка» виджетов: видна только одна вкладка за раз.
     • Сигнал/слот — вкладка «звонит» (emit), окно заранее решило, кто «ответит» (connect).
-    • Серия дней (streak) и дневная цель считаются в services/progress_service.py.
+    • Серия дней (streak) и дневная цель считаются в services.py (ProgressService).
 """
 from PyQt5.QtCore import Qt, QTimer, pyqtSignal
 from PyQt5.QtGui import QFont, QPixmap
 from PyQt5.QtWidgets import (QHBoxLayout, QLabel, QMainWindow, QMessageBox, QPushButton,
                              QStackedWidget, QVBoxLayout, QWidget)
 
-from utils.paths import icon_path
-from views.flashcards_tab import FlashcardsTab
-from views.progress_tab import ProgressTab
-from views.quiz_tab import QuizTab
-from views.translator_tab import TranslatorTab
-from views.vocabulary_tab import VocabularyTab
-from views.welcome_dialog import WelcomeDialog
-from utils.styles import (TRANSPARENT_STYLE, MAIN_GOAL_MSG_STYLE, MAIN_HEADER_STYLE, MAIN_LOGOUT_BTN_STYLE,
-                          MAIN_SIDEBAR_STYLE, MAIN_STACK_STYLE, MAIN_USER_STYLE, MAIN_WINDOW_STYLES,
-                          MAIN_WORD_COUNT_STYLE, NAV_BTN_ACTIVE_STYLE, NAV_BTN_STYLE,
-                          TEXT_DARK_STYLE)
+from utils import icon_path
+from windows.flashcards_tab import FlashcardsTab
+from windows.progress_tab import ProgressTab
+from windows.quiz_tab import QuizTab
+from windows.translator_tab import TranslatorTab
+from windows.vocabulary_tab import VocabularyTab
+from windows.welcome_dialog import WelcomeDialog
+from styles import (MAIN_GOAL_MSG_STYLE, MAIN_HEADER_STYLE, MAIN_LOGOUT_BTN_STYLE,
+                    MAIN_SIDEBAR_STYLE, MAIN_STACK_STYLE, MAIN_USER_STYLE, MAIN_WINDOW_STYLES,
+                    MAIN_WORD_COUNT_STYLE, NAV_BTN_ACTIVE_STYLE, NAV_BTN_STYLE, TEXT_DARK_STYLE,
+                    TRANSPARENT_STYLE)
 
 
 class LanguageLearningApp(QMainWindow):
@@ -274,5 +274,5 @@ class LanguageLearningApp(QMainWindow):
             msg.exec_()
 
     def apply_styles(self):
-        """Применяет общие стили главного окна из utils/styles.py."""
+        """Применяет общие стили главного окна из styles.py."""
         self.setStyleSheet(MAIN_WINDOW_STYLES)

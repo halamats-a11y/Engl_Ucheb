@@ -1,15 +1,14 @@
 """
-progress_service.py — прогресс пользователя (бизнес-логика).
+services.py — бизнес-логика (без окон и без SQL).
 
-Что здесь:
-    • выученные слова;
-    • ответы и пройденные тесты;
-    • серия дней подряд (streak) и дневная цель.
+    VocabularyService — словарь: список слов, добавление, удаление
+    ProgressService   — прогресс: выученные слова, ответы и тесты,
+                        серия дней подряд и дневная цель
 
 Как работает:
     Вкладки НЕ меняют прогресс сами. Они только отправляют сигналы
     («слово выучено», «дан ответ», «тест закончен»). Главное окно подключает
-    эти сигналы к методам сервиса. Сервис меняет данные, сохраняет их в базу
+    эти сигналы к методам сервисов. Сервис меняет данные, сохраняет их в базу
     (несколько действий — в одной транзакции) и отправляет сигнал
     progress_changed, чтобы окна обновились.
 """
@@ -18,7 +17,39 @@ from datetime import date
 from PyQt5.QtCore import QObject, pyqtSignal
 
 from config import DAILY_TESTS_TARGET, DAILY_WORDS_TARGET
-from db.connection import transaction
+from database import transaction
+
+
+class VocabularyService(QObject):
+    vocabulary_changed = pyqtSignal()   # словарь изменился
+
+    def __init__(self, words_repo):
+        super().__init__()
+        self.repo = words_repo
+        self.vocabulary = []
+        self._load()
+
+    def _load(self):
+        self.vocabulary = self.repo.all()
+
+    def add_word(self, english, russian):
+        """Добавляет слово. Если такое уже есть — DuplicateWordError (окно покажет ошибку)."""
+        self.repo.add(english, russian)
+        self._load()
+        self.vocabulary_changed.emit()
+
+    def delete_word(self, word):
+        word_id = self.word_id(word)
+        if word_id:
+            self.repo.delete(word_id)
+            self._load()
+            self.vocabulary_changed.emit()
+
+    def word_id(self, word):
+        """id слова: из словаря-записи или по английскому написанию."""
+        if isinstance(word, dict):
+            return word.get('id')
+        return next((w['id'] for w in self.vocabulary if w['english'] == word), None)
 
 
 class ProgressService(QObject):

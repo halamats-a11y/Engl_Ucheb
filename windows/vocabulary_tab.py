@@ -6,9 +6,9 @@ from PyQt5.QtWidgets import (QWidget, QVBoxLayout, QHBoxLayout, QLabel,
                              QDialog, QFormLayout, QMessageBox)
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QFont
-from utils.styles import (BTN_SUCCESS_STYLE, BTN_VOCAB_STYLE, PAGE_TITLE_STYLE,
-                          VOCAB_ADD_DIALOG_STYLE, VOCAB_ROW_HEADER_STYLE, VOCAB_SAVED_MSG_STYLE,
-                          VOCAB_SEARCH_STYLE, VOCAB_TABLE_CORNER_STYLE)
+from styles import (BTN_SUCCESS_STYLE, BTN_VOCAB_STYLE, PAGE_TITLE_STYLE, VOCAB_ADD_DIALOG_STYLE,
+                    VOCAB_ROW_HEADER_STYLE, VOCAB_SAVED_MSG_STYLE, VOCAB_SEARCH_STYLE,
+                    VOCAB_TABLE_CORNER_STYLE)
 
 
 class VocabularyTab(QWidget):

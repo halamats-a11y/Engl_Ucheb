@@ -3,16 +3,16 @@ login_window.py — окно входа и регистрации нового �
 
 Что делает этот файл:
     Показывает форму: имя пользователя, пароль, «Запомнить меня», кнопки «Войти» и «Зарегистрироваться».
-    Проверка пароля и регистрация идут через базу SQLite (UserRepository в db/repository.py),
+    Проверка пароля и регистрация идут через базу SQLite (UserRepository в database.py),
     «Запомнить меня» записывает сессию в таблицу sessions (SessionRepository).
 
 Как вписывается в приложение:
-    AppController (controllers/app_controller.py) создаёт LoginWindow и передаёт колбэк on_login(user).
+    AppController (app.py) создаёт LoginWindow и передаёт колбэк on_login(user).
     После успешного входа вызывается этот колбэк — открывается главное окно (main_window.py).
 
 Ключевые понятия для начинающих:
     • QWidget — обычное окно/панель PyQt5 (не главное окно, а отдельный виджет).
-    • Пароль в базе не хранится открытым текстом, только хеш PBKDF2-SHA256 с солью (utils/password_utils.py).
+    • Пароль в базе не хранится открытым текстом, только хеш PBKDF2-SHA256 с солью (utils.py).
     • Сессия в таблице sessions — если «Запомнить» включено, при следующем запуске вход без формы.
 """
 import sys
@@ -21,9 +21,9 @@ from PyQt5.QtWidgets import (QWidget, QVBoxLayout, QHBoxLayout, QLabel,
                              QLineEdit, QPushButton, QCheckBox)
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QFont, QPixmap
-from utils.styles import (TRANSPARENT_STYLE, LOGIN_ERROR_STYLE, LOGIN_SUBTITLE_STYLE,
-                          LOGIN_SUCCESS_STYLE, LOGIN_WINDOW_STYLE)
-from utils.paths import icon_path
+from styles import (LOGIN_ERROR_STYLE, LOGIN_SUBTITLE_STYLE, LOGIN_SUCCESS_STYLE,
+                    LOGIN_WINDOW_STYLE, TRANSPARENT_STYLE)
+from utils import icon_path
 
 
 def resource_path(relative_path):
@@ -36,7 +36,7 @@ def resource_path(relative_path):
     if getattr(sys, 'frozen', False):
         base = sys._MEIPASS
     else:
-        # Поднимаемся на два уровня от src/views/ до корня проекта
+        # Поднимаемся из папки windows/ в корень проекта
         base = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     return os.path.normpath(os.path.join(base, relative_path))
 

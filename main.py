@@ -1,7 +1,7 @@
 """
 main.py — точка входа: python main.py
 """
-from controllers.app_controller import main
+from app import main
 
 if __name__ == '__main__':
     main()

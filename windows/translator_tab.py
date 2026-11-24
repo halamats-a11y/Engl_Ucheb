@@ -5,7 +5,7 @@ from PyQt5.QtWidgets import (QWidget, QVBoxLayout, QHBoxLayout, QLabel,
                              QPushButton, QTextEdit, QFrame)
 from PyQt5.QtCore import Qt
 from datetime import datetime
-from utils.styles import TRANSLATOR_STYLE
+from styles import TRANSLATOR_STYLE
 
 
 class TranslatorTab(QWidget):
