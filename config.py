@@ -10,5 +10,6 @@ DAILY_WORDS_TARGET = 5
 DAILY_TESTS_TARGET = 1
 
 # Тесты
-MIN_WORDS_FOR_QUIZ = 4      # меньше слов — тест не начать (нужно 4 варианта ответа)
-TIMED_QUIZ_SECONDS = 60     # длительность теста «На время»
+QUIZ_TIMED_SECONDS = 60             # длительность теста «На время»
+QUIZ_DEFAULT_QUESTION_COUNT = 10    # вопросов в обычном тесте по умолчанию
+MIN_VOCABULARY_FOR_QUIZ = 4         # меньше слов — тест не начать (нужно 4 варианта ответа)

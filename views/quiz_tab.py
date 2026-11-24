@@ -7,7 +7,7 @@ from PyQt5.QtWidgets import (QWidget, QVBoxLayout, QHBoxLayout, QLabel,
                              QButtonGroup, QMessageBox, QFrame)
 from PyQt5.QtCore import Qt, QTimer, pyqtSignal
 
-from config import MIN_WORDS_FOR_QUIZ, TIMED_QUIZ_SECONDS
+from config import MIN_VOCABULARY_FOR_QUIZ, QUIZ_DEFAULT_QUESTION_COUNT, QUIZ_TIMED_SECONDS
 from PyQt5.QtGui import QFont
 from utils.styles import (BTN_SECONDARY_STYLE, BTN_START_STYLE, BTN_STOP_STYLE, CARD_FRAME_STYLE,
                           COUNTER_STYLE, GREY_TEXT_STYLE, LIGHT_MSG_STYLE, PAGE_TITLE_STYLE,
@@ -61,7 +61,7 @@ class QuizTab(QWidget):
         settings_layout.addWidget(lbl1)
 
         self.quiz_mode = QComboBox()
-        self.quiz_mode.addItems(["Обычный режим", f"⏱  На время ({TIMED_QUIZ_SECONDS} сек)"])
+        self.quiz_mode.addItems(["Обычный режим", f"⏱  На время ({QUIZ_TIMED_SECONDS} сек)"])
         self.quiz_mode.currentIndexChanged.connect(self.on_quiz_mode_changed)
         settings_layout.addWidget(self.quiz_mode)
 
@@ -74,7 +74,7 @@ class QuizTab(QWidget):
         self.quiz_count = QSpinBox()
         self.quiz_count.setMinimum(5)
         self.quiz_count.setMaximum(50)
-        self.quiz_count.setValue(10)
+        self.quiz_count.setValue(QUIZ_DEFAULT_QUESTION_COUNT)
         settings_layout.addWidget(self.quiz_count)
 
         settings_layout.addStretch()
@@ -207,16 +207,16 @@ class QuizTab(QWidget):
             self.quiz_count.setValue(999)
         else:
             self.quiz_count.setEnabled(True)
-            self.quiz_count.setValue(10)
+            self.quiz_count.setValue(QUIZ_DEFAULT_QUESTION_COUNT)
 
     def start_quiz(self):
         self.is_timed_mode = "На время" in self.quiz_mode.currentText()
         num_questions = self.quiz_count.value()
 
-        if len(self.main.vocabulary) < MIN_WORDS_FOR_QUIZ:
+        if len(self.main.vocabulary) < MIN_VOCABULARY_FOR_QUIZ:
             msg = QMessageBox(self)
             msg.setWindowTitle("Предупреждение")
-            msg.setText(f"Недостаточно слов в словаре. Минимум: {MIN_WORDS_FOR_QUIZ}")
+            msg.setText(f"Недостаточно слов в словаре. Минимум: {MIN_VOCABULARY_FOR_QUIZ}")
             msg.setIcon(QMessageBox.NoIcon)
             msg.setStyleSheet(LIGHT_MSG_STYLE)
             msg.exec_()
@@ -226,7 +226,7 @@ class QuizTab(QWidget):
         self.quiz_active = True
 
         if self.is_timed_mode:
-            self.time_remaining = TIMED_QUIZ_SECONDS
+            self.time_remaining = QUIZ_TIMED_SECONDS
             self.quiz_questions = []
             self.quiz_score = 0
             self.current_question = 0
@@ -406,7 +406,7 @@ class QuizTab(QWidget):
         msg.setText(
             f"⏱ Результат теста на время:\n\n"
             f"✅ Правильных: {wpm}\n"
-            f"⏰ Время: {TIMED_QUIZ_SECONDS} секунд\n"
+            f"⏰ Время: {QUIZ_TIMED_SECONDS} секунд\n"
             f"📊 Скорость: {wpm} слов/мин\n\n{rating}"
         )
         msg.setIcon(QMessageBox.NoIcon)
