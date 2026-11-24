@@ -1,13 +1,12 @@
 """
 Вкладка с флеш-карточками для изучения слов
 """
-import os
 import random
 import time
 from PyQt5.QtWidgets import (QWidget, QVBoxLayout, QHBoxLayout, QLabel,
                              QPushButton, QFrame, QMessageBox)
 from PyQt5.QtCore import Qt, QTimer, pyqtSignal
-from PyQt5.QtGui import QFont, QPixmap
+from PyQt5.QtGui import QFont
 from utils.styles import (BTN_SECONDARY_STYLE, BTN_START_STYLE, BTN_STOP_STYLE, BTN_SUCCESS_STYLE,
                           CARDS_BIG_WORD_STYLE, CARDS_DONE_FRAME_STYLE, CARDS_TIMER_BTN_STYLE,
                           CARDS_TIME_STYLE, CARD_FRAME_STYLE, CARD_TRANSLATION_FLAT_STYLE,
@@ -158,16 +157,6 @@ class FlashcardsTab(QWidget):
         button_layout.addWidget(self.know_btn)
 
         layout.addLayout(button_layout)
-
-    def _load_icon(self):
-        """Загружает иконку из data/ico.png если файл существует"""
-        ico_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'data', 'ico.png')
-        if os.path.exists(ico_path):
-            pix = QPixmap(ico_path).scaled(400, 400, Qt.KeepAspectRatio, Qt.SmoothTransformation)
-            self.icon_label.setPixmap(pix)
-        else:
-            self.icon_label.setText("🖼")
-            self.icon_label.setFont(QFont('Segoe UI', 32))
 
     def start_flashcards(self):
         self.cards_to_study = [w for w in self.main.vocabulary
