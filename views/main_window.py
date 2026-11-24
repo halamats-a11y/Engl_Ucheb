@@ -33,7 +33,10 @@ from views.translator_tab import TranslatorTab
 from views.vocabulary_tab import VocabularyTab
 from views.progress_tab import ProgressTab
 from views.welcome_dialog import WelcomeDialog
-from utils.styles import MAIN_WINDOW_STYLES
+from utils.styles import (MAIN_GOAL_MSG_STYLE, MAIN_HEADER_STYLE, MAIN_LOGOUT_BTN_STYLE,
+                          MAIN_SIDEBAR_STYLE, MAIN_STACK_STYLE, MAIN_USER_STYLE, MAIN_WINDOW_STYLES,
+                          MAIN_WORD_COUNT_STYLE, NAV_BTN_ACTIVE_STYLE, NAV_BTN_STYLE,
+                          TEXT_DARK_STYLE)
 
 # Дневная цель: сколько слов и тестов нужно пройти за день (используется в progress_tab и welcome_dialog)
 DAILY_WORDS_TARGET = 5
@@ -150,37 +153,28 @@ class LanguageLearningApp(QMainWindow):
         # ── Верхняя панель ──────────────────────────────────────────
         header_widget = QWidget()
         header_widget.setObjectName("headerBar")
-        header_widget.setStyleSheet("""
-            QWidget#headerBar {
-                background: #FFFFFF;
-                border-bottom: 1px solid #E2E8F0;
-            }
-        """)
+        header_widget.setStyleSheet(MAIN_HEADER_STYLE)
         header_layout = QHBoxLayout(header_widget)
         header_layout.setContentsMargins(24, 12, 24, 12)
 
         title = QLabel("🎓 Помощник для изучения английского языка")
         title.setFont(QFont('Segoe UI', 15, QFont.Bold))
-        title.setStyleSheet("color: #1A2C3E;")
+        title.setStyleSheet(TEXT_DARK_STYLE)
         header_layout.addWidget(title)
 
         header_layout.addStretch()  # пустое пространство, толкает элементы справа к краю
 
         word_count = QLabel(f"📚 Словарь: {len(self.vocabulary)} слов")
-        word_count.setStyleSheet("color: #7DD3B8; font-size: 13px; font-weight: 600; margin-right: 16px;")
+        word_count.setStyleSheet(MAIN_WORD_COUNT_STYLE)
         header_layout.addWidget(word_count)
 
         user_label = QLabel(f"👤 {self.username}")
-        user_label.setStyleSheet("color: #5A6E7A; font-size: 13px; font-weight: 600; margin-right: 12px;")
+        user_label.setStyleSheet(MAIN_USER_STYLE)
         header_layout.addWidget(user_label)
 
         logout_btn = QPushButton("Выйти")
         logout_btn.setFixedWidth(80)
-        logout_btn.setStyleSheet("""
-            QPushButton { background-color: #5A6E7A; color: white; border-radius: 16px;
-                          padding: 6px 12px; font-size: 12px; font-weight: 600; }
-            QPushButton:hover { background-color: #4A5E6A; }
-        """)
+        logout_btn.setStyleSheet(MAIN_LOGOUT_BTN_STYLE)
         logout_btn.clicked.connect(self.logout)
         header_layout.addWidget(logout_btn)
 
@@ -195,12 +189,7 @@ class LanguageLearningApp(QMainWindow):
         sidebar = QWidget()
         sidebar.setObjectName("sidebar")
         sidebar.setFixedWidth(200)
-        sidebar.setStyleSheet("""
-            QWidget#sidebar {
-                background: #FFFFFF;
-                border-right: 1px solid #E2E8F0;
-            }
-        """)
+        sidebar.setStyleSheet(MAIN_SIDEBAR_STYLE)
         sidebar_layout = QVBoxLayout(sidebar)
         sidebar_layout.setContentsMargins(12, 20, 12, 20)
         sidebar_layout.setSpacing(6)
@@ -229,7 +218,7 @@ class LanguageLearningApp(QMainWindow):
 
         # ── Стек страниц (одна видимая вкладка) ─────────────────────
         self.stack = QStackedWidget()
-        self.stack.setStyleSheet("background: transparent;")
+        self.stack.setStyleSheet(MAIN_STACK_STYLE)
 
         # Каждая вкладка получает self — ссылку на главное окно
         self.flashcards_tab = FlashcardsTab(self)
@@ -256,35 +245,7 @@ class LanguageLearningApp(QMainWindow):
 
         active=True — подсветка текущей вкладки, False — обычное состояние.
         """
-        if active:
-            return """
-                QPushButton {
-                    background: rgba(125, 211, 184, 0.15);
-                    color: #2A8C6E;
-                    border: none;
-                    border-radius: 12px;
-                    font-size: 13px;
-                    font-weight: 700;
-                    text-align: left;
-                    padding-left: 12px;
-                }
-            """
-        return """
-            QPushButton {
-                background: transparent;
-                color: #5A6E7A;
-                border: none;
-                border-radius: 12px;
-                font-size: 13px;
-                font-weight: 500;
-                text-align: left;
-                padding-left: 12px;
-            }
-            QPushButton:hover {
-                background: rgba(125, 211, 184, 0.08);
-                color: #2A8C6E;
-            }
-        """
+        return NAV_BTN_ACTIVE_STYLE if active else NAV_BTN_STYLE
 
     def _switch_tab(self, index: int):
         """
@@ -340,13 +301,7 @@ class LanguageLearningApp(QMainWindow):
                 "Так держать — ты на верном пути! 🚀"
             )
             msg.setStandardButtons(QMessageBox.Ok)
-            msg.setStyleSheet("""
-                QMessageBox { background: #F7FAFA; }
-                QLabel { color: #1A2C3E; font-size: 14px; }
-                QPushButton { background: #7DD3B8; color: white; border-radius: 10px;
-                              padding: 6px 20px; font-weight: 700; border: none; }
-                QPushButton:hover { background: #3ABFA0; }
-            """)
+            msg.setStyleSheet(MAIN_GOAL_MSG_STYLE)
             msg.exec_()
 
     def apply_styles(self):

@@ -2,117 +2,10 @@
 Вкладка переводчика — новый дизайн
 """
 from PyQt5.QtWidgets import (QWidget, QVBoxLayout, QHBoxLayout, QLabel,
-                             QPushButton, QTextEdit, QFrame, QSizePolicy)
-from PyQt5.QtCore import Qt, QPropertyAnimation, QEasingCurve
-from PyQt5.QtGui import QFont, QColor
+                             QPushButton, QTextEdit, QFrame)
+from PyQt5.QtCore import Qt
 from datetime import datetime
-
-
-TRANSLATOR_STYLE = """
-    QWidget {
-        background: transparent;
-        color: #1A2C3E;
-        font-family: 'Segoe UI', sans-serif;
-    }
-    QTextEdit {
-        background-color: #FFFFFF;
-        border: 1.5px solid #E2E8F0;
-        border-radius: 16px;
-        padding: 14px;
-        font-size: 15px;
-        color: #1A2C3E;
-        font-family: 'Segoe UI', sans-serif;
-        selection-background-color: #7DD3B8;
-    }
-    QTextEdit:focus {
-        border: 1.5px solid #7DD3B8;
-    }
-    QTextEdit[readOnly="true"] {
-        background-color: #F8F9FF;
-        color: #1A2C3E;
-    }
-    QPushButton#translateBtn {
-        background: #7DD3B8;
-        color: #FFFFFF;
-        border: none;
-        padding: 12px 36px;
-        font-size: 14px;
-        border-radius: 40px;
-        font-weight: 600;
-    }
-    QPushButton#translateBtn:hover {
-        background: #8FE3C8;
-    }
-    QPushButton#translateBtn:pressed {
-        background: #6BC2A7;
-    }
-    QPushButton#swapBtn {
-        background: #FFFFFF;
-        color: #7DD3B8;
-        border: 1.5px solid #E2E8F0;
-        padding: 8px 16px;
-        font-size: 18px;
-        border-radius: 20px;
-        font-weight: 600;
-        min-width: 48px;
-        max-width: 48px;
-        min-height: 48px;
-        max-height: 48px;
-    }
-    QPushButton#swapBtn:hover {
-        background: #F0FBF7;
-        border-color: #7DD3B8;
-    }
-    QPushButton#clearHistoryBtn {
-        background: transparent;
-        color: #B0BEC5;
-        border: 1px solid #E2E8F0;
-        padding: 4px 14px;
-        font-size: 12px;
-        border-radius: 12px;
-    }
-    QPushButton#clearHistoryBtn:hover {
-        color: #EF5350;
-        border-color: #EF5350;
-    }
-    QLabel#langLabel {
-        font-size: 12px;
-        font-weight: 600;
-        color: #7DD3B8;
-        letter-spacing: 1px;
-    }
-    QLabel#titleLabel {
-        font-size: 18px;
-        font-weight: 700;
-        color: #1A2C3E;
-    }
-    QLabel#historyTitle {
-        font-size: 13px;
-        font-weight: 600;
-        color: #5A6E7A;
-        letter-spacing: 0.5px;
-    }
-    QFrame#card {
-        background-color: #FFFFFF;
-        border: 1.5px solid #E2E8F0;
-        border-radius: 16px;
-    }
-    QFrame#historyCard {
-        background-color: #FFFFFF;
-        border: 1.5px solid #E2E8F0;
-        border-radius: 16px;
-    }
-    QTextEdit#historyBox {
-        background-color: transparent;
-        border: none;
-        font-size: 13px;
-        color: #5A6E7A;
-        font-family: 'Segoe UI', sans-serif;
-    }
-    QTextEdit#historyBox:focus {
-        border: none;
-    }
-"""
+from utils.styles import TRANSLATOR_STYLE
 
 
 class TranslatorTab(QWidget):
@@ -218,7 +111,6 @@ class TranslatorTab(QWidget):
 
     def eventFilter(self, obj, event):
         from PyQt5.QtCore import QEvent
-        from PyQt5.QtGui import QKeyEvent
         from PyQt5.QtCore import Qt
         if obj == self.input_field and event.type() == QEvent.KeyPress:
             if event.key() == Qt.Key_Return and not (event.modifiers() & Qt.ShiftModifier):

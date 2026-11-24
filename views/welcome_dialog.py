@@ -17,8 +17,12 @@ welcome_dialog.py — всплывающее окно приветствия п�
 """
 from PyQt5.QtWidgets import (QDialog, QVBoxLayout, QHBoxLayout, QLabel,
                              QPushButton, QFrame, QProgressBar)
-from PyQt5.QtCore import Qt, QTimer
+from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QFont
+from utils.styles import (HINT_TEXT_STYLE, TEXT_DARK_STYLE, TRANSPARENT_STYLE,
+                          WELCOME_CONGRATS_STYLE, WELCOME_DIALOG_STYLE, WELCOME_GOAL_PCT_STYLE,
+                          WELCOME_GOAL_TEXT_STYLE, WELCOME_GOAL_TITLE_STYLE, WELCOME_OK_BTN_STYLE,
+                          WELCOME_STREAK_NUM_STYLE)
 
 
 class WelcomeDialog(QDialog):
@@ -60,7 +64,7 @@ class WelcomeDialog(QDialog):
         hi_lbl = QLabel(f"Привет, {self.username}! 👋")
         hi_lbl.setFont(QFont('Segoe UI', 22, QFont.Bold))
         hi_lbl.setAlignment(Qt.AlignCenter)
-        hi_lbl.setStyleSheet("color: #1A2C3E;")
+        hi_lbl.setStyleSheet(TEXT_DARK_STYLE)
         layout.addWidget(hi_lbl)
 
         # ── Серия дней ─────────────────────────────────────────────────
@@ -72,7 +76,7 @@ class WelcomeDialog(QDialog):
 
         fire_lbl = QLabel("🔥")
         fire_lbl.setFont(QFont('Segoe UI', 32))
-        fire_lbl.setStyleSheet("border: none; background: transparent;")
+        fire_lbl.setStyleSheet(TRANSPARENT_STYLE)
         s_layout.addWidget(fire_lbl)
 
         streak_text = QVBoxLayout()
@@ -81,11 +85,11 @@ class WelcomeDialog(QDialog):
         day_word = self._day_word(self.streak)
         streak_num = QLabel(f"{self.streak} {day_word} подряд!")
         streak_num.setFont(QFont('Segoe UI', 18, QFont.Bold))
-        streak_num.setStyleSheet("color: #F5824A; border: none; background: transparent;")
+        streak_num.setStyleSheet(WELCOME_STREAK_NUM_STYLE)
         streak_text.addWidget(streak_num)
 
         streak_sub = QLabel("Продолжай — не прерывай серию!")
-        streak_sub.setStyleSheet("color: #5A6E7A; font-size: 12px; border: none; background: transparent;")
+        streak_sub.setStyleSheet(HINT_TEXT_STYLE)
         streak_text.addWidget(streak_sub)
 
         s_layout.addLayout(streak_text)
@@ -101,8 +105,7 @@ class WelcomeDialog(QDialog):
 
         goal_title = QLabel("🎯  Цель на сегодня")
         goal_title.setFont(QFont('Segoe UI', 13, QFont.Bold))
-        goal_title.setStyleSheet(
-            "color: #7DD3B8; letter-spacing: 1px; border: none; background: transparent;")
+        goal_title.setStyleSheet(WELCOME_GOAL_TITLE_STYLE)
         g_layout.addWidget(goal_title)
 
         wt = self.daily_goal['words_target']
@@ -114,14 +117,14 @@ class WelcomeDialog(QDialog):
         w_row = QHBoxLayout()
         w_icon = QLabel("📖")
         w_icon.setFixedWidth(24)
-        w_icon.setStyleSheet("border: none; background: transparent;")
+        w_icon.setStyleSheet(TRANSPARENT_STYLE)
         w_row.addWidget(w_icon)
         w_lbl = QLabel(f"Слов: {wd} / {wt}")
-        w_lbl.setStyleSheet("color: #1A2C3E; font-size: 13px; font-weight: 600; border: none; background: transparent;")
+        w_lbl.setStyleSheet(WELCOME_GOAL_TEXT_STYLE)
         w_row.addWidget(w_lbl)
         w_row.addStretch()
         w_pct = QLabel(f"{int(wd/wt*100) if wt else 0}%")
-        w_pct.setStyleSheet("color: #7DD3B8; font-weight: 700; border: none; background: transparent;")
+        w_pct.setStyleSheet(WELCOME_GOAL_PCT_STYLE)
         w_row.addWidget(w_pct)
         g_layout.addLayout(w_row)
 
@@ -136,14 +139,14 @@ class WelcomeDialog(QDialog):
         t_row = QHBoxLayout()
         t_icon = QLabel("✍")
         t_icon.setFixedWidth(24)
-        t_icon.setStyleSheet("border: none; background: transparent;")
+        t_icon.setStyleSheet(TRANSPARENT_STYLE)
         t_row.addWidget(t_icon)
         t_lbl = QLabel(f"Тестов: {td} / {tt}")
-        t_lbl.setStyleSheet("color: #1A2C3E; font-size: 13px; font-weight: 600; border: none; background: transparent;")
+        t_lbl.setStyleSheet(WELCOME_GOAL_TEXT_STYLE)
         t_row.addWidget(t_lbl)
         t_row.addStretch()
         t_pct = QLabel(f"{int(td/tt*100) if tt else 0}%")
-        t_pct.setStyleSheet("color: #7DD3B8; font-weight: 700; border: none; background: transparent;")
+        t_pct.setStyleSheet(WELCOME_GOAL_PCT_STYLE)
         t_row.addWidget(t_pct)
         g_layout.addLayout(t_row)
 
@@ -162,8 +165,7 @@ class WelcomeDialog(QDialog):
             congrats_lbl = QLabel("🏆  Ты выполнил дневную цель! Молодец!")
             congrats_lbl.setAlignment(Qt.AlignCenter)
             congrats_lbl.setFont(QFont('Segoe UI', 13, QFont.Bold))
-            congrats_lbl.setStyleSheet(
-                "color: #FFFFFF; background: #3ABFA0; border-radius: 12px; padding: 10px;")
+            congrats_lbl.setStyleSheet(WELCOME_CONGRATS_STYLE)
             layout.addWidget(congrats_lbl)
         else:
             layout.addSpacing(4)
@@ -172,15 +174,7 @@ class WelcomeDialog(QDialog):
         ok_btn = QPushButton("Начать учиться! 🚀")
         ok_btn.setFixedHeight(48)
         ok_btn.setFont(QFont('Segoe UI', 13, QFont.Bold))
-        ok_btn.setStyleSheet("""
-            QPushButton {
-                background: #7DD3B8;
-                color: white;
-                border: none;
-                border-radius: 14px;
-            }
-            QPushButton:hover { background: #3ABFA0; }
-        """)
+        ok_btn.setStyleSheet(WELCOME_OK_BTN_STYLE)
         ok_btn.clicked.connect(self.accept)  # закрывает диалог с кодом «принято»
         layout.addWidget(ok_btn)
 
@@ -202,28 +196,4 @@ class WelcomeDialog(QDialog):
 
     def _apply_styles(self):
         """Задаёт фон диалога, рамки блоков и цвет заполнения QProgressBar."""
-        self.setStyleSheet("""
-            QDialog {
-                background: #F7FAFA;
-            }
-            QFrame#streakFrame {
-                background: qlineargradient(x1:0,y1:0,x2:1,y2:1,
-                    stop:0 #FFF5EF, stop:1 #FFE8DA);
-                border-radius: 16px;
-                border: 1.5px solid #F5B89A;
-            }
-            QFrame#goalFrame {
-                background: #FFFFFF;
-                border-radius: 16px;
-                border: 1.5px solid #E2E8F0;
-            }
-            QProgressBar {
-                background: #E2E8F0;
-                border-radius: 4px;
-                border: none;
-            }
-            QProgressBar::chunk {
-                background: #7DD3B8;
-                border-radius: 4px;
-            }
-        """)
+        self.setStyleSheet(WELCOME_DIALOG_STYLE)

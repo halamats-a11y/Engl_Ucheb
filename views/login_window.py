@@ -15,17 +15,14 @@ login_window.py — окно входа и регистрации нового �
     • Пароль в базе не хранится открытым текстом, только хеш PBKDF2-SHA256 с солью (utils/password_utils.py).
     • Сессия в таблице sessions — если «Запомнить» включено, при следующем запуске вход без формы.
 """
-import hashlib
-import json
 import sys
 import os
-from datetime import datetime
 from PyQt5.QtWidgets import (QWidget, QVBoxLayout, QHBoxLayout, QLabel,
-                             QLineEdit, QPushButton, QCheckBox, QFrame)
+                             QLineEdit, QPushButton, QCheckBox)
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QFont
-from utils.password_utils import hash_password
-from utils.styles import LOGIN_STYLES
+from utils.styles import (LOGIN_ERROR_STYLE, LOGIN_SUBTITLE_STYLE,
+                          LOGIN_SUCCESS_STYLE, LOGIN_WINDOW_STYLE)
 
 
 def resource_path(relative_path):
@@ -75,7 +72,7 @@ class LoginWindow(QWidget):
 
         subtitle = QLabel("Войдите или создайте аккаунт")
         subtitle.setAlignment(Qt.AlignCenter)
-        subtitle.setStyleSheet("color: #757575; font-size: 13px;")
+        subtitle.setStyleSheet(LOGIN_SUBTITLE_STYLE)
         layout.addWidget(subtitle)
 
         layout.addSpacing(8)
@@ -89,7 +86,6 @@ class LoginWindow(QWidget):
         # Пароль + кнопка-глазик (показать/скрыть)
         layout.addWidget(QLabel("Пароль:"))
 
-        from PyQt5.QtWidgets import QStackedLayout
         pwd_container = QWidget()
         pwd_container.setFixedHeight(48)
         # QHBoxLayout: поле пароля растягивается, кнопка «глаз» фиксированной ширины справа
@@ -119,7 +115,7 @@ class LoginWindow(QWidget):
 
         # Метка ошибки / успеха (красный или зелёный текст)
         self.error_label = QLabel("")
-        self.error_label.setStyleSheet("color: #F44336; font-size: 12px;")
+        self.error_label.setStyleSheet(LOGIN_ERROR_STYLE)
         self.error_label.setAlignment(Qt.AlignCenter)
         layout.addWidget(self.error_label)
 
@@ -167,42 +163,9 @@ class LoginWindow(QWidget):
         if len(password)<4: self.error_label.setText("Пароль должен быть минимум 4 символа."); return
         try: self.users.create(username,password)
         except Exception: self.error_label.setText("Это имя уже занято."); return
-        self.error_label.setStyleSheet("color: #4CAF50; font-size: 12px;")
+        self.error_label.setStyleSheet(LOGIN_SUCCESS_STYLE)
         self.error_label.setText("Аккаунт создан! Теперь войдите.")
 
     def apply_styles(self):
         """Подключает CSS из LOGIN_STYLES и дополнительные стили для глаза и чекбокса."""
-        self.setStyleSheet(LOGIN_STYLES + """
-            QPushButton#eyeBtn {
-                background: #EEF6F3;
-                border: 1.5px solid #E2E8F0;
-                border-radius: 10px;
-                font-size: 18px;
-                padding: 0px;
-                color: #5A6E7A;
-            }
-            QPushButton#eyeBtn:hover {
-                background: #D4F0E8;
-                color: #2A8C6E;
-            }
-            QCheckBox#rememberCheck {
-                font-size: 13px;
-                color: #5A6E7A;
-                spacing: 8px;
-            }
-            QCheckBox#rememberCheck::indicator {
-                width: 18px;
-                height: 18px;
-                border: 1.5px solid #E2E8F0;
-                border-radius: 5px;
-                background: #FFFFFF;
-            }
-            QCheckBox#rememberCheck::indicator:checked {
-                background: #7DD3B8;
-                border-color: #7DD3B8;
-                image: none;
-            }
-            QCheckBox#rememberCheck::indicator:hover {
-                border-color: #7DD3B8;
-            }
-        """)
+        self.setStyleSheet(LOGIN_WINDOW_STYLE)
