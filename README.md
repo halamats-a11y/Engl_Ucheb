@@ -37,6 +37,15 @@ pip install -r requirements.txt
 python main.py
 ```
 
+**Собрать .exe для Windows** (с иконкой):
+
+```bash
+pip install pyinstaller
+pyinstaller --onefile --windowed --name VocabularyTrainer --icon=data/icon.ico --add-data "data;data" main.py
+```
+
+Готовый файл появится в папке `dist/`.
+
 **Автотесты (база, сервисы, транзакции):**
 
 ```bash
@@ -71,7 +80,8 @@ python -m unittest -v
 │   └── styles.py            ВСЁ оформление (в окнах нет строк CSS)
 ├── data/
 │   ├── vocabulary.json      начальный словарь (загружается в базу при первом запуске)
-│   └── ico.png              иконка
+│   ├── ico.png              иконка окна (заголовок, панель задач, шапка, окно входа)
+│   └── icon.ico             иконка для .exe
 └── tests/
     ├── test_database.py     автотесты базы данных
     └── test_services.py     автотесты сервисов и транзакций

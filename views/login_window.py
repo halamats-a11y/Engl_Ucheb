@@ -20,9 +20,10 @@ import os
 from PyQt5.QtWidgets import (QWidget, QVBoxLayout, QHBoxLayout, QLabel,
                              QLineEdit, QPushButton, QCheckBox)
 from PyQt5.QtCore import Qt
-from PyQt5.QtGui import QFont
-from utils.styles import (LOGIN_ERROR_STYLE, LOGIN_SUBTITLE_STYLE,
+from PyQt5.QtGui import QFont, QPixmap
+from utils.styles import (TRANSPARENT_STYLE, LOGIN_ERROR_STYLE, LOGIN_SUBTITLE_STYLE,
                           LOGIN_SUCCESS_STYLE, LOGIN_WINDOW_STYLE)
+from utils.paths import icon_path
 
 
 def resource_path(relative_path):
@@ -58,15 +59,22 @@ class LoginWindow(QWidget):
     def init_ui(self):
         """Создаёт все поля ввода, кнопки и подписи на окне входа."""
         self.setWindowTitle("Вход")
-        self.setFixedSize(420, 560)
+        self.setFixedSize(420, 650)
 
         layout = QVBoxLayout()
         layout.setContentsMargins(40, 40, 40, 40)
         layout.setSpacing(14)
         self.setLayout(layout)
 
-        # Заголовок
-        title = QLabel("🎓 Изучение английского")
+        # Иконка и заголовок
+        logo = QLabel()
+        logo.setPixmap(QPixmap(icon_path()).scaled(72, 72, Qt.KeepAspectRatio, Qt.SmoothTransformation))
+        logo.setAlignment(Qt.AlignCenter)
+        logo.setFixedHeight(80)
+        logo.setStyleSheet(TRANSPARENT_STYLE)
+        layout.addWidget(logo)
+
+        title = QLabel("Изучение английского")
         title.setFont(QFont('Arial', 18, QFont.Bold))
         title.setAlignment(Qt.AlignCenter)
         layout.addWidget(title)

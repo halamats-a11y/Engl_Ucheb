@@ -9,7 +9,7 @@ app_controller.py — запуск приложения: база, вход, г�
 """
 import sys
 
-from PyQt5.QtGui import QColor, QPalette
+from PyQt5.QtGui import QColor, QIcon, QPalette
 from PyQt5.QtWidgets import QApplication
 
 from db.connection import connect, init_db
@@ -17,6 +17,7 @@ from db.repository import (ProgressRepository, SessionRepository,
                            UserRepository, WordRepository)
 from services.progress_service import ProgressService
 from services.vocabulary_service import VocabularyService
+from utils.paths import icon_path
 from views.login_window import LoginWindow
 from views.main_window import LanguageLearningApp
 
@@ -64,7 +65,13 @@ class AppController:
 
 
 def main():
+    if sys.platform == 'win32':
+        # чтобы на панели задач Windows была наша иконка, а не значок Python
+        import ctypes
+        ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID('EnglUcheb.VocabularyTrainer')
+
     app = QApplication(sys.argv)
+    app.setWindowIcon(QIcon(icon_path()))   # иконка у всех окон программы
     app.setStyle('Fusion')
     palette = QPalette()
     palette.setColor(QPalette.Window, QColor(245, 245, 245))

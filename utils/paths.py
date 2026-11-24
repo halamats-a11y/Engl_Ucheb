@@ -33,5 +33,10 @@ def db_path():
     return os.environ.get('VOCAB_DB', str(data_dir() / 'app.db'))
 
 
+def icon_path():
+    """Иконка программы: окно, панель задач, шапка, окно входа."""
+    return resource_path('data/ico.png')
+
+
 def seed_vocabulary_path():
     return resource_path('data/vocabulary.json')

@@ -20,18 +20,19 @@ main_window.py — главное окно приложения после вх�
     • Сигнал/слот — вкладка «звонит» (emit), окно заранее решило, кто «ответит» (connect).
     • Серия дней (streak) и дневная цель считаются в services/progress_service.py.
 """
-from PyQt5.QtCore import QTimer, pyqtSignal
-from PyQt5.QtGui import QFont
+from PyQt5.QtCore import Qt, QTimer, pyqtSignal
+from PyQt5.QtGui import QFont, QPixmap
 from PyQt5.QtWidgets import (QHBoxLayout, QLabel, QMainWindow, QMessageBox, QPushButton,
                              QStackedWidget, QVBoxLayout, QWidget)
 
+from utils.paths import icon_path
 from views.flashcards_tab import FlashcardsTab
 from views.progress_tab import ProgressTab
 from views.quiz_tab import QuizTab
 from views.translator_tab import TranslatorTab
 from views.vocabulary_tab import VocabularyTab
 from views.welcome_dialog import WelcomeDialog
-from utils.styles import (MAIN_GOAL_MSG_STYLE, MAIN_HEADER_STYLE, MAIN_LOGOUT_BTN_STYLE,
+from utils.styles import (TRANSPARENT_STYLE, MAIN_GOAL_MSG_STYLE, MAIN_HEADER_STYLE, MAIN_LOGOUT_BTN_STYLE,
                           MAIN_SIDEBAR_STYLE, MAIN_STACK_STYLE, MAIN_USER_STYLE, MAIN_WINDOW_STYLES,
                           MAIN_WORD_COUNT_STYLE, NAV_BTN_ACTIVE_STYLE, NAV_BTN_STYLE,
                           TEXT_DARK_STYLE)
@@ -121,7 +122,13 @@ class LanguageLearningApp(QMainWindow):
         header_layout = QHBoxLayout(header_widget)
         header_layout.setContentsMargins(24, 12, 24, 12)
 
-        title = QLabel("🎓 Помощник для изучения английского языка")
+        logo = QLabel()
+        logo.setPixmap(QPixmap(icon_path()).scaled(24, 24, Qt.KeepAspectRatio, Qt.SmoothTransformation))
+        logo.setStyleSheet(TRANSPARENT_STYLE)
+        header_layout.addWidget(logo)
+        header_layout.addSpacing(8)
+
+        title = QLabel("Помощник для изучения английского языка")
         title.setFont(QFont('Segoe UI', 15, QFont.Bold))
         title.setStyleSheet(TEXT_DARK_STYLE)
         header_layout.addWidget(title)
