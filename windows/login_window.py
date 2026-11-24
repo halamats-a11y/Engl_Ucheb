@@ -3,29 +3,27 @@ login_window.py — окно входа и регистрации нового �
 
 Что делает этот файл:
     Показывает форму: имя пользователя, пароль, «Запомнить меня», кнопки «Войти» и «Зарегистрироваться».
-    Проверка пароля и регистрация идут через базу SQLite (UserRepository в db/repository.py),
+    Проверка пароля и регистрация идут через базу SQLite (UserRepository в database.py),
     «Запомнить меня» записывает сессию в таблицу sessions (SessionRepository).
 
 Как вписывается в приложение:
-    AppController (controllers/app_controller.py) создаёт LoginWindow и передаёт колбэк on_login(user).
+    AppController (app.py) создаёт LoginWindow и передаёт колбэк on_login(user).
     После успешного входа вызывается этот колбэк — открывается главное окно (main_window.py).
 
 Ключевые понятия для начинающих:
     • QWidget — обычное окно/панель PyQt5 (не главное окно, а отдельный виджет).
-    • Пароль в базе не хранится открытым текстом, только хеш PBKDF2-SHA256 с солью (utils/password_utils.py).
+    • Пароль в базе не хранится открытым текстом, только хеш PBKDF2-SHA256 с солью (utils.py).
     • Сессия в таблице sessions — если «Запомнить» включено, при следующем запуске вход без формы.
 """
-import hashlib
-import json
 import sys
 import os
-from datetime import datetime
 from PyQt5.QtWidgets import (QWidget, QVBoxLayout, QHBoxLayout, QLabel,
-                             QLineEdit, QPushButton, QCheckBox, QFrame)
+                             QLineEdit, QPushButton, QCheckBox)
 from PyQt5.QtCore import Qt
-from PyQt5.QtGui import QFont
-from utils.password_utils import hash_password
-from utils.styles import LOGIN_STYLES
+from PyQt5.QtGui import QFont, QPixmap
+from styles import (LOGIN_ERROR_STYLE, LOGIN_SUBTITLE_STYLE, LOGIN_SUCCESS_STYLE,
+                    LOGIN_WINDOW_STYLE, TRANSPARENT_STYLE)
+from utils import icon_path
 
 
 def resource_path(relative_path):
@@ -38,7 +36,7 @@ def resource_path(relative_path):
     if getattr(sys, 'frozen', False):
         base = sys._MEIPASS
     else:
-        # Поднимаемся на два уровня от src/views/ до корня проекта
+        # Поднимаемся из папки windows/ в корень проекта
         base = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     return os.path.normpath(os.path.join(base, relative_path))
 
@@ -53,29 +51,37 @@ class LoginWindow(QWidget):
     def __init__(self, on_login_success, users, sessions):
         super().__init__()
         self.on_login_success, self.users, self.sessions = on_login_success, users, sessions
-        self.init_ui(); self.apply_styles()
+        self.init_ui()
+        self.apply_styles()
 
     # ── UI ───────────────────────────────────────────────────────────
 
     def init_ui(self):
         """Создаёт все поля ввода, кнопки и подписи на окне входа."""
         self.setWindowTitle("Вход")
-        self.setFixedSize(420, 560)
+        self.setFixedSize(420, 650)
 
         layout = QVBoxLayout()
         layout.setContentsMargins(40, 40, 40, 40)
         layout.setSpacing(14)
         self.setLayout(layout)
 
-        # Заголовок
-        title = QLabel("🎓 Изучение английского")
+        # Иконка и заголовок
+        logo = QLabel()
+        logo.setPixmap(QPixmap(icon_path()).scaled(72, 72, Qt.KeepAspectRatio, Qt.SmoothTransformation))
+        logo.setAlignment(Qt.AlignCenter)
+        logo.setFixedHeight(80)
+        logo.setStyleSheet(TRANSPARENT_STYLE)
+        layout.addWidget(logo)
+
+        title = QLabel("Изучение английского")
         title.setFont(QFont('Arial', 18, QFont.Bold))
         title.setAlignment(Qt.AlignCenter)
         layout.addWidget(title)
 
         subtitle = QLabel("Войдите или создайте аккаунт")
         subtitle.setAlignment(Qt.AlignCenter)
-        subtitle.setStyleSheet("color: #757575; font-size: 13px;")
+        subtitle.setStyleSheet(LOGIN_SUBTITLE_STYLE)
         layout.addWidget(subtitle)
 
         layout.addSpacing(8)
@@ -89,7 +95,6 @@ class LoginWindow(QWidget):
         # Пароль + кнопка-глазик (показать/скрыть)
         layout.addWidget(QLabel("Пароль:"))
 
-        from PyQt5.QtWidgets import QStackedLayout
         pwd_container = QWidget()
         pwd_container.setFixedHeight(48)
         # QHBoxLayout: поле пароля растягивается, кнопка «глаз» фиксированной ширины справа
@@ -119,7 +124,7 @@ class LoginWindow(QWidget):
 
         # Метка ошибки / успеха (красный или зелёный текст)
         self.error_label = QLabel("")
-        self.error_label.setStyleSheet("color: #F44336; font-size: 12px;")
+        self.error_label.setStyleSheet(LOGIN_ERROR_STYLE)
         self.error_label.setAlignment(Qt.AlignCenter)
         layout.addWidget(self.error_label)
 
@@ -150,59 +155,41 @@ class LoginWindow(QWidget):
     # ── Логика входа / регистрации ────────────────────────────────────
 
     def do_login(self):
-        username=self.username_input.text().strip(); password=self.password_input.text()
+        username = self.username_input.text().strip()
+        password = self.password_input.text()
         if not username or not password:
-            self.error_label.setText("Заполните все поля!"); return
-        try: user=self.users.authenticate(username,password)
+            self.error_label.setText("Заполните все поля!")
+            return
+        try:
+            user = self.users.authenticate(username, password)
         except Exception:
-            self.error_label.setText("Неверное имя пользователя или пароль."); return
-        self.users.rehash_if_needed(user,password)
-        if self.remember_checkbox.isChecked(): self.sessions.start(user['id'])
-        else: self.sessions.clear()
-        self.error_label.setText(""); self.on_login_success(user)
+            self.error_label.setText("Неверное имя пользователя или пароль.")
+            return
+        self.users.rehash_if_needed(user, password)
+        if self.remember_checkbox.isChecked():
+            self.sessions.start(user['id'])
+        else:
+            self.sessions.clear()
+        self.error_label.setText("")
+        self.on_login_success(user)
 
     def do_register(self):
-        username=self.username_input.text().strip(); password=self.password_input.text()
-        if not username or not password: self.error_label.setText("Заполните все поля!"); return
-        if len(password)<4: self.error_label.setText("Пароль должен быть минимум 4 символа."); return
-        try: self.users.create(username,password)
-        except Exception: self.error_label.setText("Это имя уже занято."); return
-        self.error_label.setStyleSheet("color: #4CAF50; font-size: 12px;")
+        username = self.username_input.text().strip()
+        password = self.password_input.text()
+        if not username or not password:
+            self.error_label.setText("Заполните все поля!")
+            return
+        if len(password) < 4:
+            self.error_label.setText("Пароль должен быть минимум 4 символа.")
+            return
+        try:
+            self.users.create(username, password)
+        except Exception:
+            self.error_label.setText("Это имя уже занято.")
+            return
+        self.error_label.setStyleSheet(LOGIN_SUCCESS_STYLE)
         self.error_label.setText("Аккаунт создан! Теперь войдите.")
 
     def apply_styles(self):
         """Подключает CSS из LOGIN_STYLES и дополнительные стили для глаза и чекбокса."""
-        self.setStyleSheet(LOGIN_STYLES + """
-            QPushButton#eyeBtn {
-                background: #EEF6F3;
-                border: 1.5px solid #E2E8F0;
-                border-radius: 10px;
-                font-size: 18px;
-                padding: 0px;
-                color: #5A6E7A;
-            }
-            QPushButton#eyeBtn:hover {
-                background: #D4F0E8;
-                color: #2A8C6E;
-            }
-            QCheckBox#rememberCheck {
-                font-size: 13px;
-                color: #5A6E7A;
-                spacing: 8px;
-            }
-            QCheckBox#rememberCheck::indicator {
-                width: 18px;
-                height: 18px;
-                border: 1.5px solid #E2E8F0;
-                border-radius: 5px;
-                background: #FFFFFF;
-            }
-            QCheckBox#rememberCheck::indicator:checked {
-                background: #7DD3B8;
-                border-color: #7DD3B8;
-                image: none;
-            }
-            QCheckBox#rememberCheck::indicator:hover {
-                border-color: #7DD3B8;
-            }
-        """)
+        self.setStyleSheet(LOGIN_WINDOW_STYLE)

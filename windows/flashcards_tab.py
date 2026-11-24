@@ -1,29 +1,21 @@
 """
 Вкладка с флеш-карточками для изучения слов
 """
-import os
 import random
-import sys
 import time
 from PyQt5.QtWidgets import (QWidget, QVBoxLayout, QHBoxLayout, QLabel,
                              QPushButton, QFrame, QMessageBox)
-from PyQt5.QtCore import Qt, QSize, QTimer
-from PyQt5.QtGui import QFont, QPixmap
-from utils.styles import (BTN_SECONDARY_STYLE, BTN_GOLD_STYLE,
-                          BTN_SUCCESS_STYLE, CARD_TRANSLATION_STYLE)
-
-LIGHT_MSG_STYLE = """
-    QMessageBox { background-color: #F8F9FF; color: #1A2C3E; }
-    QLabel { color: #1A2C3E; font-size: 14px; }
-    QPushButton {
-        background: #7DD3B8; color: white; border: none;
-        padding: 8px 24px; border-radius: 20px; font-weight: 600; min-width: 80px;
-    }
-    QPushButton:hover { background: #8FE3C8; }
-"""
+from PyQt5.QtCore import Qt, QTimer, pyqtSignal
+from PyQt5.QtGui import QFont
+from styles import (BTN_SECONDARY_STYLE, BTN_START_STYLE, BTN_STOP_STYLE, BTN_SUCCESS_STYLE,
+                    CARDS_BIG_WORD_STYLE, CARDS_DONE_FRAME_STYLE, CARDS_TIMER_BTN_STYLE,
+                    CARDS_TIME_STYLE, CARD_FRAME_STYLE, CARD_TRANSLATION_FLAT_STYLE, COUNTER_STYLE,
+                    GRADIENT_FRAME_STYLE, LIGHT_MSG_STYLE, PAGE_TITLE_STYLE)
 
 
 class FlashcardsTab(QWidget):
+    word_learned = pyqtSignal(dict)   # «слово выучено» — слушает сервис прогресса
+
     def __init__(self, main_window):
         super().__init__()
         self.main = main_window
@@ -44,7 +36,6 @@ class FlashcardsTab(QWidget):
         layout.setSpacing(16)
         self.setLayout(layout)
 
-
         # Верхняя строка: таймер слева + заголовок + счётчик
         top_row = QHBoxLayout()
         top_row.setSpacing(16)
@@ -60,17 +51,7 @@ class FlashcardsTab(QWidget):
         self.time_label = QLabel("00:00")
         self.time_label.setFixedSize(150, 50)
         self.time_label.setAlignment(Qt.AlignCenter)
-        self.time_label.setStyleSheet("""
-            QLabel {
-                border: 1.5px solid #E2E8F0;
-                border-radius: 12px;
-                background: #FFFFFF;
-                font-family: 'Segoe UI', monospace;
-                font-size: 24px;
-                font-weight: bold;
-                color: #1A2C3E;
-            }
-        """)
+        self.time_label.setStyleSheet(CARDS_TIME_STYLE)
         timer_col.addWidget(self.time_label)
 
         timer_btn_row = QHBoxLayout()
@@ -78,19 +59,13 @@ class FlashcardsTab(QWidget):
 
         self.pause_timer_btn = QPushButton("⏸ Пауза")
         self.pause_timer_btn.setFixedHeight(28)
-        self.pause_timer_btn.setStyleSheet(
-            "QPushButton { background-color: #E2E8F0; color: #5A6E7A; border: none; padding: 4px 10px; font-size: 11px; border-radius: 14px; font-weight: 600; }"
-            "QPushButton:hover { background-color: #CBD5E0; }"
-        )
+        self.pause_timer_btn.setStyleSheet(CARDS_TIMER_BTN_STYLE)
         self.pause_timer_btn.clicked.connect(self.toggle_timer_pause)
         timer_btn_row.addWidget(self.pause_timer_btn)
 
         self.reset_timer_btn = QPushButton("⟳ Сброс")
         self.reset_timer_btn.setFixedHeight(28)
-        self.reset_timer_btn.setStyleSheet(
-            "QPushButton { background-color: #E2E8F0; color: #5A6E7A; border: none; padding: 4px 10px; font-size: 11px; border-radius: 14px; font-weight: 600; }"
-            "QPushButton:hover { background-color: #CBD5E0; }"
-        )
+        self.reset_timer_btn.setStyleSheet(CARDS_TIMER_BTN_STYLE)
         self.reset_timer_btn.clicked.connect(self.reset_timer)
         timer_btn_row.addWidget(self.reset_timer_btn)
 
@@ -109,12 +84,12 @@ class FlashcardsTab(QWidget):
         info = QLabel("📚  Флеш-карточки")
         info.setFont(QFont('Segoe UI', 25, QFont.Bold))
         info.setAlignment(Qt.AlignCenter)  # Меняем на AlignCenter
-        info.setStyleSheet("color: #1A2C3E; margin-bottom: 4px;")
+        info.setStyleSheet(PAGE_TITLE_STYLE)
         title_col.addWidget(info)
 
         self.card_counter = QLabel("Карточка 0 из 0")
         self.card_counter.setAlignment(Qt.AlignCenter)  # Меняем на AlignCenter
-        self.card_counter.setStyleSheet("color: #9B9FC4; font-size: 13px;")
+        self.card_counter.setStyleSheet(COUNTER_STYLE)
         title_col.addWidget(self.card_counter)
 
         # Добавляем контейнер в top_row
@@ -125,17 +100,9 @@ class FlashcardsTab(QWidget):
 
         layout.addLayout(top_row)
 
-
-
         # Карточка
         self.card_frame = QFrame()
-        self.card_frame.setStyleSheet("""
-            QFrame {
-                background: #FFFFFF;
-                border-radius: 20px;
-                border: 1.5px solid #E2E8F0;
-            }
-        """)
+        self.card_frame.setStyleSheet(CARD_FRAME_STYLE)
         self.card_frame.setMinimumHeight(220)
         card_layout = QVBoxLayout(self.card_frame)
         card_layout.setContentsMargins(40, 40, 40, 40)
@@ -145,13 +112,13 @@ class FlashcardsTab(QWidget):
         self.card_word.setFont(QFont('Segoe UI', 28, QFont.Bold))
         self.card_word.setAlignment(Qt.AlignCenter)
         self.card_word.setWordWrap(True)
-        self.card_word.setStyleSheet("color: #1A2C3E; letter-spacing: 2px; border: none; background: transparent;")
+        self.card_word.setStyleSheet(CARDS_BIG_WORD_STYLE)
         card_layout.addWidget(self.card_word)
 
         self.card_translation = QLabel("")
         self.card_translation.setFont(QFont('Segoe UI', 22, QFont.Bold))
         self.card_translation.setAlignment(Qt.AlignCenter)
-        self.card_translation.setStyleSheet(CARD_TRANSLATION_STYLE + " border: none; background: transparent;")
+        self.card_translation.setStyleSheet(CARD_TRANSLATION_FLAT_STYLE)
         card_layout.addWidget(self.card_translation)
 
         layout.addWidget(self.card_frame)
@@ -161,22 +128,12 @@ class FlashcardsTab(QWidget):
         button_layout.setSpacing(10)
 
         self.start_cards_btn = QPushButton("▶  Начать")
-        self.start_cards_btn.setStyleSheet(
-            "QPushButton { background-color: #7DD3B8; color: white; border: none; padding: 12px 22px; font-size: 14px; border-radius: 40px; font-weight: 700; }"
-            "QPushButton:hover { background-color: #8FE3C8; }"
-            "QPushButton:pressed { background-color: #6BC2A7; }"
-            "QPushButton:disabled { background-color: #E2E8F0; color: #9AAEB9; border: none; }"
-        )
+        self.start_cards_btn.setStyleSheet(BTN_START_STYLE)
         self.start_cards_btn.clicked.connect(self.start_flashcards)
         button_layout.addWidget(self.start_cards_btn)
 
         self.stop_cards_btn = QPushButton("⏹  Стоп")
-        self.stop_cards_btn.setStyleSheet(
-            "QPushButton { background-color: #E87A7A; color: white; border: none; padding: 12px 22px; font-size: 14px; border-radius: 40px; font-weight: 700; }"
-            "QPushButton:hover { background-color: #F08080; }"
-            "QPushButton:pressed { background-color: #D06060; }"
-            "QPushButton:disabled { background-color: #E2E8F0; color: #9AAEB9; border: none; }"
-        )
+        self.stop_cards_btn.setStyleSheet(BTN_STOP_STYLE)
         self.stop_cards_btn.clicked.connect(self.stop_flashcards)
         self.stop_cards_btn.setEnabled(False)
         button_layout.addWidget(self.stop_cards_btn)
@@ -201,19 +158,9 @@ class FlashcardsTab(QWidget):
 
         layout.addLayout(button_layout)
 
-    def _load_icon(self):
-        """Загружает иконку из data/ico.png если файл существует"""
-        ico_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'data', 'ico.png')
-        if os.path.exists(ico_path):
-            pix = QPixmap(ico_path).scaled(400, 400, Qt.KeepAspectRatio, Qt.SmoothTransformation)
-            self.icon_label.setPixmap(pix)
-        else:
-            self.icon_label.setText("🖼")
-            self.icon_label.setFont(QFont('Segoe UI', 32))
-
     def start_flashcards(self):
         self.cards_to_study = [w for w in self.main.vocabulary
-                               if not self.main.is_word_learned(w['english'])]
+                               if not self.main.is_word_learned(w)]
         if not self.cards_to_study:
             msg = QMessageBox(self)
             msg.setWindowTitle("Поздравляем!")
@@ -237,13 +184,7 @@ class FlashcardsTab(QWidget):
             self.card_word.setText(card['english'].upper())
             self.card_translation.setText("")
             self.card_flipped = False
-            self.card_frame.setStyleSheet("""
-                QFrame {
-                    background: #FFFFFF;
-                    border-radius: 20px;
-                    border: 1.5px solid #E2E8F0;
-                }
-            """)
+            self.card_frame.setStyleSheet(CARD_FRAME_STYLE)
             self.card_counter.setText(
                 f"Карточка {self.current_card_index + 1} из {len(self.cards_to_study)}")
         else:
@@ -255,24 +196,11 @@ class FlashcardsTab(QWidget):
             if not self.card_flipped:
                 self.card_translation.setText(card['russian'])
                 self.card_flipped = True
-                self.card_frame.setStyleSheet("""
-                    QFrame {
-                        background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
-                            stop:0 #F0FBF7, stop:1 #E8F5F0);
-                        border-radius: 20px;
-                        border: 1.5px solid #7DD3B8;
-                    }
-                """)
+                self.card_frame.setStyleSheet(GRADIENT_FRAME_STYLE)
             else:
                 self.card_translation.setText("")
                 self.card_flipped = False
-                self.card_frame.setStyleSheet("""
-                    QFrame {
-                        background: #FFFFFF;
-                        border-radius: 20px;
-                        border: 1.5px solid #E2E8F0;
-                    }
-                """)
+                self.card_frame.setStyleSheet(CARD_FRAME_STYLE)
 
     def next_card(self):
         self.current_card_index += 1
@@ -281,22 +209,13 @@ class FlashcardsTab(QWidget):
     def mark_as_known(self):
         if self.current_card_index < len(self.cards_to_study):
             card = self.cards_to_study[self.current_card_index]
-            self.main.mark_word_learned(card)
             self.next_card()
-            self.main.update_progress_stats()
-            self.main.save_progress()
+            self.word_learned.emit(card)
 
     def finish_flashcards(self):
         self.card_word.setText("Все карточки изучены! 🎉")
         self.card_translation.setText("")
-        self.card_frame.setStyleSheet("""
-            QFrame {
-                background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
-                    stop:0 #E8F5F0, stop:1 #D4EEE5);
-                border-radius: 20px;
-                border: 1.5px solid #7DD3B8;
-            }
-        """)
+        self.card_frame.setStyleSheet(CARDS_DONE_FRAME_STYLE)
         self.flip_card_btn.setEnabled(False)
         self.next_card_btn.setEnabled(False)
         self.know_btn.setEnabled(False)
@@ -309,13 +228,7 @@ class FlashcardsTab(QWidget):
         self.card_flipped = False
         self.card_word.setText("Нажмите  «Начать»  для старта")
         self.card_translation.setText("")
-        self.card_frame.setStyleSheet("""
-            QFrame {
-                background: #FFFFFF;
-                border-radius: 20px;
-                border: 1.5px solid #E2E8F0;
-            }
-        """)
+        self.card_frame.setStyleSheet(CARD_FRAME_STYLE)
         self.card_counter.setText("Карточка 0 из 0")
         self.start_cards_btn.setEnabled(True)
         self.stop_cards_btn.setEnabled(False)

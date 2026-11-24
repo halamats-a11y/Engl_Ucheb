@@ -5,23 +5,26 @@ import random
 from PyQt5.QtWidgets import (QWidget, QVBoxLayout, QHBoxLayout, QLabel,
                              QPushButton, QComboBox, QSpinBox, QRadioButton,
                              QButtonGroup, QMessageBox, QFrame)
-from PyQt5.QtCore import Qt, QTimer
-from PyQt5.QtGui import QFont
-from utils.styles import (BTN_SECONDARY_STYLE, QUIZ_CORRECT_STYLE,
-                          QUIZ_WRONG_STYLE, QUIZ_NORMAL_STYLE)
+from PyQt5.QtCore import Qt, QTimer, pyqtSignal
 
-LIGHT_MSG_STYLE = """
-    QMessageBox { background-color: #F8F9FF; color: #1A2C3E; }
-    QLabel { color: #1A2C3E; font-size: 14px; }
-    QPushButton {
-        background: #7DD3B8; color: white; border: none;
-        padding: 8px 24px; border-radius: 20px; font-weight: 600; min-width: 80px;
-    }
-    QPushButton:hover { background: #8FE3C8; }
-"""
+from config import MIN_VOCABULARY_FOR_QUIZ, QUIZ_DEFAULT_QUESTION_COUNT, QUIZ_TIMED_SECONDS
+from PyQt5.QtGui import QFont
+from styles import (BTN_SECONDARY_STYLE, BTN_START_STYLE, BTN_STOP_STYLE, CARD_FRAME_STYLE,
+                    COUNTER_STYLE, GREY_TEXT_STYLE, LIGHT_MSG_STYLE, PAGE_TITLE_STYLE,
+                    PANEL_FRAME_STYLE, QUIZ_CORRECT_STYLE, QUIZ_NORMAL_STYLE,
+                    QUIZ_QUESTION_BOX_STYLE, QUIZ_RESULT_BAD_STYLE, QUIZ_RESULT_OK_STYLE,
+                    QUIZ_TIMER_STYLE, QUIZ_TIMER_URGENT_STYLE, QUIZ_WOD_ENGLISH_STYLE,
+                    QUIZ_WOD_HINT_STYLE, QUIZ_WOD_RUSSIAN_STYLE, QUIZ_WRONG_STYLE,
+                    SECTION_CAPTION_STYLE, TEXT_DARK_STYLE)
 
 
 class QuizTab(QWidget):
+    # Сигналы: вкладка сообщает, что произошло, а сохраняет прогресс сервис
+    quiz_started = pyqtSignal(str)        # режим: "classic" или "timed"
+    answer_given = pyqtSignal(bool)       # True — ответ правильный
+    quiz_finished = pyqtSignal(int, int)  # правильных ответов, всего вопросов
+    quiz_stopped = pyqtSignal()           # тест остановили кнопкой «Стоп»
+
     def __init__(self, main_window):
         super().__init__()
         self.main = main_window
@@ -44,35 +47,34 @@ class QuizTab(QWidget):
         title = QLabel("✍  Тест на знание слов")
         title.setFont(QFont('Segoe UI', 18, QFont.Bold))
         title.setAlignment(Qt.AlignCenter)
-        title.setStyleSheet("color: #1A2C3E; margin-bottom: 4px;")
+        title.setStyleSheet(PAGE_TITLE_STYLE)
         layout.addWidget(title)
 
         # Настройки (всегда видны)
         settings_frame = QFrame()
-        settings_frame.setStyleSheet(
-            "QFrame { background-color: #FFFFFF; border-radius: 16px; border: 1.5px solid #E2E8F0; }")
+        settings_frame.setStyleSheet(PANEL_FRAME_STYLE)
         settings_layout = QHBoxLayout(settings_frame)
         settings_layout.setContentsMargins(16, 10, 16, 10)
 
         lbl1 = QLabel("Режим:")
-        lbl1.setStyleSheet("color: #5A6E7A; font-size: 13px; border: none; background: transparent;")
+        lbl1.setStyleSheet(GREY_TEXT_STYLE)
         settings_layout.addWidget(lbl1)
 
         self.quiz_mode = QComboBox()
-        self.quiz_mode.addItems(["Обычный режим", "⏱  На время (60 сек)"])
+        self.quiz_mode.addItems(["Обычный режим", f"⏱  На время ({QUIZ_TIMED_SECONDS} сек)"])
         self.quiz_mode.currentIndexChanged.connect(self.on_quiz_mode_changed)
         settings_layout.addWidget(self.quiz_mode)
 
         settings_layout.addSpacing(20)
 
         lbl2 = QLabel("Вопросов:")
-        lbl2.setStyleSheet("color: #5A6E7A; font-size: 13px; border: none; background: transparent;")
+        lbl2.setStyleSheet(GREY_TEXT_STYLE)
         settings_layout.addWidget(lbl2)
 
         self.quiz_count = QSpinBox()
         self.quiz_count.setMinimum(5)
         self.quiz_count.setMaximum(50)
-        self.quiz_count.setValue(10)
+        self.quiz_count.setValue(QUIZ_DEFAULT_QUESTION_COUNT)
         settings_layout.addWidget(self.quiz_count)
 
         settings_layout.addStretch()
@@ -82,20 +84,13 @@ class QuizTab(QWidget):
         self.timer_label = QLabel("")
         self.timer_label.setFont(QFont('Segoe UI', 18, QFont.Bold))
         self.timer_label.setAlignment(Qt.AlignCenter)
-        self.timer_label.setStyleSheet(
-            "color: #E87A7A; background-color: #FFF0F0; padding: 10px; border-radius: 16px; border: 1.5px solid #FFB8B8;")
+        self.timer_label.setStyleSheet(QUIZ_TIMER_STYLE)
         self.timer_label.setVisible(False)
         layout.addWidget(self.timer_label)
 
         # «Слово дня» — показывается пока тест не начат
         self.word_of_day_frame = QFrame()
-        self.word_of_day_frame.setStyleSheet("""
-            QFrame {
-                background: #FFFFFF;
-                border-radius: 20px;
-                border: 1.5px solid #E2E8F0;
-            }
-        """)
+        self.word_of_day_frame.setStyleSheet(CARD_FRAME_STYLE)
         wod_layout = QVBoxLayout(self.word_of_day_frame)
         wod_layout.setContentsMargins(32, 28, 32, 28)
         wod_layout.setSpacing(10)
@@ -104,25 +99,25 @@ class QuizTab(QWidget):
         wod_title = QLabel("📖  Слово дня")
         wod_title.setFont(QFont('Segoe UI', 13, QFont.Bold))
         wod_title.setAlignment(Qt.AlignCenter)
-        wod_title.setStyleSheet("color: #7DD3B8; border: none; background: transparent; letter-spacing: 1px;")
+        wod_title.setStyleSheet(SECTION_CAPTION_STYLE)
         wod_layout.addWidget(wod_title)
 
         self.wod_english = QLabel("")
         self.wod_english.setFont(QFont('Segoe UI', 30, QFont.Bold))
         self.wod_english.setAlignment(Qt.AlignCenter)
-        self.wod_english.setStyleSheet("color: #1A2C3E; border: none; background: transparent; letter-spacing: 2px;")
+        self.wod_english.setStyleSheet(QUIZ_WOD_ENGLISH_STYLE)
         wod_layout.addWidget(self.wod_english)
 
         self.wod_russian = QLabel("")
         self.wod_russian.setFont(QFont('Segoe UI', 18))
         self.wod_russian.setAlignment(Qt.AlignCenter)
-        self.wod_russian.setStyleSheet("color: #7DD3B8; border: none; background: transparent; font-weight: 600;")
+        self.wod_russian.setStyleSheet(QUIZ_WOD_RUSSIAN_STYLE)
         wod_layout.addWidget(self.wod_russian)
 
         self.wod_hint = QLabel("Нажмите «Начать тест», чтобы проверить знания")
         self.wod_hint.setFont(QFont('Segoe UI', 11))
         self.wod_hint.setAlignment(Qt.AlignCenter)
-        self.wod_hint.setStyleSheet("color: #9AAEB9; border: none; background: transparent; margin-top: 6px;")
+        self.wod_hint.setStyleSheet(QUIZ_WOD_HINT_STYLE)
         wod_layout.addWidget(self.wod_hint)
 
         layout.addWidget(self.word_of_day_frame)
@@ -134,9 +129,7 @@ class QuizTab(QWidget):
         self.quiz_question.setAlignment(Qt.AlignCenter)
         self.quiz_question.setMinimumHeight(100)
         self.quiz_question.setWordWrap(True)
-        self.quiz_question.setStyleSheet(
-            "background: #FFFFFF;"
-            "border-radius: 16px; padding: 22px; border: 1.5px solid #E2E8F0; color: #1A2C3E;")
+        self.quiz_question.setStyleSheet(QUIZ_QUESTION_BOX_STYLE)
         self.quiz_question.setVisible(False)
         layout.addWidget(self.quiz_question)
 
@@ -156,12 +149,12 @@ class QuizTab(QWidget):
         self.quiz_result = QLabel("")
         self.quiz_result.setAlignment(Qt.AlignCenter)
         self.quiz_result.setFont(QFont('Segoe UI', 14, QFont.Bold))
-        self.quiz_result.setStyleSheet("color: #1A2C3E;")
+        self.quiz_result.setStyleSheet(TEXT_DARK_STYLE)
         layout.addWidget(self.quiz_result)
 
         self.quiz_progress = QLabel("")
         self.quiz_progress.setAlignment(Qt.AlignCenter)
-        self.quiz_progress.setStyleSheet("color: #9B9FC4; font-size: 13px;")
+        self.quiz_progress.setStyleSheet(COUNTER_STYLE)
         layout.addWidget(self.quiz_progress)
 
         # Кнопки
@@ -169,22 +162,12 @@ class QuizTab(QWidget):
         button_layout.setSpacing(10)
 
         self.start_quiz_btn = QPushButton("▶  Начать тест")
-        self.start_quiz_btn.setStyleSheet(
-            "QPushButton { background-color: #7DD3B8; color: white; border: none; padding: 12px 22px; font-size: 14px; border-radius: 40px; font-weight: 700; }"
-            "QPushButton:hover { background-color: #8FE3C8; }"
-            "QPushButton:pressed { background-color: #6BC2A7; }"
-            "QPushButton:disabled { background-color: #E2E8F0; color: #9AAEB9; border: none; }"
-        )
+        self.start_quiz_btn.setStyleSheet(BTN_START_STYLE)
         self.start_quiz_btn.clicked.connect(self.start_quiz)
         button_layout.addWidget(self.start_quiz_btn)
 
         self.stop_quiz_btn = QPushButton("⏹  Стоп")
-        self.stop_quiz_btn.setStyleSheet(
-            "QPushButton { background-color: #E87A7A; color: white; border: none; padding: 12px 22px; font-size: 14px; border-radius: 40px; font-weight: 700; }"
-            "QPushButton:hover { background-color: #F08080; }"
-            "QPushButton:pressed { background-color: #D06060; }"
-            "QPushButton:disabled { background-color: #E2E8F0; color: #9AAEB9; border: none; }"
-        )
+        self.stop_quiz_btn.setStyleSheet(BTN_STOP_STYLE)
         self.stop_quiz_btn.clicked.connect(self.stop_quiz)
         self.stop_quiz_btn.setEnabled(False)
         button_layout.addWidget(self.stop_quiz_btn)
@@ -224,27 +207,26 @@ class QuizTab(QWidget):
             self.quiz_count.setValue(999)
         else:
             self.quiz_count.setEnabled(True)
-            self.quiz_count.setValue(10)
+            self.quiz_count.setValue(QUIZ_DEFAULT_QUESTION_COUNT)
 
     def start_quiz(self):
         self.is_timed_mode = "На время" in self.quiz_mode.currentText()
         num_questions = self.quiz_count.value()
 
-        if len(self.main.vocabulary) < 4:
+        if len(self.main.vocabulary) < MIN_VOCABULARY_FOR_QUIZ:
             msg = QMessageBox(self)
             msg.setWindowTitle("Предупреждение")
-            msg.setText("Недостаточно слов в словаре. Минимум: 4")
+            msg.setText(f"Недостаточно слов в словаре. Минимум: {MIN_VOCABULARY_FOR_QUIZ}")
             msg.setIcon(QMessageBox.NoIcon)
             msg.setStyleSheet(LIGHT_MSG_STYLE)
             msg.exec_()
             return
 
         self._show_quiz_widgets(True)
-        self.quiz_session_id = self.main.start_quiz_session("timed" if self.is_timed_mode else "classic")
         self.quiz_active = True
 
         if self.is_timed_mode:
-            self.time_remaining = 60
+            self.time_remaining = QUIZ_TIMED_SECONDS
             self.quiz_questions = []
             self.quiz_score = 0
             self.current_question = 0
@@ -269,6 +251,7 @@ class QuizTab(QWidget):
             self.timer_label.setVisible(False)
             self.show_quiz_question()
 
+        self.quiz_started.emit("timed" if self.is_timed_mode else "classic")
         self.start_quiz_btn.setEnabled(False)
         self.stop_quiz_btn.setEnabled(True)
         self.check_answer_btn.setEnabled(True)
@@ -342,17 +325,16 @@ class QuizTab(QWidget):
             return
 
         selected_index = self.answer_group.id(selected_button)
-        self.main.user_progress['total_answers'] += 1
+        self.answer_given.emit(selected_index == self.correct_answer_index)
 
         if selected_index == self.correct_answer_index:
             self.quiz_result.setText("✓  Правильно!")
-            self.quiz_result.setStyleSheet("color: #2A8C6E; font-weight: bold; font-size: 15px;")
+            self.quiz_result.setStyleSheet(QUIZ_RESULT_OK_STYLE)
             self.answer_buttons[selected_index].setStyleSheet(QUIZ_CORRECT_STYLE)
             self.quiz_score += 1
-            self.main.user_progress['correct_answers'] += 1
         else:
             self.quiz_result.setText("✗  Неправильно!")
-            self.quiz_result.setStyleSheet("color: #E87A7A; font-weight: bold; font-size: 15px;")
+            self.quiz_result.setStyleSheet(QUIZ_RESULT_BAD_STYLE)
             self.answer_buttons[selected_index].setStyleSheet(QUIZ_WRONG_STYLE)
             self.answer_buttons[self.correct_answer_index].setStyleSheet(QUIZ_CORRECT_STYLE)
 
@@ -379,19 +361,14 @@ class QuizTab(QWidget):
             btn.setStyleSheet(QUIZ_NORMAL_STYLE)
         self.quiz_result.setText("")
         self.quiz_progress.setText("")
-        self.main.user_progress['tests_completed'] += 1
-        self.main.finish_quiz_session(getattr(self, 'quiz_session_id', None), self.quiz_score, len(self.quiz_questions))
-
         self._reset_to_idle()
-        self.main.update_progress_stats()
-        self.main.save_progress()
+        self.quiz_finished.emit(self.quiz_score, len(self.quiz_questions))
 
     def update_quiz_timer(self):
         self.time_remaining -= 1
         self.timer_label.setText(f"⏱  Осталось: {self.time_remaining} сек")
         if self.time_remaining <= 10:
-            self.timer_label.setStyleSheet(
-                "color: white; background: #E87A7A; padding: 10px; border-radius: 16px; font-weight: bold; border: 1.5px solid #E87A7A;")
+            self.timer_label.setStyleSheet(QUIZ_TIMER_URGENT_STYLE)
         if self.time_remaining <= 0:
             self.quiz_timer.stop()
             self.finish_timed_quiz()
@@ -408,8 +385,7 @@ class QuizTab(QWidget):
             btn.setStyleSheet(QUIZ_NORMAL_STYLE)
         self.quiz_result.setText("")
         self.quiz_progress.setText("")
-        self.main.user_progress['tests_completed'] += 1
-        self.main.finish_quiz_session(getattr(self, 'quiz_session_id', None), self.quiz_score, self.current_question + 1)
+        answered = self.current_question + 1
 
         rating = ""
         if wpm >= 40:
@@ -430,15 +406,14 @@ class QuizTab(QWidget):
         msg.setText(
             f"⏱ Результат теста на время:\n\n"
             f"✅ Правильных: {wpm}\n"
-            f"⏰ Время: 60 секунд\n"
+            f"⏰ Время: {QUIZ_TIMED_SECONDS} секунд\n"
             f"📊 Скорость: {wpm} слов/мин\n\n{rating}"
         )
         msg.setIcon(QMessageBox.NoIcon)
         msg.setStyleSheet(LIGHT_MSG_STYLE)
         msg.exec_()
 
-        self.main.update_progress_stats()
-        self.main.save_progress()
+        self.quiz_finished.emit(wpm, answered)
 
     def _reset_to_idle(self):
         self._show_quiz_widgets(False)
@@ -452,6 +427,8 @@ class QuizTab(QWidget):
         self.quiz_mode.setEnabled(True)
 
     def stop_quiz(self):
+        if self.quiz_active:
+            self.quiz_stopped.emit()
         self.quiz_timer.stop()
         self.quiz_questions = []
         self.current_question = 0

@@ -6,67 +6,9 @@ from PyQt5.QtWidgets import (QWidget, QVBoxLayout, QHBoxLayout, QLabel,
                              QDialog, QFormLayout, QMessageBox)
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QFont
-from utils.styles import BTN_SUCCESS_STYLE, BTN_SECONDARY_STYLE
-
-DIALOG_STYLE = """
-    QDialog {
-        background-color: #F8F9FF;
-        color: #1A2C3E;
-    }
-    QLabel {
-        color: #1A2C3E;
-        font-size: 13px;
-    }
-    QLineEdit {
-        padding: 10px 14px;
-        border: 1.5px solid #E2E8F0;
-        border-radius: 12px;
-        font-size: 13px;
-        background-color: #FFFFFF;
-        color: #1A2C3E;
-    }
-    QLineEdit:focus {
-        border-color: #7DD3B8;
-    }
-    QPushButton {
-        background: #7DD3B8;
-        color: #FFFFFF;
-        border: none;
-        padding: 10px 22px;
-        font-size: 13px;
-        border-radius: 20px;
-        font-weight: 600;
-    }
-    QPushButton:hover { background: #8FE3C8; }
-    QPushButton:pressed { background: #6BC2A7; }
-    QPushButton[objectName="cancel"] {
-        background: #FFFFFF;
-        color: #7DD3B8;
-        border: 1.5px solid #E2E8F0;
-    }
-    QPushButton[objectName="cancel"]:hover {
-        background: #F8FAFF;
-        border-color: #7DD3B8;
-    }
-"""
-
-BTN_VOCAB_STYLE = """
-    QPushButton {
-        background: #FFFFFF;
-        color: #7DD3B8;
-        border: 1.5px solid #E2E8F0;
-        padding: 10px 20px;
-        font-size: 13px;
-        border-radius: 20px;
-        font-weight: 600;
-    }
-    QPushButton:hover {
-        background: #F0FBF7;
-        border-color: #7DD3B8;
-        color: #6BC2A7;
-    }
-    QPushButton:pressed { background: #E8F5F0; }
-"""
+from styles import (BTN_SUCCESS_STYLE, BTN_VOCAB_STYLE, PAGE_TITLE_STYLE, VOCAB_ADD_DIALOG_STYLE,
+                    VOCAB_ROW_HEADER_STYLE, VOCAB_SAVED_MSG_STYLE, VOCAB_SEARCH_STYLE,
+                    VOCAB_TABLE_CORNER_STYLE)
 
 
 class VocabularyTab(QWidget):
@@ -85,13 +27,13 @@ class VocabularyTab(QWidget):
         title = QLabel("📖 Мой словарь")
         title.setFont(QFont('Segoe UI', 18, QFont.Bold))
         title.setAlignment(Qt.AlignCenter)
-        title.setStyleSheet("color: #1A2C3E; margin-bottom: 4px;")
+        title.setStyleSheet(PAGE_TITLE_STYLE)
         layout.addWidget(title)
 
         # Поиск
         search_layout = QHBoxLayout()
         search_lbl = QLabel("Поиск:")
-        search_lbl.setStyleSheet("color: #5A6E7A; font-size: 13px; font-weight: 600;")
+        search_lbl.setStyleSheet(VOCAB_SEARCH_STYLE)
         search_layout.addWidget(search_lbl)
         self.vocab_search = QLineEdit()
         self.vocab_search.setPlaceholderText("Введите слово для поиска...")
@@ -106,25 +48,8 @@ class VocabularyTab(QWidget):
         self.vocab_table.horizontalHeader().setStretchLastSection(True)
         # Corner (верхний левый квадрат между заголовками)
         self.vocab_table.setCornerButtonEnabled(False)
-        self.vocab_table.setStyleSheet(self.vocab_table.styleSheet() + """
-            QAbstractScrollArea::corner {
-                background-color: #F8F9FF;
-                border: none;
-                border-right: 1px solid #E2E8F0;
-                border-bottom: 1px solid #E2E8F0;
-            }
-        """)
-        self.vocab_table.verticalHeader().setStyleSheet("""
-            QHeaderView::section {
-                background-color: #F8F9FF;
-                color: #5A6E7A;
-                padding: 6px 10px;
-                border: none;
-                border-right: 1px solid #E2E8F0;
-                font-size: 12px;
-                font-weight: 500;
-            }
-        """)
+        self.vocab_table.setStyleSheet(self.vocab_table.styleSheet() + VOCAB_TABLE_CORNER_STYLE)
+        self.vocab_table.verticalHeader().setStyleSheet(VOCAB_ROW_HEADER_STYLE)
         layout.addWidget(self.vocab_table)
 
         # Кнопки
@@ -153,7 +78,7 @@ class VocabularyTab(QWidget):
         for i, word in enumerate(self.main.vocabulary):
             self.vocab_table.setItem(i, 0, QTableWidgetItem(word['english']))
             self.vocab_table.setItem(i, 1, QTableWidgetItem(word['russian']))
-            status = "✓ Изучено" if self.main.is_word_learned(word['english']) else "○ Не изучено"
+            status = "✓ Изучено" if self.main.is_word_learned(word) else "○ Не изучено"
             self.vocab_table.setItem(i, 2, QTableWidgetItem(status))
 
     def filter_vocabulary(self):
@@ -168,7 +93,7 @@ class VocabularyTab(QWidget):
         dialog.setWindowTitle("Добавить новое слово")
         dialog.setModal(True)
         dialog.setMinimumWidth(320)
-        dialog.setStyleSheet(DIALOG_STYLE)
+        dialog.setStyleSheet(VOCAB_ADD_DIALOG_STYLE)
 
         layout = QFormLayout()
         layout.setContentsMargins(20, 20, 20, 20)
@@ -207,23 +132,10 @@ class VocabularyTab(QWidget):
 
     def manual_save(self):
         self.main.save_progress()
-        self.main.save_progress()
         # Светлый диалог сохранения
         msg = QMessageBox(self)
         msg.setWindowTitle("Сохранено")
         msg.setText("Словарь и прогресс успешно сохранены!")
         msg.setIcon(QMessageBox.NoIcon)
-        msg.setStyleSheet("""
-            QMessageBox {
-                background-color: #F8F9FF;
-                color: #1A2C3E;
-            }
-            QLabel { color: #1A2C3E; font-size: 14px; }
-            QPushButton {
-                background: #7DD3B8; color: white; border: none;
-                padding: 8px 24px; border-radius: 20px; font-weight: 600;
-                min-width: 80px;
-            }
-            QPushButton:hover { background: #8FE3C8; }
-        """)
+        msg.setStyleSheet(VOCAB_SAVED_MSG_STYLE)
         msg.exec_()

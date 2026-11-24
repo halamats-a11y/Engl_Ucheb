@@ -5,7 +5,18 @@ from PyQt5.QtWidgets import (QWidget, QVBoxLayout, QHBoxLayout, QLabel,
                              QProgressBar, QPushButton, QFrame)
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QFont
-from utils.styles import BTN_SECONDARY_STYLE
+
+from config import DAILY_TESTS_TARGET, DAILY_WORDS_TARGET
+from styles import (BTN_SECONDARY_STYLE, GRADIENT_FRAME_STYLE, GREY_TEXT_STYLE, HINT_TEXT_STYLE,
+                    PAGE_TITLE_STYLE, PANEL_FRAME_STYLE, PROGRESS_BIG_TEXT_STYLE,
+                    PROGRESS_CARD_STYLE, PROGRESS_CHECK_DONE_STYLE, PROGRESS_DAILY_CONGRATS_STYLE,
+                    PROGRESS_GOAL_BAR_STYLE, PROGRESS_GOAL_TEXT_STYLE, PROGRESS_PROG_TITLE_STYLE,
+                    PROGRESS_RANKS_TITLE_STYLE, PROGRESS_RANK_HEADER_STYLE,
+                    PROGRESS_RANK_LOCKED_STYLE, PROGRESS_REQ_DONE_STYLE, PROGRESS_REQ_LOCKED_STYLE,
+                    PROGRESS_REQ_STYLE, PROGRESS_STREAK_CARD_STYLE, PROGRESS_STREAK_SUB_STYLE,
+                    PROGRESS_STREAK_TITLE_STYLE, PROGRESS_VALUE_STYLE, PROGRESS_VAL_ACCURACY_STYLE,
+                    SECTION_CAPTION_STYLE, TRANSPARENT_STYLE, rank_done_style, rank_name_style,
+                    rank_title_style)
 
 # ── Таблица званий ────────────────────────────────────────────────────────────
 # (мин_слов, мин_тестов, эмодзи, название, цвет)
@@ -18,9 +29,10 @@ RANKS = [
     (300, 20, "🔥", "Эрудит",           "#F5824A"),
     (500, 35, "💎", "Мастер слов",      "#7B74FF"),
     (750, 50, "🏆", "Лингвист",         "#E8A020"),
-    (1000,75, "👑", "Полиглот",         "#E8504A"),
-    (2094,100,"🌟", "Легенда словаря",  "#7DD3B8"),
+    (1000, 75, "👑", "Полиглот",         "#E8504A"),
+    (2094, 100, "🌟", "Легенда словаря",  "#7DD3B8"),
 ]
+
 
 def get_rank(words_learned: int, tests_completed: int) -> tuple:
     """Возвращает (эмодзи, название, цвет, след_порог_слов, след_порог_тестов)."""
@@ -53,45 +65,35 @@ class ProgressTab(QWidget):
         title = QLabel("📊  Мой прогресс")
         title.setFont(QFont('Segoe UI', 18, QFont.Bold))
         title.setAlignment(Qt.AlignCenter)
-        title.setStyleSheet("color: #1A2C3E; margin-bottom: 4px;")
+        title.setStyleSheet(PAGE_TITLE_STYLE)
         layout.addWidget(title)
 
         # ── Карточка звания ───────────────────────────────────────────
         self.rank_frame = QFrame()
-        self.rank_frame.setStyleSheet("""
-            QFrame {
-                background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
-                    stop:0 #F0FBF7, stop:1 #E8F5F0);
-                border-radius: 20px;
-                border: 1.5px solid #7DD3B8;
-            }
-        """)
+        self.rank_frame.setStyleSheet(GRADIENT_FRAME_STYLE)
         rank_layout = QHBoxLayout(self.rank_frame)
         rank_layout.setContentsMargins(24, 18, 24, 18)
         rank_layout.setSpacing(16)
 
         self.rank_icon_lbl = QLabel("🌱")
         self.rank_icon_lbl.setFont(QFont('Segoe UI', 36))
-        self.rank_icon_lbl.setStyleSheet("border: none; background: transparent;")
+        self.rank_icon_lbl.setStyleSheet(TRANSPARENT_STYLE)
         rank_layout.addWidget(self.rank_icon_lbl)
 
         rank_text_col = QVBoxLayout()
         rank_text_col.setSpacing(4)
 
         rank_header = QLabel("Ваше звание")
-        rank_header.setStyleSheet(
-            "color: #7DD3B8; font-size: 11px; font-weight: 700; "
-            "letter-spacing: 1px; border: none; background: transparent;")
+        rank_header.setStyleSheet(PROGRESS_RANK_HEADER_STYLE)
         rank_text_col.addWidget(rank_header)
 
         self.rank_name_lbl = QLabel("Новичок")
         self.rank_name_lbl.setFont(QFont('Segoe UI', 20, QFont.Bold))
-        self.rank_name_lbl.setStyleSheet("color: #1A2C3E; border: none; background: transparent;")
+        self.rank_name_lbl.setStyleSheet(PROGRESS_BIG_TEXT_STYLE)
         rank_text_col.addWidget(self.rank_name_lbl)
 
         self.rank_next_lbl = QLabel("")
-        self.rank_next_lbl.setStyleSheet(
-            "color: #5A6E7A; font-size: 12px; border: none; background: transparent;")
+        self.rank_next_lbl.setStyleSheet(HINT_TEXT_STYLE)
         rank_text_col.addWidget(self.rank_next_lbl)
 
         rank_layout.addLayout(rank_text_col)
@@ -104,33 +106,23 @@ class ProgressTab(QWidget):
 
         # Карточка серии дней
         streak_card = QFrame()
-        streak_card.setStyleSheet("""
-            QFrame {
-                background: qlineargradient(x1:0,y1:0,x2:1,y2:1,
-                    stop:0 #FFF5EF, stop:1 #FFE8DA);
-                border-radius: 16px;
-                border: 1.5px solid #F5B89A;
-            }
-        """)
+        streak_card.setStyleSheet(PROGRESS_STREAK_CARD_STYLE)
         sc_layout = QVBoxLayout(streak_card)
         sc_layout.setContentsMargins(18, 14, 18, 14)
         sc_layout.setSpacing(4)
 
         streak_title = QLabel("🔥  Серия дней")
         streak_title.setFont(QFont('Segoe UI', 11, QFont.Bold))
-        streak_title.setStyleSheet(
-            "color: #F5824A; border: none; background: transparent; letter-spacing: 1px;")
+        streak_title.setStyleSheet(PROGRESS_STREAK_TITLE_STYLE)
         sc_layout.addWidget(streak_title)
 
         self.streak_val_lbl = QLabel("0 дней подряд")
         self.streak_val_lbl.setFont(QFont('Segoe UI', 20, QFont.Bold))
-        self.streak_val_lbl.setStyleSheet(
-            "color: #1A2C3E; border: none; background: transparent;")
+        self.streak_val_lbl.setStyleSheet(PROGRESS_BIG_TEXT_STYLE)
         sc_layout.addWidget(self.streak_val_lbl)
 
         self.streak_sub_lbl = QLabel("Войди завтра, чтобы не прерывать!")
-        self.streak_sub_lbl.setStyleSheet(
-            "color: #5A6E7A; font-size: 11px; border: none; background: transparent;")
+        self.streak_sub_lbl.setStyleSheet(PROGRESS_STREAK_SUB_STYLE)
         sc_layout.addWidget(self.streak_sub_lbl)
 
         streak_goal_row.addWidget(streak_card)
@@ -138,26 +130,18 @@ class ProgressTab(QWidget):
         # Карточка дневной цели
         from PyQt5.QtWidgets import QProgressBar as _QProgressBar
         goal_card = QFrame()
-        goal_card.setStyleSheet("""
-            QFrame {
-                background: #FFFFFF;
-                border-radius: 16px;
-                border: 1.5px solid #E2E8F0;
-            }
-        """)
+        goal_card.setStyleSheet(PROGRESS_CARD_STYLE)
         gc_layout = QVBoxLayout(goal_card)
         gc_layout.setContentsMargins(18, 14, 18, 14)
         gc_layout.setSpacing(6)
 
         goal_title_lbl = QLabel("🎯  Цель на сегодня")
         goal_title_lbl.setFont(QFont('Segoe UI', 11, QFont.Bold))
-        goal_title_lbl.setStyleSheet(
-            "color: #7DD3B8; border: none; background: transparent; letter-spacing: 1px;")
+        goal_title_lbl.setStyleSheet(SECTION_CAPTION_STYLE)
         gc_layout.addWidget(goal_title_lbl)
 
         self.daily_words_lbl = QLabel("Слов: 0 / 5")
-        self.daily_words_lbl.setStyleSheet(
-            "color: #1A2C3E; font-size: 12px; font-weight: 600; border: none; background: transparent;")
+        self.daily_words_lbl.setStyleSheet(PROGRESS_GOAL_TEXT_STYLE)
         gc_layout.addWidget(self.daily_words_lbl)
 
         self.daily_words_bar = _QProgressBar()
@@ -165,15 +149,11 @@ class ProgressTab(QWidget):
         self.daily_words_bar.setValue(0)
         self.daily_words_bar.setTextVisible(False)
         self.daily_words_bar.setFixedHeight(7)
-        self.daily_words_bar.setStyleSheet("""
-            QProgressBar { background: #E2E8F0; border-radius: 3px; border: none; }
-            QProgressBar::chunk { background: #7DD3B8; border-radius: 3px; }
-        """)
+        self.daily_words_bar.setStyleSheet(PROGRESS_GOAL_BAR_STYLE)
         gc_layout.addWidget(self.daily_words_bar)
 
         self.daily_tests_lbl = QLabel("Тестов: 0 / 1")
-        self.daily_tests_lbl.setStyleSheet(
-            "color: #1A2C3E; font-size: 12px; font-weight: 600; border: none; background: transparent;")
+        self.daily_tests_lbl.setStyleSheet(PROGRESS_GOAL_TEXT_STYLE)
         gc_layout.addWidget(self.daily_tests_lbl)
 
         self.daily_tests_bar = _QProgressBar()
@@ -181,17 +161,13 @@ class ProgressTab(QWidget):
         self.daily_tests_bar.setValue(0)
         self.daily_tests_bar.setTextVisible(False)
         self.daily_tests_bar.setFixedHeight(7)
-        self.daily_tests_bar.setStyleSheet("""
-            QProgressBar { background: #E2E8F0; border-radius: 3px; border: none; }
-            QProgressBar::chunk { background: #7DD3B8; border-radius: 3px; }
-        """)
+        self.daily_tests_bar.setStyleSheet(PROGRESS_GOAL_BAR_STYLE)
         gc_layout.addWidget(self.daily_tests_bar)
 
         self.daily_congrats_lbl = QLabel("")
         self.daily_congrats_lbl.setAlignment(Qt.AlignCenter)
         self.daily_congrats_lbl.setFont(QFont('Segoe UI', 11, QFont.Bold))
-        self.daily_congrats_lbl.setStyleSheet(
-            "color: #FFFFFF; background: #3ABFA0; border-radius: 8px; padding: 4px; border: none;")
+        self.daily_congrats_lbl.setStyleSheet(PROGRESS_DAILY_CONGRATS_STYLE)
         self.daily_congrats_lbl.setVisible(False)
         gc_layout.addWidget(self.daily_congrats_lbl)
 
@@ -204,13 +180,7 @@ class ProgressTab(QWidget):
 
         def make_stat_card(icon, label_text):
             frame = QFrame()
-            frame.setStyleSheet("""
-                QFrame {
-                    background: #FFFFFF;
-                    border-radius: 16px;
-                    border: 1.5px solid #E2E8F0;
-                }
-            """)
+            frame.setStyleSheet(PROGRESS_CARD_STYLE)
             fl = QVBoxLayout(frame)
             fl.setContentsMargins(20, 18, 20, 18)
             fl.setSpacing(6)
@@ -218,19 +188,18 @@ class ProgressTab(QWidget):
             icon_lbl = QLabel(icon)
             icon_lbl.setFont(QFont('Segoe UI', 26))
             icon_lbl.setAlignment(Qt.AlignCenter)
-            icon_lbl.setStyleSheet("border: none; background: transparent;")
+            icon_lbl.setStyleSheet(TRANSPARENT_STYLE)
             fl.addWidget(icon_lbl)
 
             val_lbl = QLabel("—")
             val_lbl.setFont(QFont('Segoe UI', 22, QFont.Bold))
             val_lbl.setAlignment(Qt.AlignCenter)
-            val_lbl.setStyleSheet("color: #7DD3B8; border: none; background: transparent;")
+            val_lbl.setStyleSheet(PROGRESS_VALUE_STYLE)
             fl.addWidget(val_lbl)
 
             desc_lbl = QLabel(label_text)
             desc_lbl.setAlignment(Qt.AlignCenter)
-            desc_lbl.setStyleSheet(
-                "color: #5A6E7A; font-size: 12px; border: none; background: transparent;")
+            desc_lbl.setStyleSheet(HINT_TEXT_STYLE)
             fl.addWidget(desc_lbl)
 
             return frame, val_lbl
@@ -238,8 +207,7 @@ class ProgressTab(QWidget):
         card_words, self.val_words = make_stat_card("📖", "Слов изучено")
         card_tests, self.val_tests = make_stat_card("✍", "Тестов пройдено")
         card_acc, self.val_accuracy = make_stat_card("🎯", "Точность ответов")
-        self.val_accuracy.setStyleSheet(
-            "color: #F5B841; font-size: 22px; font-weight: 700; border: none; background: transparent;")
+        self.val_accuracy.setStyleSheet(PROGRESS_VAL_ACCURACY_STYLE)
 
         cards_layout.addWidget(card_words)
         cards_layout.addWidget(card_tests)
@@ -248,22 +216,14 @@ class ProgressTab(QWidget):
 
         # ── Прогресс-бар изучения ─────────────────────────────────────
         prog_frame = QFrame()
-        prog_frame.setStyleSheet("""
-            QFrame {
-                background-color: #FFFFFF;
-                border-radius: 16px;
-                border: 1.5px solid #E2E8F0;
-            }
-        """)
+        prog_frame.setStyleSheet(PANEL_FRAME_STYLE)
         prog_layout = QVBoxLayout(prog_frame)
         prog_layout.setContentsMargins(22, 18, 22, 18)
         prog_layout.setSpacing(10)
 
         prog_title = QLabel("Прогресс изучения словаря")
         prog_title.setFont(QFont('Segoe UI', 13, QFont.Bold))
-        prog_title.setStyleSheet(
-            "color: #7DD3B8; border: none; background: transparent; "
-            "font-size: 11px; text-transform: uppercase; letter-spacing: 1px;")
+        prog_title.setStyleSheet(PROGRESS_PROG_TITLE_STYLE)
         prog_layout.addWidget(prog_title)
 
         self.progress_bar = QProgressBar()
@@ -275,30 +235,21 @@ class ProgressTab(QWidget):
 
         self.progress_label = QLabel("0 из 0 слов изучено")
         self.progress_label.setAlignment(Qt.AlignCenter)
-        self.progress_label.setStyleSheet(
-            "color: #5A6E7A; font-size: 13px; border: none; background: transparent;")
+        self.progress_label.setStyleSheet(GREY_TEXT_STYLE)
         prog_layout.addWidget(self.progress_label)
 
         layout.addWidget(prog_frame)
 
         # ── Таблица всех званий ───────────────────────────────────────
         ranks_frame = QFrame()
-        ranks_frame.setStyleSheet("""
-            QFrame {
-                background-color: #FFFFFF;
-                border-radius: 16px;
-                border: 1.5px solid #E2E8F0;
-            }
-        """)
+        ranks_frame.setStyleSheet(PANEL_FRAME_STYLE)
         ranks_layout = QVBoxLayout(ranks_frame)
         ranks_layout.setContentsMargins(22, 14, 22, 14)
         ranks_layout.setSpacing(6)
 
         ranks_title = QLabel("Все звания")
         ranks_title.setFont(QFont('Segoe UI', 11, QFont.Bold))
-        ranks_title.setStyleSheet(
-            "color: #7DD3B8; border: none; background: transparent; "
-            "font-size: 11px; letter-spacing: 1px;")
+        ranks_title.setStyleSheet(PROGRESS_RANKS_TITLE_STYLE)
         ranks_layout.addWidget(ranks_title)
 
         self.rank_rows = []
@@ -309,22 +260,22 @@ class ProgressTab(QWidget):
             icon_l = QLabel(rank[2])
             icon_l.setFixedWidth(28)
             icon_l.setFont(QFont('Segoe UI', 16))
-            icon_l.setStyleSheet("border: none; background: transparent;")
+            icon_l.setStyleSheet(TRANSPARENT_STYLE)
             row.addWidget(icon_l)
 
             name_l = QLabel(rank[3])
             name_l.setFont(QFont('Segoe UI', 12, QFont.Bold))
-            name_l.setStyleSheet(f"color: {rank[4]}; border: none; background: transparent;")
+            name_l.setStyleSheet(rank_name_style(rank[4]))
             row.addWidget(name_l)
 
             req_l = QLabel(f"— {rank[0]}+ слов  •  {rank[1]}+ тестов")
-            req_l.setStyleSheet("color: #9AAEB9; font-size: 11px; border: none; background: transparent;")
+            req_l.setStyleSheet(PROGRESS_REQ_STYLE)
             row.addWidget(req_l)
             row.addStretch()
 
             check_l = QLabel("")
             check_l.setFixedWidth(20)
-            check_l.setStyleSheet("border: none; background: transparent;")
+            check_l.setStyleSheet(TRANSPARENT_STYLE)
             row.addWidget(check_l)
 
             ranks_layout.addLayout(row)
@@ -369,8 +320,7 @@ class ProgressTab(QWidget):
         icon, name, color, next_words, next_tests = get_rank(learned_count, tests_done)
         self.rank_icon_lbl.setText(icon)
         self.rank_name_lbl.setText(name)
-        self.rank_name_lbl.setStyleSheet(
-            f"color: {color}; font-size: 20px; font-weight: 700; border: none; background: transparent;")
+        self.rank_name_lbl.setStyleSheet(rank_title_style(color))
 
         if next_words is not None:
             need_w = max(0, next_words - learned_count)
@@ -392,20 +342,13 @@ class ProgressTab(QWidget):
             name_l, req_l, check_l = row_widgets
             achieved = learned_count >= rank[0] and tests_done >= rank[1]
             if achieved:
-                name_l.setStyleSheet(
-                    f"color: {rank[4]}; font-size: 12px; font-weight: 700; "
-                    "border: none; background: transparent;")
-                req_l.setStyleSheet(
-                    "color: #7DD3B8; font-size: 11px; border: none; background: transparent;")
+                name_l.setStyleSheet(rank_done_style(rank[4]))
+                req_l.setStyleSheet(PROGRESS_REQ_DONE_STYLE)
                 check_l.setText("✓")
-                check_l.setStyleSheet(
-                    "color: #7DD3B8; font-weight: bold; border: none; background: transparent;")
+                check_l.setStyleSheet(PROGRESS_CHECK_DONE_STYLE)
             else:
-                name_l.setStyleSheet(
-                    f"color: #C1CFD9; font-size: 12px; font-weight: 600; "
-                    "border: none; background: transparent;")
-                req_l.setStyleSheet(
-                    "color: #C1CFD9; font-size: 11px; border: none; background: transparent;")
+                name_l.setStyleSheet(PROGRESS_RANK_LOCKED_STYLE)
+                req_l.setStyleSheet(PROGRESS_REQ_LOCKED_STYLE)
                 check_l.setText("")
 
         # ── Серия дней ────────────────────────────────────────────────
@@ -421,7 +364,6 @@ class ProgressTab(QWidget):
 
         # ── Дневная цель ──────────────────────────────────────────────
         p = self.main.user_progress
-        from views.main_window import DAILY_WORDS_TARGET, DAILY_TESTS_TARGET
         wt = DAILY_WORDS_TARGET
         tt = DAILY_TESTS_TARGET
         words_done = max(0, len(p.get('words_learned', [])) - p.get('daily_words_start', 0))
