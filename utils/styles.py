@@ -55,10 +55,10 @@ LOGIN_STYLES = """
         font-weight: 600;
         font-family: 'Segoe UI', sans-serif;
     }
-    QPushButton:hover { 
+    QPushButton:hover {
         background: #8FE3C8;
     }
-    QPushButton:pressed { 
+    QPushButton:pressed {
         background: #6BC2A7;
     }
     QPushButton[objectName="secondary"] {
@@ -80,12 +80,12 @@ MAIN_WINDOW_STYLES = """
         color: #1A2C3E;
         font-family: 'Segoe UI', 'Inter', sans-serif;
     }
-    QTabWidget::pane { 
-        background: transparent; 
+    QTabWidget::pane {
+        background: transparent;
         border: none;
     }
-    QTabBar { 
-        background: transparent; 
+    QTabBar {
+        background: transparent;
     }
     QTabBar::tab {
         background: transparent;
@@ -102,7 +102,7 @@ MAIN_WINDOW_STYLES = """
         color: #7DD3B8;
         border: 1px solid #E2E8F0;
     }
-    QTabBar::tab:hover:!selected { 
+    QTabBar::tab:hover:!selected {
         background: rgba(125, 211, 184, 0.1);
         color: #6BC2A7;
     }
@@ -116,15 +116,15 @@ MAIN_WINDOW_STYLES = """
         font-weight: 600;
         font-family: 'Segoe UI', sans-serif;
     }
-    QPushButton:hover { 
+    QPushButton:hover {
         background: #8FE3C8;
     }
-    QPushButton:pressed { 
+    QPushButton:pressed {
         background: #6BC2A7;
     }
-    QPushButton:disabled { 
-        background: #E2E8F0; 
-        color: #9AAEB9; 
+    QPushButton:disabled {
+        background: #E2E8F0;
+        color: #9AAEB9;
         border: none;
     }
     QPushButton[objectName="secondary"] {
@@ -146,8 +146,8 @@ MAIN_WINDOW_STYLES = """
         color: #1A2C3E;
         font-family: 'Segoe UI', sans-serif;
     }
-    QLineEdit:focus { 
-        border-color: #7DD3B8; 
+    QLineEdit:focus {
+        border-color: #7DD3B8;
         background-color: #FFFFFF;
     }
     QTextEdit {
@@ -158,8 +158,8 @@ MAIN_WINDOW_STYLES = """
         color: #1A2C3E;
         font-size: 13px;
     }
-    QTextEdit:focus { 
-        border-color: #7DD3B8; 
+    QTextEdit:focus {
+        border-color: #7DD3B8;
     }
     QGroupBox {
         font-weight: 600;
@@ -190,11 +190,11 @@ MAIN_WINDOW_STYLES = """
         selection-background-color: rgba(125, 211, 184, 0.2);
         selection-color: #1A2C3E;
     }
-    QTableWidget::item { 
-        padding: 12px 16px; 
-        border: none; 
+    QTableWidget::item {
+        padding: 12px 16px;
+        border: none;
     }
-    QTableWidget::item:selected { 
+    QTableWidget::item:selected {
         background-color: rgba(125, 211, 184, 0.2);
         color: #1A2C3E;
     }
@@ -219,37 +219,37 @@ MAIN_WINDOW_STYLES = """
         background: #7DD3B8;
         border-radius: 12px;
     }
-    QScrollBar:vertical { 
-        background: transparent; 
-        width: 6px; 
-        border-radius: 3px; 
+    QScrollBar:vertical {
+        background: transparent;
+        width: 6px;
+        border-radius: 3px;
     }
-    QScrollBar::handle:vertical { 
-        background: #C1CFD9; 
-        border-radius: 3px; 
-        min-height: 30px; 
+    QScrollBar::handle:vertical {
+        background: #C1CFD9;
+        border-radius: 3px;
+        min-height: 30px;
     }
-    QScrollBar::handle:vertical:hover { 
-        background: #7DD3B8; 
+    QScrollBar::handle:vertical:hover {
+        background: #7DD3B8;
     }
-    QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical { 
-        height: 0; 
+    QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+        height: 0;
     }
-    QScrollBar:horizontal { 
-        background: transparent; 
-        height: 6px; 
-        border-radius: 3px; 
+    QScrollBar:horizontal {
+        background: transparent;
+        height: 6px;
+        border-radius: 3px;
     }
-    QScrollBar::handle:horizontal { 
-        background: #C1CFD9; 
-        border-radius: 3px; 
-        min-width: 30px; 
+    QScrollBar::handle:horizontal {
+        background: #C1CFD9;
+        border-radius: 3px;
+        min-width: 30px;
     }
-    QScrollBar::handle:horizontal:hover { 
-        background: #7DD3B8; 
+    QScrollBar::handle:horizontal:hover {
+        background: #7DD3B8;
     }
-    QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal { 
-        width: 0; 
+    QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+        width: 0;
     }
     QComboBox {
         background-color: #FFFFFF;
@@ -260,8 +260,8 @@ MAIN_WINDOW_STYLES = """
         font-size: 13px;
         min-height: 20px;
     }
-    QComboBox:hover { 
-        border-color: #7DD3B8; 
+    QComboBox:hover {
+        border-color: #7DD3B8;
     }
     QComboBox::drop-down {
         border: none;
@@ -285,48 +285,48 @@ MAIN_WINDOW_STYLES = """
         padding: 8px 12px;
         font-size: 13px;
     }
-    QSpinBox:focus { 
-        border-color: #7DD3B8; 
+    QSpinBox:focus {
+        border-color: #7DD3B8;
     }
-    QSpinBox::up-button, QSpinBox::down-button { 
-        background-color: transparent; 
-        border: none; 
+    QSpinBox::up-button, QSpinBox::down-button {
+        background-color: transparent;
+        border: none;
         width: 24px;
     }
-    QSpinBox::up-button:hover, QSpinBox::down-button:hover { 
+    QSpinBox::up-button:hover, QSpinBox::down-button:hover {
         background-color: rgba(125, 211, 184, 0.1);
     }
-    QRadioButton { 
-        color: #1A2C3E; 
-        font-size: 14px; 
-        spacing: 10px; 
-        padding: 8px 0; 
+    QRadioButton {
+        color: #1A2C3E;
+        font-size: 14px;
+        spacing: 10px;
+        padding: 8px 0;
     }
     QRadioButton::indicator {
-        width: 20px; 
-        height: 20px; 
+        width: 20px;
+        height: 20px;
         border-radius: 10px;
-        border: 2px solid #C1CFD9; 
+        border: 2px solid #C1CFD9;
         background-color: #FFFFFF;
     }
-    QRadioButton::indicator:checked { 
-        border: 2px solid #7DD3B8; 
-        background-color: #7DD3B8; 
+    QRadioButton::indicator:checked {
+        border: 2px solid #7DD3B8;
+        background-color: #7DD3B8;
     }
-    QRadioButton::indicator:hover { 
-        border-color: #7DD3B8; 
+    QRadioButton::indicator:hover {
+        border-color: #7DD3B8;
     }
-    QLabel { 
-        color: #1A2C3E; 
-        font-family: 'Segoe UI', sans-serif; 
+    QLabel {
+        color: #1A2C3E;
+        font-family: 'Segoe UI', sans-serif;
     }
-    QMessageBox { 
-        background-color: #FFFFFF; 
+    QMessageBox {
+        background-color: #FFFFFF;
         color: #1A2C3E;
         border-radius: 24px;
     }
-    QMessageBox QPushButton { 
-        min-width: 80px; 
+    QMessageBox QPushButton {
+        min-width: 80px;
         padding: 10px 24px;
         border-radius: 40px;
     }
@@ -340,40 +340,40 @@ CARD_FRONT_STYLE = """
     border: 1px solid #E2E8F0;
 """
 CARD_WORD_STYLE = """
-    color: #1A2C3E; 
-    font-size: 36px; 
-    font-weight: 700; 
+    color: #1A2C3E;
+    font-size: 36px;
+    font-weight: 700;
     letter-spacing: -0.5px;
 """
 CARD_TRANSLATION_STYLE = """
-    color: #7DD3B8; 
-    font-size: 24px; 
+    color: #7DD3B8;
+    font-size: 24px;
     font-weight: 600;
 """
 
 # ── Стили тестов: правильный / неправильный / обычный ответ ───────────────
 QUIZ_CORRECT_STYLE = """
-    background-color: #E8F5F0; 
-    border: 1px solid #7DD3B8; 
-    border-radius: 20px; 
-    color: #2A8C6E; 
-    font-size: 14px; 
+    background-color: #E8F5F0;
+    border: 1px solid #7DD3B8;
+    border-radius: 20px;
+    color: #2A8C6E;
+    font-size: 14px;
     padding: 12px 18px;
 """
 QUIZ_WRONG_STYLE = """
-    background-color: #FFF0F0; 
-    border: 1px solid #FFB8B8; 
-    border-radius: 20px; 
-    color: #E87A7A; 
-    font-size: 14px; 
+    background-color: #FFF0F0;
+    border: 1px solid #FFB8B8;
+    border-radius: 20px;
+    color: #E87A7A;
+    font-size: 14px;
     padding: 12px 18px;
 """
 QUIZ_NORMAL_STYLE = """
-    background-color: #FFFFFF; 
-    border: 1px solid #E2E8F0; 
-    border-radius: 20px; 
-    color: #1A2C3E; 
-    font-size: 14px; 
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 20px;
+    color: #1A2C3E;
+    font-size: 14px;
     padding: 12px 18px;
 """
 QUIZ_QUESTION_STYLE = """
@@ -388,59 +388,59 @@ QUIZ_QUESTION_STYLE = """
 
 # ── Стили кнопок: зелёная (успех), золотая, вторичная ─────────────────────
 BTN_SUCCESS_STYLE = """
-    QPushButton { 
-        background: #7DD3B8; 
-        color: white; 
-        border: none; 
-        padding: 12px 24px; 
-        font-size: 13px; 
-        border-radius: 40px; 
-        font-weight: 600; 
-    } 
-    QPushButton:hover { 
+    QPushButton {
+        background: #7DD3B8;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        font-size: 13px;
+        border-radius: 40px;
+        font-weight: 600;
+    }
+    QPushButton:hover {
         background: #8FE3C8;
-    } 
-    QPushButton:disabled { 
-        background: #E2E8F0; 
-        color: #9AAEB9; 
+    }
+    QPushButton:disabled {
+        background: #E2E8F0;
+        color: #9AAEB9;
     }
 """
 BTN_GOLD_STYLE = """
-    QPushButton { 
+    QPushButton {
         background: #F5B841;
-        color: #FFFFFF; 
-        border: none; 
-        padding: 12px 24px; 
-        font-size: 13px; 
-        border-radius: 40px; 
-        font-weight: 700; 
-    } 
-    QPushButton:hover { 
+        color: #FFFFFF;
+        border: none;
+        padding: 12px 24px;
+        font-size: 13px;
+        border-radius: 40px;
+        font-weight: 700;
+    }
+    QPushButton:hover {
         background: #F7C35C;
-    } 
-    QPushButton:disabled { 
-        background: #E2E8F0; 
-        color: #9AAEB9; 
+    }
+    QPushButton:disabled {
+        background: #E2E8F0;
+        color: #9AAEB9;
     }
 """
 BTN_SECONDARY_STYLE = """
-    QPushButton { 
-        background: #FFFFFF; 
-        color: #7DD3B8; 
-        border: 1.5px solid #E2E8F0; 
-        padding: 12px 24px; 
-        font-size: 13px; 
-        border-radius: 40px; 
-        font-weight: 600; 
-    } 
-    QPushButton:hover { 
-        background: #F8FAFF; 
-        color: #6BC2A7; 
-        border-color: #7DD3B8; 
-    } 
-    QPushButton:disabled { 
-        color: #C1CFD9; 
-        border-color: #E2E8F0; 
+    QPushButton {
+        background: #FFFFFF;
+        color: #7DD3B8;
+        border: 1.5px solid #E2E8F0;
+        padding: 12px 24px;
+        font-size: 13px;
+        border-radius: 40px;
+        font-weight: 600;
+    }
+    QPushButton:hover {
+        background: #F8FAFF;
+        color: #6BC2A7;
+        border-color: #7DD3B8;
+    }
+    QPushButton:disabled {
+        color: #C1CFD9;
+        border-color: #E2E8F0;
     }
 """
 # ── Карточки статистики на вкладке «Прогресс» ─────────────────────────────
@@ -455,12 +455,38 @@ STAT_CARD_STYLE = """
 # ── Общие стили (используются на нескольких вкладках) ─────────────────────
 # зелёная кнопка «Начать»
 BTN_START_STYLE = """
-    QPushButton { background-color: #7DD3B8; color: white; border: none; padding: 12px 22px; font-size: 14px; border-radius: 40px; font-weight: 700; }QPushButton:hover { background-color: #8FE3C8; }QPushButton:pressed { background-color: #6BC2A7; }QPushButton:disabled { background-color: #E2E8F0; color: #9AAEB9; border: none; }
+    QPushButton {
+        background-color: #7DD3B8;
+        color: white;
+        border: none;
+        padding: 12px 22px;
+        font-size: 14px;
+        border-radius: 40px;
+        font-weight: 700;
+        }QPushButton:hover { background-color: #8FE3C8;
+        }QPushButton:pressed { background-color: #6BC2A7;
+        }QPushButton:disabled { background-color: #E2E8F0;
+        color: #9AAEB9;
+        border: none;
+    }
 """
 
 # красная кнопка «Стоп»
 BTN_STOP_STYLE = """
-    QPushButton { background-color: #E87A7A; color: white; border: none; padding: 12px 22px; font-size: 14px; border-radius: 40px; font-weight: 700; }QPushButton:hover { background-color: #F08080; }QPushButton:pressed { background-color: #D06060; }QPushButton:disabled { background-color: #E2E8F0; color: #9AAEB9; border: none; }
+    QPushButton {
+        background-color: #E87A7A;
+        color: white;
+        border: none;
+        padding: 12px 22px;
+        font-size: 14px;
+        border-radius: 40px;
+        font-weight: 700;
+        }QPushButton:hover { background-color: #F08080;
+        }QPushButton:pressed { background-color: #D06060;
+        }QPushButton:disabled { background-color: #E2E8F0;
+        color: #9AAEB9;
+        border: none;
+    }
 """
 
 # белая карточка (радиус 20)
@@ -535,7 +561,16 @@ CARDS_DONE_FRAME_STYLE = """
 """
 
 CARDS_TIMER_BTN_STYLE = """
-    QPushButton { background-color: #E2E8F0; color: #5A6E7A; border: none; padding: 4px 10px; font-size: 11px; border-radius: 14px; font-weight: 600; }QPushButton:hover { background-color: #CBD5E0; }
+    QPushButton {
+        background-color: #E2E8F0;
+        color: #5A6E7A;
+        border: none;
+        padding: 4px 10px;
+        font-size: 11px;
+        border-radius: 14px;
+        font-weight: 600;
+        }QPushButton:hover { background-color: #CBD5E0;
+    }
 """
 
 CARDS_TIME_STYLE = """
@@ -690,7 +725,8 @@ PROGRESS_GOAL_BAR_STYLE = """
 PROGRESS_GOAL_TEXT_STYLE = "color: #1A2C3E; font-size: 12px; font-weight: 600; border: none; background: transparent;"
 
 PROGRESS_PROG_TITLE_STYLE = """
-    color: #7DD3B8; border: none; background: transparent; font-size: 11px; text-transform: uppercase; letter-spacing: 1px;
+    color: #7DD3B8; border: none; background: transparent;
+    font-size: 11px; text-transform: uppercase; letter-spacing: 1px;
 """
 
 PROGRESS_RANKS_TITLE_STYLE = """
@@ -722,7 +758,8 @@ PROGRESS_STREAK_TITLE_STYLE = "color: #F5824A; border: none; background: transpa
 
 PROGRESS_VALUE_STYLE = "color: #7DD3B8; border: none; background: transparent;"
 
-PROGRESS_VAL_ACCURACY_STYLE = "color: #F5B841; font-size: 22px; font-weight: 700; border: none; background: transparent;"
+PROGRESS_VAL_ACCURACY_STYLE = ("color: #F5B841; font-size: 22px; font-weight: 700; "
+                               "border: none; background: transparent;")
 
 # звание, которое ещё не получено
 PROGRESS_RANK_LOCKED_STYLE = "color: #C1CFD9; font-size: 12px; font-weight: 600; border: none; background: transparent;"
@@ -758,7 +795,8 @@ QUIZ_TIMER_STYLE = """
 """
 
 QUIZ_TIMER_URGENT_STYLE = """
-    color: white; background: #E87A7A; padding: 10px; border-radius: 16px; font-weight: bold; border: 1.5px solid #E87A7A;
+    color: white; background: #E87A7A; padding: 10px;
+    border-radius: 16px; font-weight: bold; border: 1.5px solid #E87A7A;
 """
 
 QUIZ_WOD_ENGLISH_STYLE = "color: #1A2C3E; border: none; background: transparent; letter-spacing: 2px;"

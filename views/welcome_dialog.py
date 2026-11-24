@@ -45,7 +45,7 @@ class WelcomeDialog(QDialog):
         self.username = username
         self.streak = streak
         self.daily_goal = daily_goal  # {'words_target': int, 'tests_target': int,
-                                      #  'words_done': int, 'tests_done': int}
+        #  'words_done': int, 'tests_done': int}
         self.setWindowTitle("Добро пожаловать!")
         self.setFixedSize(480, 480)
         # Убираем кнопку «?» в заголовке окна (справка Windows)

@@ -50,7 +50,8 @@ class LoginWindow(QWidget):
     def __init__(self, on_login_success, users, sessions):
         super().__init__()
         self.on_login_success, self.users, self.sessions = on_login_success, users, sessions
-        self.init_ui(); self.apply_styles()
+        self.init_ui()
+        self.apply_styles()
 
     # ── UI ───────────────────────────────────────────────────────────
 
@@ -146,23 +147,38 @@ class LoginWindow(QWidget):
     # ── Логика входа / регистрации ────────────────────────────────────
 
     def do_login(self):
-        username=self.username_input.text().strip(); password=self.password_input.text()
+        username = self.username_input.text().strip()
+        password = self.password_input.text()
         if not username or not password:
-            self.error_label.setText("Заполните все поля!"); return
-        try: user=self.users.authenticate(username,password)
+            self.error_label.setText("Заполните все поля!")
+            return
+        try:
+            user = self.users.authenticate(username, password)
         except Exception:
-            self.error_label.setText("Неверное имя пользователя или пароль."); return
-        self.users.rehash_if_needed(user,password)
-        if self.remember_checkbox.isChecked(): self.sessions.start(user['id'])
-        else: self.sessions.clear()
-        self.error_label.setText(""); self.on_login_success(user)
+            self.error_label.setText("Неверное имя пользователя или пароль.")
+            return
+        self.users.rehash_if_needed(user, password)
+        if self.remember_checkbox.isChecked():
+            self.sessions.start(user['id'])
+        else:
+            self.sessions.clear()
+        self.error_label.setText("")
+        self.on_login_success(user)
 
     def do_register(self):
-        username=self.username_input.text().strip(); password=self.password_input.text()
-        if not username or not password: self.error_label.setText("Заполните все поля!"); return
-        if len(password)<4: self.error_label.setText("Пароль должен быть минимум 4 символа."); return
-        try: self.users.create(username,password)
-        except Exception: self.error_label.setText("Это имя уже занято."); return
+        username = self.username_input.text().strip()
+        password = self.password_input.text()
+        if not username or not password:
+            self.error_label.setText("Заполните все поля!")
+            return
+        if len(password) < 4:
+            self.error_label.setText("Пароль должен быть минимум 4 символа.")
+            return
+        try:
+            self.users.create(username, password)
+        except Exception:
+            self.error_label.setText("Это имя уже занято.")
+            return
         self.error_label.setStyleSheet(LOGIN_SUCCESS_STYLE)
         self.error_label.setText("Аккаунт создан! Теперь войдите.")
 
