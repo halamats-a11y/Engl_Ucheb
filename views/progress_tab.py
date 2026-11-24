@@ -5,6 +5,8 @@ from PyQt5.QtWidgets import (QWidget, QVBoxLayout, QHBoxLayout, QLabel,
                              QProgressBar, QPushButton, QFrame)
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QFont
+
+from config import DAILY_TESTS_TARGET, DAILY_WORDS_TARGET
 from utils.styles import (BTN_SECONDARY_STYLE, GRADIENT_FRAME_STYLE, GREY_TEXT_STYLE,
                           HINT_TEXT_STYLE, PAGE_TITLE_STYLE, PANEL_FRAME_STYLE,
                           PROGRESS_BIG_TEXT_STYLE, PROGRESS_CARD_STYLE, PROGRESS_CHECK_DONE_STYLE,
@@ -28,9 +30,10 @@ RANKS = [
     (300, 20, "🔥", "Эрудит",           "#F5824A"),
     (500, 35, "💎", "Мастер слов",      "#7B74FF"),
     (750, 50, "🏆", "Лингвист",         "#E8A020"),
-    (1000,75, "👑", "Полиглот",         "#E8504A"),
-    (2094,100,"🌟", "Легенда словаря",  "#7DD3B8"),
+    (1000, 75, "👑", "Полиглот",         "#E8504A"),
+    (2094, 100, "🌟", "Легенда словаря",  "#7DD3B8"),
 ]
+
 
 def get_rank(words_learned: int, tests_completed: int) -> tuple:
     """Возвращает (эмодзи, название, цвет, след_порог_слов, след_порог_тестов)."""
@@ -362,7 +365,6 @@ class ProgressTab(QWidget):
 
         # ── Дневная цель ──────────────────────────────────────────────
         p = self.main.user_progress
-        from views.main_window import DAILY_WORDS_TARGET, DAILY_TESTS_TARGET
         wt = DAILY_WORDS_TARGET
         tt = DAILY_TESTS_TARGET
         words_done = max(0, len(p.get('words_learned', [])) - p.get('daily_words_start', 0))

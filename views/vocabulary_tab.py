@@ -78,7 +78,7 @@ class VocabularyTab(QWidget):
         for i, word in enumerate(self.main.vocabulary):
             self.vocab_table.setItem(i, 0, QTableWidgetItem(word['english']))
             self.vocab_table.setItem(i, 1, QTableWidgetItem(word['russian']))
-            status = "✓ Изучено" if self.main.is_word_learned(word['english']) else "○ Не изучено"
+            status = "✓ Изучено" if self.main.is_word_learned(word) else "○ Не изучено"
             self.vocab_table.setItem(i, 2, QTableWidgetItem(status))
 
     def filter_vocabulary(self):
@@ -131,7 +131,6 @@ class VocabularyTab(QWidget):
         dialog.exec_()
 
     def manual_save(self):
-        self.main.save_progress()
         self.main.save_progress()
         # Светлый диалог сохранения
         msg = QMessageBox(self)

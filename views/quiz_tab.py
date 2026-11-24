@@ -5,7 +5,9 @@ import random
 from PyQt5.QtWidgets import (QWidget, QVBoxLayout, QHBoxLayout, QLabel,
                              QPushButton, QComboBox, QSpinBox, QRadioButton,
                              QButtonGroup, QMessageBox, QFrame)
-from PyQt5.QtCore import Qt, QTimer
+from PyQt5.QtCore import Qt, QTimer, pyqtSignal
+
+from config import MIN_WORDS_FOR_QUIZ, TIMED_QUIZ_SECONDS
 from PyQt5.QtGui import QFont
 from utils.styles import (BTN_SECONDARY_STYLE, BTN_START_STYLE, BTN_STOP_STYLE, CARD_FRAME_STYLE,
                           COUNTER_STYLE, GREY_TEXT_STYLE, LIGHT_MSG_STYLE, PAGE_TITLE_STYLE,
@@ -17,6 +19,12 @@ from utils.styles import (BTN_SECONDARY_STYLE, BTN_START_STYLE, BTN_STOP_STYLE, 
 
 
 class QuizTab(QWidget):
+    # Сигналы: вкладка сообщает, что произошло, а сохраняет прогресс сервис
+    quiz_started = pyqtSignal(str)        # режим: "classic" или "timed"
+    answer_given = pyqtSignal(bool)       # True — ответ правильный
+    quiz_finished = pyqtSignal(int, int)  # правильных ответов, всего вопросов
+    quiz_stopped = pyqtSignal()           # тест остановили кнопкой «Стоп»
+
     def __init__(self, main_window):
         super().__init__()
         self.main = main_window
@@ -53,7 +61,7 @@ class QuizTab(QWidget):
         settings_layout.addWidget(lbl1)
 
         self.quiz_mode = QComboBox()
-        self.quiz_mode.addItems(["Обычный режим", "⏱  На время (60 сек)"])
+        self.quiz_mode.addItems(["Обычный режим", f"⏱  На время ({TIMED_QUIZ_SECONDS} сек)"])
         self.quiz_mode.currentIndexChanged.connect(self.on_quiz_mode_changed)
         settings_layout.addWidget(self.quiz_mode)
 
@@ -205,21 +213,20 @@ class QuizTab(QWidget):
         self.is_timed_mode = "На время" in self.quiz_mode.currentText()
         num_questions = self.quiz_count.value()
 
-        if len(self.main.vocabulary) < 4:
+        if len(self.main.vocabulary) < MIN_WORDS_FOR_QUIZ:
             msg = QMessageBox(self)
             msg.setWindowTitle("Предупреждение")
-            msg.setText("Недостаточно слов в словаре. Минимум: 4")
+            msg.setText(f"Недостаточно слов в словаре. Минимум: {MIN_WORDS_FOR_QUIZ}")
             msg.setIcon(QMessageBox.NoIcon)
             msg.setStyleSheet(LIGHT_MSG_STYLE)
             msg.exec_()
             return
 
         self._show_quiz_widgets(True)
-        self.quiz_session_id = self.main.start_quiz_session("timed" if self.is_timed_mode else "classic")
         self.quiz_active = True
 
         if self.is_timed_mode:
-            self.time_remaining = 60
+            self.time_remaining = TIMED_QUIZ_SECONDS
             self.quiz_questions = []
             self.quiz_score = 0
             self.current_question = 0
@@ -244,6 +251,7 @@ class QuizTab(QWidget):
             self.timer_label.setVisible(False)
             self.show_quiz_question()
 
+        self.quiz_started.emit("timed" if self.is_timed_mode else "classic")
         self.start_quiz_btn.setEnabled(False)
         self.stop_quiz_btn.setEnabled(True)
         self.check_answer_btn.setEnabled(True)
@@ -317,14 +325,13 @@ class QuizTab(QWidget):
             return
 
         selected_index = self.answer_group.id(selected_button)
-        self.main.user_progress['total_answers'] += 1
+        self.answer_given.emit(selected_index == self.correct_answer_index)
 
         if selected_index == self.correct_answer_index:
             self.quiz_result.setText("✓  Правильно!")
             self.quiz_result.setStyleSheet(QUIZ_RESULT_OK_STYLE)
             self.answer_buttons[selected_index].setStyleSheet(QUIZ_CORRECT_STYLE)
             self.quiz_score += 1
-            self.main.user_progress['correct_answers'] += 1
         else:
             self.quiz_result.setText("✗  Неправильно!")
             self.quiz_result.setStyleSheet(QUIZ_RESULT_BAD_STYLE)
@@ -354,12 +361,8 @@ class QuizTab(QWidget):
             btn.setStyleSheet(QUIZ_NORMAL_STYLE)
         self.quiz_result.setText("")
         self.quiz_progress.setText("")
-        self.main.user_progress['tests_completed'] += 1
-        self.main.finish_quiz_session(getattr(self, 'quiz_session_id', None), self.quiz_score, len(self.quiz_questions))
-
         self._reset_to_idle()
-        self.main.update_progress_stats()
-        self.main.save_progress()
+        self.quiz_finished.emit(self.quiz_score, len(self.quiz_questions))
 
     def update_quiz_timer(self):
         self.time_remaining -= 1
@@ -382,8 +385,7 @@ class QuizTab(QWidget):
             btn.setStyleSheet(QUIZ_NORMAL_STYLE)
         self.quiz_result.setText("")
         self.quiz_progress.setText("")
-        self.main.user_progress['tests_completed'] += 1
-        self.main.finish_quiz_session(getattr(self, 'quiz_session_id', None), self.quiz_score, self.current_question + 1)
+        answered = self.current_question + 1
 
         rating = ""
         if wpm >= 40:
@@ -404,15 +406,14 @@ class QuizTab(QWidget):
         msg.setText(
             f"⏱ Результат теста на время:\n\n"
             f"✅ Правильных: {wpm}\n"
-            f"⏰ Время: 60 секунд\n"
+            f"⏰ Время: {TIMED_QUIZ_SECONDS} секунд\n"
             f"📊 Скорость: {wpm} слов/мин\n\n{rating}"
         )
         msg.setIcon(QMessageBox.NoIcon)
         msg.setStyleSheet(LIGHT_MSG_STYLE)
         msg.exec_()
 
-        self.main.update_progress_stats()
-        self.main.save_progress()
+        self.quiz_finished.emit(wpm, answered)
 
     def _reset_to_idle(self):
         self._show_quiz_widgets(False)
@@ -426,6 +427,8 @@ class QuizTab(QWidget):
         self.quiz_mode.setEnabled(True)
 
     def stop_quiz(self):
+        if self.quiz_active:
+            self.quiz_stopped.emit()
         self.quiz_timer.stop()
         self.quiz_questions = []
         self.current_question = 0

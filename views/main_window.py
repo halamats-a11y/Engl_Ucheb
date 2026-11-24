@@ -6,41 +6,35 @@ main_window.py — главное окно приложения после вх�
     Здесь собираются все вкладки (флеш-карточки, тесты, переводчик, словарь, прогресс),
     боковая навигация, шапка с именем пользователя и кнопка «Выйти».
 
-Как вписывается в приложение:
+Как вписывается в приложение (слои):
+    окна (views/)  →  сервисы (services/)  →  репозитории (db/)  →  база SQLite
     1. Пользователь входит через login_window.py.
-    2. main.py создаёт LanguageLearningApp и показывает это окно.
-    3. Каждая вкладка получает ссылку self (main_window), чтобы читать словарь,
-       прогресс и вызывать save_progress() / update_progress_stats().
+    2. AppController создаёт сервисы и это окно.
+    3. Вкладки ничего не записывают сами: они отправляют сигналы (pyqtSignal),
+       а это окно подключает сигналы к методам сервисов (см. _connect_signals).
+    4. Сервис меняет данные и отправляет progress_changed — окно обновляет вкладки.
 
 Ключевые понятия для начинающих:
     • QMainWindow — стандартное «главное» окно PyQt5 с заголовком и кнопками свернуть/закрыть.
     • QStackedWidget — «стопка» виджетов: видна только одна вкладка за раз.
-    • self (main_window) — общий объект, который вкладки хранят в self.main.
-    • Серия дней (streak) — сколько дней подряд пользователь заходил в приложение.
-    • Дневная цель — сколько слов и тестов нужно сделать за сегодня (константы внизу файла).
+    • Сигнал/слот — вкладка «звонит» (emit), окно заранее решило, кто «ответит» (connect).
+    • Серия дней (streak) и дневная цель считаются в services/progress_service.py.
 """
-import os
-import json
-from datetime import datetime, date
-from PyQt5.QtWidgets import (QMainWindow, QWidget, QVBoxLayout, QHBoxLayout,
-                             QLabel, QPushButton, QStackedWidget, QFrame)
-from PyQt5.QtCore import Qt
+from PyQt5.QtCore import QTimer, pyqtSignal
 from PyQt5.QtGui import QFont
+from PyQt5.QtWidgets import (QHBoxLayout, QLabel, QMainWindow, QMessageBox, QPushButton,
+                             QStackedWidget, QVBoxLayout, QWidget)
 
 from views.flashcards_tab import FlashcardsTab
+from views.progress_tab import ProgressTab
 from views.quiz_tab import QuizTab
 from views.translator_tab import TranslatorTab
 from views.vocabulary_tab import VocabularyTab
-from views.progress_tab import ProgressTab
 from views.welcome_dialog import WelcomeDialog
 from utils.styles import (MAIN_GOAL_MSG_STYLE, MAIN_HEADER_STYLE, MAIN_LOGOUT_BTN_STYLE,
                           MAIN_SIDEBAR_STYLE, MAIN_STACK_STYLE, MAIN_USER_STYLE, MAIN_WINDOW_STYLES,
                           MAIN_WORD_COUNT_STYLE, NAV_BTN_ACTIVE_STYLE, NAV_BTN_STYLE,
                           TEXT_DARK_STYLE)
-
-# Дневная цель: сколько слов и тестов нужно пройти за день (используется в progress_tab и welcome_dialog)
-DAILY_WORDS_TARGET = 5
-DAILY_TESTS_TARGET = 1
 
 
 class LanguageLearningApp(QMainWindow):
@@ -48,94 +42,64 @@ class LanguageLearningApp(QMainWindow):
     Главное окно приложения для изучения английского.
 
     Наследуется от QMainWindow — это базовый класс PyQt5 для окон с меню/панелями.
-    Хранит словарь, прогресс текущего пользователя и переключает вкладки в QStackedWidget.
+    Получает два сервиса: словарь (vocab) и прогресс (progress), переключает вкладки.
     """
 
-    def __init__(self, user, words, progress, words_repo, progress_repo, user_repo, quiz_repo):
+    logged_out = pyqtSignal()   # нажали «Выйти» — контроллер покажет окно входа
+
+    def __init__(self, user, vocabulary_service, progress_service):
         super().__init__()
-        self.user = user
         self.user_id = user['id']
         self.username = user['username']
-        self.words_repo, self.progress_repo = words_repo, progress_repo
-        self.user_repo, self.quiz_repo = user_repo, quiz_repo
-        self.vocabulary = words
-        self.progress_obj = progress
-        self.user_progress = dict(progress)
-        self.user_progress['words_learned'] = [w['english'] for w in words if w['id'] in progress_repo.learned_ids(self.user_id)]
+        self.vocab = vocabulary_service
+        self.progress = progress_service
         self.setWindowTitle(f"Помощник для изучения языков 🌍 — {self.username}")
         self.setGeometry(100, 100, 1100, 700)
-        self._update_streak()
         self.init_ui()
+        self._connect_signals()
         self.apply_styles()
-        from PyQt5.QtCore import QTimer
         QTimer.singleShot(200, self._show_welcome_dialog)
 
-    def _update_streak(self):
-        from datetime import date
-        p = self.user_progress
-        today = date.today().isoformat()
-        last = p.get('last_login_date', '') or ''
-        try:
-            previous = date.fromisoformat(last) if last else None
-        except ValueError:
-            previous = None
-        if last != today:
-            p['streak'] = (p.get('streak', 0) + 1) if previous and (date.today()-previous).days == 1 else 1
-            p['last_login_date'] = today
-        if p.get('daily_date') != today:
-            p['daily_date'] = today
-            p['daily_words_start'] = len(p['words_learned'])
-            p['daily_tests_start'] = p.get('tests_completed', 0)
-        self.save_progress()
+    # ── Данные для вкладок (только чтение) ────────────────────────────
+    @property
+    def vocabulary(self):
+        return self.vocab.vocabulary
 
-    def _get_daily_progress(self):
-        p=self.user_progress
-        return {'words_target': DAILY_WORDS_TARGET, 'tests_target': DAILY_TESTS_TARGET,
-                'words_done': max(0,len(p.get('words_learned',[]))-p.get('daily_words_start',0)),
-                'tests_done': max(0,p.get('tests_completed',0)-p.get('daily_tests_start',0))}
-
-    def _show_welcome_dialog(self):
-        dlg=WelcomeDialog(self.username,self.user_progress.get('streak',1),self._get_daily_progress(),parent=self); dlg.exec_()
-
-    def reload_vocabulary(self):
-        self.vocabulary=self.words_repo.all()
-        if hasattr(self,'vocabulary_tab'): self.vocabulary_tab.refresh_table()
-        if hasattr(self,'word_count_label'): self.word_count_label.setText(f"📚 Словарь: {len(self.vocabulary)} слов")
-
-    def add_word(self, english, russian):
-        self.words_repo.add(english,russian); self.reload_vocabulary()
-
-    def delete_word(self, word):
-        wid=word.get('id') if isinstance(word,dict) else self._word_id(word)
-        if wid: self.words_repo.delete(wid); self.reload_vocabulary()
-
-    def _word_id(self, word):
-        return word.get('id') if isinstance(word,dict) else next((w['id'] for w in self.vocabulary if w['english']==word),None)
+    @property
+    def user_progress(self):
+        return self.progress.data
 
     def is_word_learned(self, word):
-        if isinstance(word,dict): wid=word.get('id')
-        else: wid=self._word_id(word)
-        return bool(wid and wid in self.progress_repo.learned_ids(self.user_id))
+        return self.progress.is_learned(word)
 
-    def mark_word_learned(self, word):
-        wid=self._word_id(word)
-        if wid: self.progress_repo.mark_learned(self.user_id,wid)
-        self.user_progress['words_learned']=[w['english'] for w in self.vocabulary if w['id'] in self.progress_repo.learned_ids(self.user_id)]
-        self.save_progress()
+    def add_word(self, english, russian):
+        self.vocab.add_word(english, russian)
 
-    def unmark_word_learned(self, word):
-        wid=self._word_id(word)
-        if wid: self.progress_repo.unmark_learned(self.user_id,wid)
-        self.user_progress['words_learned']=[w['english'] for w in self.vocabulary if w['id'] in self.progress_repo.learned_ids(self.user_id)]
-        self.save_progress()
+    def delete_word(self, word):
+        self.vocab.delete_word(word)
 
     def save_progress(self):
-        self.progress_repo.save(self.user_id,self.user_progress)
+        self.progress.save()
 
-    def start_quiz_session(self, mode): return self.quiz_repo.start_quiz(self.user_id,mode)
-    def finish_quiz_session(self, session_id, score, questions):
-        self.quiz_repo.finish_quiz(session_id,score,questions)
-    def abandon_quiz_session(self, session_id): pass
+    # ── Сигналы ───────────────────────────────────────────────────────
+    def _connect_signals(self):
+        """Кто кому «звонит»: сигнал вкладки → метод сервиса → обновление экрана."""
+        self.flashcards_tab.word_learned.connect(self.progress.mark_learned)
+        self.quiz_tab.quiz_started.connect(self.progress.start_quiz)
+        self.quiz_tab.answer_given.connect(self.progress.record_answer)
+        self.quiz_tab.quiz_finished.connect(self.progress.finish_quiz)
+        self.quiz_tab.quiz_stopped.connect(self.progress.abandon_quiz)
+        self.progress.progress_changed.connect(self.update_progress_stats)
+        self.vocab.vocabulary_changed.connect(self._on_vocabulary_changed)
+
+    def _on_vocabulary_changed(self):
+        self.vocabulary_tab.refresh_table()
+        self.word_count_label.setText(f"📚 Словарь: {len(self.vocabulary)} слов")
+
+    def _show_welcome_dialog(self):
+        dlg = WelcomeDialog(self.username, self.user_progress.get('streak', 1),
+                            self.progress.daily_progress(), parent=self)
+        dlg.exec_()
 
     def init_ui(self):
         """
@@ -164,9 +128,9 @@ class LanguageLearningApp(QMainWindow):
 
         header_layout.addStretch()  # пустое пространство, толкает элементы справа к краю
 
-        word_count = QLabel(f"📚 Словарь: {len(self.vocabulary)} слов")
-        word_count.setStyleSheet(MAIN_WORD_COUNT_STYLE)
-        header_layout.addWidget(word_count)
+        self.word_count_label = QLabel(f"📚 Словарь: {len(self.vocabulary)} слов")
+        self.word_count_label.setStyleSheet(MAIN_WORD_COUNT_STYLE)
+        header_layout.addWidget(self.word_count_label)
 
         user_label = QLabel(f"👤 {self.username}")
         user_label.setStyleSheet(MAIN_USER_STYLE)
@@ -260,20 +224,19 @@ class LanguageLearningApp(QMainWindow):
 
     def logout(self):
         """
-        Сохраняет данные, закрывает окно и вызывает колбэк _on_logout (если задан в main.py).
+        Сохраняет данные, закрывает окно и отправляет сигнал logged_out (его слушает AppController).
 
         После этого приложение обычно снова показывает окно входа.
         """
         self.save_progress()
         self.close()
-        if hasattr(self, '_on_logout'):
-            self._on_logout()
+        self.logged_out.emit()
 
     def update_progress_stats(self):
         """
         Обновляет отображение прогресса на всех связанных вкладках.
 
-        Вызывается из flashcards_tab и quiz_tab после изучения слова или теста.
+        Вызывается по сигналу progress_changed от сервиса прогресса.
         """
         self.progress_tab.update_stats()
         self.vocabulary_tab.refresh_table()
@@ -285,14 +248,13 @@ class LanguageLearningApp(QMainWindow):
 
         Флаг _daily_goal_congratulated не даёт показать окно дважды за одну сессию.
         """
-        daily = self._get_daily_progress()
+        daily = self.progress.daily_progress()
         goal_done = (daily['words_done'] >= daily['words_target'] and
                      daily['tests_done'] >= daily['tests_target'])
 
         # Показываем только один раз за сессию (атрибут появляется при первом выполнении)
         if goal_done and not getattr(self, '_daily_goal_congratulated', False):
             self._daily_goal_congratulated = True
-            from PyQt5.QtWidgets import QMessageBox
             msg = QMessageBox(self)
             msg.setWindowTitle("🏆 Дневная цель выполнена!")
             msg.setText(

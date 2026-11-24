@@ -11,6 +11,7 @@ repository.py — репозитории: вся работа с базой че
 import secrets
 from datetime import datetime
 
+from db.connection import commit, transaction
 from utils.password_utils import hash_password, needs_rehash, verify_password
 
 
@@ -66,7 +67,7 @@ class WordRepository:
                 'INSERT INTO words(english, russian, english_norm, russian_norm) VALUES(?, ?, ?, ?)',
                 (en.strip(), ru.strip(), en.strip().lower(), ru.strip().lower())
             )
-            self.c.commit()
+            commit(self.c)
             return cur.lastrowid
         except Exception as e:
             if 'UNIQUE' in str(e):
@@ -75,7 +76,7 @@ class WordRepository:
 
     def delete(self, i):
         self.c.execute('DELETE FROM words WHERE id=?', (i,))
-        self.c.commit()
+        commit(self.c)
 
 
 class UserRepository:
@@ -97,12 +98,12 @@ class UserRepository:
         if self.exists(u):
             raise UserExistsError(u)
         now = datetime.now().isoformat()
-        cur = self.c.execute(
-            'INSERT INTO users(username, username_norm, password_hash, created_at) VALUES(?, ?, ?, ?)',
-            (u, u.strip().lower(), hash_password(p), now)
-        )
-        self.c.execute('INSERT INTO user_progress(user_id) VALUES(?)', (cur.lastrowid,))
-        self.c.commit()
+        with transaction(self.c):       # пользователь и его прогресс создаются вместе
+            cur = self.c.execute(
+                'INSERT INTO users(username, username_norm, password_hash, created_at) VALUES(?, ?, ?, ?)',
+                (u, u.strip().lower(), hash_password(p), now)
+            )
+            self.c.execute('INSERT INTO user_progress(user_id) VALUES(?)', (cur.lastrowid,))
         return self.get_by_id(cur.lastrowid)
 
     def authenticate(self, u, p):
@@ -114,11 +115,11 @@ class UserRepository:
     def rehash_if_needed(self, user, p):
         if needs_rehash(user['password_hash']):
             self.c.execute('UPDATE users SET password_hash=? WHERE id=?', (hash_password(p), user['id']))
-            self.c.commit()
+            commit(self.c)
 
     def change_password(self, user_id, p):
         self.c.execute('UPDATE users SET password_hash=? WHERE id=?', (hash_password(p), user_id))
-        self.c.commit()
+        commit(self.c)
 
 
 class ProgressRepository:
@@ -131,7 +132,7 @@ class ProgressRepository:
 
     def ensure(self, uid):
         self.c.execute('INSERT OR IGNORE INTO user_progress(user_id) VALUES(?)', (uid,))
-        self.c.commit()
+        commit(self.c)
 
     def load(self, uid):
         self.ensure(uid)
@@ -141,7 +142,7 @@ class ProgressRepository:
         sets = ', '.join(col + '=?' for col in self.COLUMNS)
         values = tuple(p.get(col, '' if col in self.TEXT_COLUMNS else 0) for col in self.COLUMNS)
         self.c.execute('UPDATE user_progress SET ' + sets + ' WHERE user_id=?', values + (uid,))
-        self.c.commit()
+        commit(self.c)
 
     def learned_ids(self, uid):
         return {r[0] for r in self.c.execute('SELECT word_id FROM learned_words WHERE user_id=?', (uid,))}
@@ -151,22 +152,22 @@ class ProgressRepository:
 
     def mark_learned(self, uid, wid):
         self.c.execute('INSERT OR IGNORE INTO learned_words(user_id, word_id) VALUES(?, ?)', (uid, wid))
-        self.c.commit()
+        commit(self.c)
 
     def unmark_learned(self, uid, wid):
         self.c.execute('DELETE FROM learned_words WHERE user_id=? AND word_id=?', (uid, wid))
-        self.c.commit()
+        commit(self.c)
 
     def start_quiz(self, uid, mode):
         cur = self.c.execute('INSERT INTO quiz_sessions(user_id, mode, started_at) VALUES(?, ?, ?)',
                              (uid, mode, datetime.now().isoformat()))
-        self.c.commit()
+        commit(self.c)
         return cur.lastrowid
 
     def finish_quiz(self, i, score, questions):
         self.c.execute('UPDATE quiz_sessions SET score=?, questions=?, finished_at=? WHERE id=?',
                        (score, questions, datetime.now().isoformat(), i))
-        self.c.commit()
+        commit(self.c)
 
     def recent_quizzes(self, uid, limit=20):
         rows = self.c.execute('SELECT * FROM quiz_sessions WHERE user_id=? ORDER BY id DESC LIMIT ?',
@@ -181,7 +182,7 @@ class SessionRepository:
     def start(self, uid):
         self.c.execute('INSERT OR REPLACE INTO sessions VALUES(?, ?, ?)',
                        (uid, secrets.token_hex(32), datetime.now().isoformat()))
-        self.c.commit()
+        commit(self.c)
 
     def current_user(self):
         r = self.c.execute('SELECT user_id FROM sessions ORDER BY created_at DESC LIMIT 1').fetchone()
@@ -189,8 +190,8 @@ class SessionRepository:
 
     def clear(self):
         self.c.execute('DELETE FROM sessions')
-        self.c.commit()
+        commit(self.c)
 
     def clear_for_user(self, uid):
         self.c.execute('DELETE FROM sessions WHERE user_id=?', (uid,))
-        self.c.commit()
+        commit(self.c)

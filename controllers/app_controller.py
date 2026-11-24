@@ -1,8 +1,11 @@
 """
 app_controller.py — запуск приложения: база, вход, главное окно.
 
-Контроллер создаёт подключение к базе, репозитории и сервис прогресса,
-показывает окно входа или сразу главное окно (если пользователь уже входил).
+Контроллер собирает приложение из слоёв:
+    db/        — подключение и репозитории (SQL)
+    services/  — бизнес-логика (словарь, прогресс)
+    views/     — окна PyQt5
+Показывает окно входа или сразу главное окно (если пользователь уже входил).
 """
 import sys
 
@@ -12,6 +15,8 @@ from PyQt5.QtWidgets import QApplication
 from db.connection import connect, init_db
 from db.repository import (ProgressRepository, SessionRepository,
                            UserRepository, WordRepository)
+from services.progress_service import ProgressService
+from services.vocabulary_service import VocabularyService
 from views.login_window import LoginWindow
 from views.main_window import LanguageLearningApp
 
@@ -24,6 +29,7 @@ class AppController:
         self.users = UserRepository(self.conn)
         self.progress = ProgressRepository(self.conn)
         self.sessions = SessionRepository(self.conn)
+        self.vocabulary = VocabularyService(self.words)
         self.main_window = None
         self.login_window = None
 
@@ -41,10 +47,10 @@ class AppController:
     def on_login(self, user):
         if self.login_window:
             self.login_window.close()
-        p = self.progress.load(user['id'])
-        self.main_window = LanguageLearningApp(user, self.words.all(), p, self.words,
-                                               self.progress, self.users, self.progress)
-        self.main_window._on_logout = self.on_logout
+        progress = ProgressService(self.conn, self.progress, user['id'], self.vocabulary)
+        progress.update_streak()
+        self.main_window = LanguageLearningApp(user, self.vocabulary, progress)
+        self.main_window.logged_out.connect(self.on_logout)
         self.main_window.show()
 
     def on_logout(self):

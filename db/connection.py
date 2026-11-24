@@ -3,6 +3,7 @@ connection.py — подключение к базе SQLite и создание 
 """
 import json
 import sqlite3
+from contextlib import contextmanager
 from pathlib import Path
 
 from utils.paths import db_path, seed_vocabulary_path
@@ -80,6 +81,43 @@ def connect(path=None):
     return c
 
 
+# id подключений, у которых сейчас открыта транзакция
+_open_transactions = set()
+
+
+@contextmanager
+def transaction(conn):
+    """
+    Транзакция: несколько изменений в базе как одно целое.
+
+        with transaction(conn):
+            repo.finish_quiz(...)
+            repo.save(...)
+
+    Если всё прошло хорошо — сохраняется всё сразу (commit).
+    Если где-то ошибка — не сохраняется ничего (rollback), база не «ломается» наполовину.
+    """
+    key = id(conn)
+    if key in _open_transactions:       # уже внутри другой транзакции — она и сохранит
+        yield conn
+        return
+    _open_transactions.add(key)
+    try:
+        yield conn
+        conn.commit()
+    except Exception:
+        conn.rollback()
+        raise
+    finally:
+        _open_transactions.discard(key)
+
+
+def commit(conn):
+    """Сохраняет изменения. Внутри transaction() ничего не делает — сохранит сама транзакция."""
+    if id(conn) not in _open_transactions:
+        conn.commit()
+
+
 def init_db(conn, seed=True):
     """Создаёт таблицы (если их ещё нет) и заполняет словарь из data/vocabulary.json."""
     conn.executescript(DDL_V1)
@@ -102,4 +140,4 @@ def seed_words(conn, path=None):
                 'VALUES(?, ?, ?, ?)',
                 (en, ru, en.lower(), ru.lower())
             )
-    conn.commit()
+    commit(conn)

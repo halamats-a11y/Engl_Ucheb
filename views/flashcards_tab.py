@@ -6,7 +6,7 @@ import random
 import time
 from PyQt5.QtWidgets import (QWidget, QVBoxLayout, QHBoxLayout, QLabel,
                              QPushButton, QFrame, QMessageBox)
-from PyQt5.QtCore import Qt, QTimer
+from PyQt5.QtCore import Qt, QTimer, pyqtSignal
 from PyQt5.QtGui import QFont, QPixmap
 from utils.styles import (BTN_SECONDARY_STYLE, BTN_START_STYLE, BTN_STOP_STYLE, BTN_SUCCESS_STYLE,
                           CARDS_BIG_WORD_STYLE, CARDS_DONE_FRAME_STYLE, CARDS_TIMER_BTN_STYLE,
@@ -15,6 +15,8 @@ from utils.styles import (BTN_SECONDARY_STYLE, BTN_START_STYLE, BTN_STOP_STYLE, 
 
 
 class FlashcardsTab(QWidget):
+    word_learned = pyqtSignal(dict)   # «слово выучено» — слушает сервис прогресса
+
     def __init__(self, main_window):
         super().__init__()
         self.main = main_window
@@ -34,7 +36,6 @@ class FlashcardsTab(QWidget):
         layout.setContentsMargins(24, 24, 24, 24)
         layout.setSpacing(16)
         self.setLayout(layout)
-
 
         # Верхняя строка: таймер слева + заголовок + счётчик
         top_row = QHBoxLayout()
@@ -99,8 +100,6 @@ class FlashcardsTab(QWidget):
         top_row.addStretch(1)
 
         layout.addLayout(top_row)
-
-
 
         # Карточка
         self.card_frame = QFrame()
@@ -172,7 +171,7 @@ class FlashcardsTab(QWidget):
 
     def start_flashcards(self):
         self.cards_to_study = [w for w in self.main.vocabulary
-                               if not self.main.is_word_learned(w['english'])]
+                               if not self.main.is_word_learned(w)]
         if not self.cards_to_study:
             msg = QMessageBox(self)
             msg.setWindowTitle("Поздравляем!")
@@ -221,10 +220,8 @@ class FlashcardsTab(QWidget):
     def mark_as_known(self):
         if self.current_card_index < len(self.cards_to_study):
             card = self.cards_to_study[self.current_card_index]
-            self.main.mark_word_learned(card)
             self.next_card()
-            self.main.update_progress_stats()
-            self.main.save_progress()
+            self.word_learned.emit(card)
 
     def finish_flashcards(self):
         self.card_word.setText("Все карточки изучены! 🎉")
